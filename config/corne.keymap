@@ -43,10 +43,10 @@
 
                  lower_layer {
 // ---------------------------------------------------------------------------------------------------
-// |       |      |  HOME |  PGUP |  PGDN |  END |            |  7  |  8  |  9  |      |  UP  |      |
-// |  F7   |  F8  |  F9   |  F10  |  F11  |  F12 |            |  4  |  5  |  6  |  LFT |      |  RGT |
-// |  F1   |  F2  |  F3   |  F4   |  F5   |  F6  |            |  1  |  2  |  3  |      |  DWN |      |
-//                        |       |       |      |            |     |     |  0  |
+// |  GUI P |      |  HOME |  PGUP |  PGDN |  END |            |  7  |  8  |  9  |      |  UP  |      |
+// |  F7    |  F8  |  F9   |  F10  |  F11  |  F12 |            |  4  |  5  |  6  |  LFT |      |  RGT |
+// |  F1    |  F2  |  F3   |  F4   |  F5   |  F6  |            |  1  |  2  |  3  |      |  DWN |      |
+//                         |       |       |      |            |     |     |  0  |
                         bindings = <
    &kp  LGUI P  &none    &kp  HOME  &kp  PG_UP  &kp  PG_DN  &kp  END            &kp  N7  &kp  N8  &kp  N9  &none      &kp  UP     &trans
    &kp  F7      &kp  F8  &kp  F9    &kp  F10    &kp  F11    &kp  F12            &kp  N4  &kp  N5  &kp  N6  &kp  LEFT  &none       &kp  RIGHT 
