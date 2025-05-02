@@ -28,38 +28,38 @@
                 compatible = "zmk,keymap";
 
                 default_layer_dvorak {
-// -----------------------------------------------------------------------------------------
-// |  ESC |  ,  |  .  |  Ñ  |  P  |  Y  |   |  F  |  G   |  C  |  H  |  L  | BSPC |
-// | SHFT |  A  |  O  |  E  |  U  |  I  |   |  D  |  R   |  T  |  N  |  S  | DEL  |
-// | CTRL |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M   |  W  |  V  |  Z  | TAB  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | CAPS |
+// -------------------------------------------------------------------------------------------
+// |  ESC  |  ,  |  ;  |  Ñ  |  P  |  Y  |            |  F  |  G   |  C  |  H  |  L  |  BSPC |
+// |  SHFT |  A  |  O  |  E  |  U  |  I  |            |  D  |  R   |  T  |  N  |  S  |  DEL  |
+// |  CTRL |  .  |  Q  |  J  |  K  |  X  |            |  B  |  M   |  W  |  V  |  Z  |  TAB  |
+//                    | GUI | LWR | SPC |            | ENT | RSE  | CAPS |
                         bindings = <
-   &kp ESC   &kp COMMA &kp DOT &kp SEMI &kp P &kp Y   &kp F &kp G  &kp C &kp H &kp L &kp BSPC
-   &kp LSHFT &kp   A   &kp  O  &kp E &kp U &kp I   &kp D &kp R  &kp T &kp N &kp S &kp DEL
-   &kp LCTRL &kp SEMI  &kp  Q  &kp J &kp K &kp X   &kp B &kp N  &kp W &kp V &kp Z &kp TAB
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp CAPS
+   &kp  ESC    &kp  COMMA  &kp  SEMICOLON  &kp  SEMI  &kp  P  &kp  Y            &kp   F   &kp  G  &kp  C   &kp  H  &kp  L  &kp  BSPC
+   &kp  LSHFT  &kp  A      &kp  O          &kp  E     &kp  U  &kp  I            &kp   D   &kp  R  &kp  T   &kp  N  &kp  S  &kp  DEL
+   &kp  LCTRL  &kp  DOT    &kp  Q          &kp  J     &kp  K  &kp  X            &kp   B   &kp  M  &kp  W   &kp  V  &kp  Z  &kp  TAB
+                                           &kp  LGUI  &mo  1  &kp  SPACE        &kp  RET  &mo  2  &kp  CAPS
                         >;
                 };
 
                  lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  ESC   |  7   |  5  |  3  |  1  |  9  |            |  0  |  2  |  4  |  6  |  8  |      |
-// | F11    |  F1  |  F2 |  F3 |  F4 |  F5 |            | LFT | DWN |  UP | RGT |     |      |
-// | SHFT   |  F6  |  F7 |  F8 |  F9 |  F10|            |HOME | PGDN| PGUP| END |     |      |
-//                       |     |     |     |            |     |     |     |
+// ---------------------------------------------------------------------------------------------------
+// |       |      |  HOME |  PGUP |  PGDN |  END |            |  7  |  8  |  9  |      |  UP  |      |
+// |  F7   |  F8  |  F9   |  F10  |  F11  |  F12 |            |  4  |  5  |  6  |  LFT |      |  RGT |
+// |  F1   |  F2  |  F3   |  F4   |  F5   |  F6  |            |  1  |  2  |  3  |      |  DWN |      |
+//                        |       |       |      |            |     |     |  0  |
                         bindings = <
-   &trans     &kp N7        &kp N5      &kp N3      &kp N1      &kp N9               &kp N0     &kp N2      &kp N4      &kp N6      &kp N8      &trans
-   &kp F11    &kp F1        &kp F2      &kp F3      &kp F4      &kp F5               &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
-   &trans     &kp F6        &kp F7      &kp F8      &kp F9      &kp F10              &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &trans      &trans
-                          	            &trans      &trans      &trans               &trans     &trans      &trans
+   &mo  LGUI P  &none    &kp  HOME  &kp  PG_UP  &kp  PG_DN  &kp  END            &kp  N7  &kp  N8  &kp  N9  &none      &kp  UP     &none
+   &kp  F7      &kp  F8  &kp  F9    &kp  F10    &kp  F11    &kp  F12            &kp  N4  &kp  N5  &kp  N6  &kp  LEFT  &none       &kp  RIGHT 
+   &kp  F1      &kp  F2  &kp  F3    &kp  F4     &kp  F5     &kp  F6             &kp  N1  &kp  N2  &kp  N3  &none      &kp  DOWN   &none
+                                &trans      &none       &trans              &trans   &none    &kp  0
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+// |  TAB  |  !  |  @  |  #  |  $  |  %  |            |  ^  |  &  |  *  |  (  |  )  | BSPC |
+// |  CTRL |     |     |     |     |     |            |  -  |  =  |  [  |  ]  |  \  |  `   |
+// |  SHFT |     |     |     |     |     |            |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
