@@ -54,8 +54,15 @@ combos {
   // ARCHIVO VSC - CTRL + B
   COMBO(arch, <&kp LC(B)>, 24 30)
 };
-
-
+ 
+ // LAYER 3
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 
         keymap {
                 compatible = "zmk,keymap";
@@ -71,7 +78,7 @@ combos {
    &kp  ESC    &kp  COMMA  &kp  SEMI  &kp  SEMI  &kp  P  &kp  Y            &kp   F   &kp  G  &kp  C     &kp  H  &kp  L  &kp  BSPC
    &td0        &kp  A      &kp  O     &kp  E     &kp  U  &kp  I            &kp   D   &kp  R  &kp  T     &kp  N  &kp  S  &kp  DEL
    &kp  LCTRL  &kp  DOT    &kp  Q     &kp  J     &kp  K  &kp  X            &kp   B   &kp  M  &kp  W     &kp  V  &kp  Z  &kp  TAB
-                                      &kp  LGUI  &mo  1  &kp  SPACE        &kp  RET  &mo  3  &kp  RALT
+                                      &kp  LGUI  &mo  1  &kp  SPACE        &kp  RET  &mo  2  &kp  RALT
                         >;
                 };
 
