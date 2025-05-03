@@ -9,11 +9,23 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DVORAK 0
-#define NAV y
+#define NAV 1
 #define SYM 2
 #define BT 3
 
 / {
+
+behaviors{  
+
+   td0: tap_dance_0 {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>; 
+      tapping-term-ms = <TAP_SPEED>; 
+      bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
+
+      }; 
+   };
+
 
     // LAYERS
     conditional_layers {
@@ -35,34 +47,84 @@
         };
     };
 
+    // PASTE
+    combos {
+        compatible = "zmk,combos";
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <24 33>;  // CTRL + V
+            bindings = <&kp LC(V)>;
+        };
+    };
+
+    // CUT
+    combos {
+        compatible = "zmk,combos";
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <24 29>;  // CTRL + X
+            bindings = <&kp LC(X)>;
+        };
+    };
+
+    // CONSOLA VSC
+    combos {
+        compatible = "zmk,combos";
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <24 27>;  // CTRL + J
+            bindings = <&kp LC(J)>;
+        };
+    };
+
+    // ARCHIVO VSC
+    combos {
+        compatible = "zmk,combos";
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <24 30>;  // CTRL + B
+            bindings = <&kp LC(B)>;
+        };
+    };
+
+    // MENU VSC
+    combos {
+        compatible = "zmk,combos";
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <24 41 30>;  // CTRL + ALT + B
+            bindings = <&kp LC(LALT(B))>;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer_dvorak {
-// --------------------------------------------------------------------------------------------------------
-// |  ESC   |  ,  |  ;  |  Ñ    |  P    |  Y    |            |  F    |  G    |  C     |  H  |  L  |  BSPC |
-// |  SHFT  |  A  |  O  |  E    |  U    |  I    |            |  D    |  R    |  T     |  N  |  S  |  DEL  |
-// |  CTRL  |  .  |  Q  |  J    |  K    |  X    |            |  B    |  M    |  W     |  V  |  Z  |  TAB  |
-//                      |  GUI  |  LWR  |  SPC  |            |  ENT  |  RSE  |  CAPS  |
+// -----------------------------------------------------------------------------------------------------------
+// |  ESC       |  ,  |  ;  |  Ñ    |  P    |  Y    |            |  F    |  G    |  C    |  H  |  L  |  BSPC |
+// |  SHFT:CAP  |  A  |  O  |  E    |  U    |  I    |            |  D    |  R    |  T    |  N  |  S  |  DEL  |
+// |  CTRL      |  .  |  Q  |  J    |  K    |  X    |            |  B    |  M    |  W    |  V  |  Z  |  TAB  |
+//                          |  GUI  |  LWR  |  SPC  |            |  ENT  |  RSE  |  ALT  |
                         bindings = <
-   &kp  ESC    &kp  COMMA  &kp  SEMI  &kp  SEMI  &kp  P  &kp  Y            &kp   F   &kp  G  &kp  C   &kp  H  &kp  L  &kp  BSPC
-   &kp  LSHFT  &kp  A      &kp  O     &kp  E     &kp  U  &kp  I            &kp   D   &kp  R  &kp  T   &kp  N  &kp  S  &kp  DEL
-   &kp  LCTRL  &kp  DOT    &kp  Q     &kp  J     &kp  K  &kp  X            &kp   B   &kp  M  &kp  W   &kp  V  &kp  Z  &kp  TAB
-                                      &kp  LGUI  &mo  1  &kp  SPACE        &kp  RET  &mo  2  &kp  CAPS
+   &kp  ESC    &kp  COMMA  &kp  SEMI  &kp  SEMI  &kp  P  &kp  Y            &kp   F   &kp  G  &kp  C     &kp  H  &kp  L  &kp  BSPC
+   &td0        &kp  A      &kp  O     &kp  E     &kp  U  &kp  I            &kp   D   &kp  R  &kp  T     &kp  N  &kp  S  &kp  DEL
+   &kp  LCTRL  &kp  DOT    &kp  Q     &kp  J     &kp  K  &kp  X            &kp   B   &kp  M  &kp  W     &kp  V  &kp  Z  &kp  TAB
+                                      &kp  LGUI  &mo  1  &kp  SPACE        &kp  RET  &mo  2  &kp  RALT
                         >;
                 };
 
                  lower_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |  COPY      |      |  HOME  |  PGUP  |  PGDN  |  END  |            |  7  |  8  |  9  |       |  UP   |       |
-// |  F7     |  F8  |  F9    |  F10   |  F11   |  F12  |            |  4  |  5  |  6  |  LFT  |       |  RGT  |
-// |  F1     |  F2  |  F3    |  F4    |  F5    |  F6   |            |  1  |  2  |  3  |       |  DWN  |       |
-//                           |        |        |       |            |     |     |  0  |
+// -----------------------------------------------------------------------------------------------------------------
+// |  COPY   |  MENU     |  HOME  |  PGUP  |  PGDN  |  END  |            |  7  |  8  |  9  |       |  UP   |       |
+// |  PASTE  |  ARCHIVO  |        |        |        |       |            |  4  |  5  |  6  |  LFT  |       |  RGT  |
+// |  CUT    |  CONSLG   |        |        |        |       |            |  1  |  2  |  3  |       |  DWN  |       |
+//                                |        |        |       |            |     |     |  0  |
                         bindings = <
-   &kp  LC(C)  &none    &kp  HOME  &kp  PG_UP  &kp  PG_DN  &kp  END            &kp  N7  &kp  N8  &kp  N9  &none      &kp  UP     &trans
-   &kp  F7     &kp  F8  &kp  F9    &kp  F10    &kp  F11    &kp  F12            &kp  N4  &kp  N5  &kp  N6  &kp  LEFT  &none       &kp  RIGHT 
-   &kp  F1     &kp  F2  &kp  F3    &kp  F4     &kp  F5     &kp  F6             &kp  N1  &kp  N2  &kp  N3  &none      &kp  DOWN   &none
-                                   &none       &none       &trans              &trans   &none    &kp  N0
+   &kp LC(C)  &kp LC(RALT(B))  &kp  HOME  &kp  PG_UP  &kp  PG_DN  &kp  END            &kp  N7  &kp  N8  &kp  N9  &none      &kp  UP     &trans
+   &kp LC(V)  &kp LC(B)        &trans     &trans      &trans      &trans              &kp  N4  &kp  N5  &kp  N6  &kp  LEFT  &none       &kp  RIGHT 
+   &kp LC(X)  &kp LC(J)        &trans     &trans      &trans      &trans              &kp  N1  &kp  N2  &kp  N3  &none      &kp  DOWN   &none
+                                          &none       &none       &trans              &trans   &none    &kp  N0
                         >;
                 };
 
