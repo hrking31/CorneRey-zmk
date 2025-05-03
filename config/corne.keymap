@@ -67,11 +67,11 @@ combos {
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
+                dVORAK_layer {
 // -------------------------------------------------------------------------------------------------------------
-// |  ESC         |  ,  |  ;  |  Ñ    |  P    |  Y    |            |  F    |  G    |  C    |  H  |  L  |  BSPC |
+// |  ESC        |  ,  |  ;  |  Ñ    |  P    |  Y    |            |  F    |  G    |  C    |  H  |  L  |  BSPC |
 // |  SHFT:CAPS  |  A  |  O  |  E    |  U    |  I    |            |  D    |  R    |  T    |  N  |  S  |  DEL  |
-// |  CTRL        |  .  |  Q  |  J    |  K    |  X    |            |  B    |  M    |  W    |  V  |  Z  |  TAB  |
+// |  CTRL       |  .  |  Q  |  J    |  K    |  X    |            |  B    |  M    |  W    |  V  |  Z  |  TAB  |
 //                            |  GUI  |  NAV  |  SPC  |            |  ENT  |  NUM  |  ALT  |
                         bindings = <
    &kp  ESC    &kp  COMMA  &kp  SEMI  &kp  SEMI  &kp  P    &kp  Y            &kp   F   &kp  G      &kp  C     &kp  H  &kp  L  &kp  BSPC
