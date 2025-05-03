@@ -77,7 +77,7 @@ compatible = "zmk,combos";
 // MENU VSC
         combo_menu {
         timeout-ms = <50>;
-        key-positions = <24, 41, 30>;  // CTRL + ALT + B
+        key-positions = <24 41 30>;  // CTRL + ALT + B
         bindings = <&kp LC &kp LALT &kp B>;
 };
 };
