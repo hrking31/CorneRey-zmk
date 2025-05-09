@@ -59,7 +59,7 @@ combos {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <NUM SYM>;
+            if-layers = <SYM NUM>;
             then-layer = <FUN>;
         };
     };
@@ -82,7 +82,7 @@ combos {
    &kp  ESC    &kp  COMMA  &kp  SEMI  &kp  SEMI  &kp  P  &kp  Y            &kp   F   &kp  G  &kp  C     &kp  H  &kp  L  &kp  BSPC
    &td0        &kp  A      &kp  O     &kp  E     &kp  U  &kp  I            &kp   D   &kp  R  &kp  T     &kp  N  &kp  S  &kp  DEL
    &kp  LCTRL  &kp  DOT    &kp  Q     &kp  J     &kp  K  &kp  X            &kp   B   &kp  M  &kp  W     &kp  V  &kp  Z  &kp  TAB
-                                      &kp  LGUI  &mo  1  &kp  SPACE        &kp  RET  &mo  2  &kp  RALT
+                                      &kp  LGUI  &mo  NUM  &kp  SPACE        &kp  RET  &mo  SYN  &kp  RALT
                         >;
                 };
 
