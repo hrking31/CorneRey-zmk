@@ -35,28 +35,7 @@
                 ;
         };
 
-        key_241_lower: key_241_lower{
-            compatible = "zmk,behavior-macro";
-            wait-ms = <40>;
-            tap-ms = <40>;
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press   &kp LALT>,
-                <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N1>,
-                <&macro_release &kp LALT>;
-        };
-    };
-};
 
-/ {
-    behaviors {
-        key_dual: mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&key_241_lower>, <&key_209_upper>;
-        };
     };
 };
 
@@ -103,7 +82,7 @@ combos {
 //                      |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SIM  |  ALT  |
 
                         bindings = < 
-   &kp  ESC    &kp  COMMA  &kp  SEMI  &key_dual    &kp  P    &kp  Y            &kp  F    &kp  G    &kp  C     &kp  H  &kp  L  &kp  BSPC
+   &kp  ESC    &kp  COMMA  &kp  SEMI  &key_209_upper    &kp  P    &kp  Y            &kp  F    &kp  G    &kp  C     &kp  H  &kp  L  &kp  BSPC
    &kp  LGUI   &kp  A      &kp  O     &kp  E       &kp  U    &kp  I            &kp  D    &kp  R    &kp  T     &kp  N  &kp  S  &kp  DEL
    &kp  LCTRL  &kp  DOT    &kp  Q     &kp  J       &kp  K    &kp  X            &kp  B    &kp  M    &kp  W     &kp  V  &kp  Z  &kp  TAB
                                       &kp  LSHFT   &mo  NUM  &kp  SPACE        &kp  RET  &mo  SYM  &kp  RALT
