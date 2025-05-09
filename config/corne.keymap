@@ -13,7 +13,47 @@
 #define SYM 2
 #define FUN 3
 
+#define COMBO(NAME, BINDINGS, KEYPOS) \
+   combo_##NAME { \
+   timeout-ms = <200>; \
+   bindings = BINDINGS; \
+   key-positions = <KEYPOS>; \
+   layers = <0>; \
+};
 
+
+/ {
+behaviors{  
+   td0: tap_dance_0 {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>; 
+        tapping-term-ms = <200>; 
+        bindings = <&kp LSHIFT>, <&kp CAPS>;
+
+      }; 
+   };
+};
+
+/ {
+combos {
+  compatible = "zmk,combos";
+
+  // COPY - CTRL + C
+  COMBO(copy, <&kp LC(C)>, 24 8)
+
+  // PASTE - CTRL + V
+  COMBO(paste, <&kp LC(V)>, 24 33)
+
+  // CUT - CTRL + X
+  COMBO(cut, <&kp LC(X)>, 24 29)
+
+  // CONSOLA VSC - CTRL + J
+  COMBO(clg, <&kp LC(J)>, 24 27)
+
+  // ARCHIVO VSC - CTRL + B
+  COMBO(arch, <&kp LC(B)>, 24 30)
+};
+};
  
  / {
     conditional_layers {
@@ -23,8 +63,6 @@
             then-layer = <FUN>;
         };
     };
-
-
 
         keymap {
                 compatible = "zmk,keymap";
