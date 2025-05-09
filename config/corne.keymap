@@ -29,7 +29,7 @@ behaviors{
 
       }; 
    };
-},
+};
 
 / {
 combos {
@@ -50,7 +50,7 @@ combos {
   // ARCHIVO VSC - CTRL + B
   COMBO(arch, <&kp LC(B)>, 24 30)
 };
-},
+};
  
  / {
  // LAYER 3
@@ -61,7 +61,7 @@ combos {
             then-layer = <3>;
         };
     };
- },
+ };
 
  / {
         keymap {
