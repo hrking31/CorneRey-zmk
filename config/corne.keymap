@@ -77,11 +77,11 @@ combos {
 // |  CTRL  |  .  |  Q  |  J     |  K    |  X    |            |  B    |  M    |  W    |  V  |  Z  |  TAB  |
 //                      |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SIM  |  ALT  |
 
-                        bindings = <
-   &kp  ESC    &kp  COMMA  &kp  SEMI  &key_163   &kp  P    &kp  Y            &kp  F    &kp  G    &kp  C     &kp  H  &kp  L  &kp  BSPC
-   &kp  LGUI   &kp  A      &kp  O     &kp  E     &kp  U    &kp  I            &kp  D    &kp  R    &kp  T     &kp  N  &kp  S  &kp  DEL
-   &kp  LCTRL  &kp  DOT    &kp  Q     &kp  J     &kp  K    &kp  X            &kp  B    &kp  M    &kp  W     &kp  V  &kp  Z  &kp  TAB
-                                      &kp  SHFT  &mo  NUM  &kp  SPACE        &kp  RET  &mo  SYM  &kp  RALT
+                        bindings = < 
+   &kp  ESC    &kp  COMMA  &kp  SEMI  &key_163    &kp  P    &kp  Y            &kp  F    &kp  G    &kp  C     &kp  H  &kp  L  &kp  BSPC
+   &kp  LGUI   &kp  A      &kp  O     &kp  E      &kp  U    &kp  I            &kp  D    &kp  R    &kp  T     &kp  N  &kp  S  &kp  DEL
+   &kp  LCTRL  &kp  DOT    &kp  Q     &kp  J      &kp  K    &kp  X            &kp  B    &kp  M    &kp  W     &kp  V  &kp  Z  &kp  TAB
+                                      &kp  LSHFT  &mo  NUM  &kp  SPACE        &kp  RET  &mo  SYM  &kp  RALT
                         >;
                 };
 
