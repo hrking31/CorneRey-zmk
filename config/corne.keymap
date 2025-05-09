@@ -57,15 +57,15 @@ combos {
                    default_layer {
             label = "DEF";
 // --------------------------------------------------------------------------------------------------------
-// |  ESC   |  ,  |  ;  |  Ñ     |  P    |  Y    |            |  F    |  G    |  C    |  H  |  L  |  BSPC |
-// |  GUI   |  A  |  O  |  E     |  U    |  I    |            |  D    |  R    |  T    |  N  |  S  |  DEL  |
-// |  CTRL  |  .  |  Q  |  J     |  K    |  X    |            |  B    |  M    |  W    |  V  |  Z  |  TAB  |
+// |  ESC   |  Q  |  W  |  F     |  P    |  G    |            |  J    |  L    |  U    |  Y  |  Ñ  |  BSPC |
+// |  GUI   |  A  |  R  |  S     |  T    |  D    |            |  H    |  N    |  E    |  I  |  O  |  DEL  |
+// |  CTRL  |  Z  |  X  |  C     |  V    |  B    |            |  K    |  M    |      |    |    |  TAB  |
 //                      |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SIM  |  ALT  |
 
                         bindings = < 
-   &kp  ESC    &kp  COMMA  &kp  SEMI  &kp  SEMI    &kp  P    &kp  Y            &kp  F    &kp  G    &kp  C     &kp  H  &kp  L  &kp  BSPC
-   &kp  LGUI   &kp  A      &kp  O     &kp  E       &kp  U    &kp  I            &kp  D    &kp  R    &kp  T     &kp  N  &kp  S  &kp  DEL
-   &kp  LCTRL  &kp  DOT    &kp  Q     &kp  J       &kp  K    &kp  X            &kp  B    &kp  M    &kp  W     &kp  V  &kp  Z  &kp  TAB
+   &kp  ESC    &kp  Q  &kp  W  &kp  F  &kp  P    &kp  G            &kp  J    &kp  L    &kp  U      &kp  Y    &kp  SEMI  &kp  BSPC
+   &kp  LGUI   &kp  A  &kp  R  &kp  S  &kp  T    &kp  D            &kp  H    &kp  N    &kp  E      &kp  I    &kp  O     &kp  DEL
+   &kp  LCTRL  &kp  Z  &kp  X  &kp  C  &kp  V    &kp  B            &kp  K    &kp  M    &kp  COMMA  &kp  DOT  &kp  SEMI  &kp  TAB
                                       &kp  LSHFT   &mo  NUM  &kp  SPACE        &kp  RET  &mo  SYM  &kp  RALT
                         >;
                 };
