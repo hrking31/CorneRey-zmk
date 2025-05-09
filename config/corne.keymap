@@ -52,7 +52,7 @@
     behaviors {
         key_dual: key_dual {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&key_241_lower>, <&key_209_upper>;
