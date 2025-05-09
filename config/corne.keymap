@@ -8,24 +8,27 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEF 0
+#define NUM 1
+#define SYM 2
+#define FUN 3
+
 #define COMBO(NAME, BINDINGS, KEYPOS) \
    combo_##NAME { \
    timeout-ms = <200>; \
    bindings = BINDINGS; \
    key-positions = <KEYPOS>; \
    layers = <0>; \
-  };
+};
 
 
 / {
-
 behaviors{  
-
    td0: tap_dance_0 {
-      compatible = "zmk,behavior-tap-dance";
-      #binding-cells = <0>; 
-      tapping-term-ms = <200>; 
-      bindings = <&kp LSHIFT>, <&kp CAPS>;
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>; 
+        tapping-term-ms = <200>; 
+        bindings = <&kp LSHIFT>, <&kp CAPS>;
 
       }; 
    };
@@ -53,12 +56,11 @@ combos {
 };
  
  / {
- // LAYER 3
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <NUM SYM>;
+            then-layer = <FUN>;
         };
     };
  };
@@ -67,8 +69,10 @@ combos {
         keymap {
                 compatible = "zmk,keymap";
 
-                dVORAK_layer {
+                   default_layer {
+            label = "DEF";
 // -------------------------------------------------------------------------------------------------------------
+
 // |  ESC        |  ,  |  ;  |  Ñ    |  P    |  Y    |            |  F    |  G    |  C    |  H  |  L  |  BSPC |
 // |  SHFT:CAPS  |  A  |  O  |  E    |  U    |  I    |            |  D    |  R    |  T    |  N  |  S  |  DEL  |
 // |  CTRL       |  .  |  Q  |  J    |  K    |  X    |            |  B    |  M    |  W    |  V  |  Z  |  TAB  |
@@ -82,7 +86,8 @@ combos {
                         >;
                 };
 
-                 numeros_layer {
+                 number_layer {
+            label = "NUM";
 // -----------------------------------------------------------------------------------------------------------------
 // |  COPY   |           |  HOME  |  PGUP  |  PGDN  |  END  |            |  7  |  8  |  9  |       |  UP   |       |
 // |  PASTE  |  ARCHIVO  |        |        |        |       |            |  4  |  5  |  6  |  LFT  |       |  RGT  |
@@ -97,7 +102,8 @@ combos {
                         >;
                 };
 
-                simbolos_layer {
+               symbol_layer {
+            label = "SYM";
 // -------------------------------------------------------------------------------------------
 // |  TAB   |  !  |  @  |  #  |  $  |  %  |            |  ^  |  &  |  *  |  (  |  )    |     |
 // |  CTRL  |  "  |  '  |  `  |  <  |  >  |            |  -  |  =  |  [  |  ]  |  \    |  `  |
@@ -112,7 +118,8 @@ combos {
                         >;
                 };
 
-                 btmedia_layer {
+                 function_layer {
+            label = "FUN";
 // ----------------------------------------------------------------------------------------------------------------------
 // |  F1     |  F2   |  F3   |  F4   |  F5   |  F6   |            |  F7   |  F8      |  F9   |  F10   |   F11  |  F12   |
 // |  BTCLR  |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |            |  PRV  |  PLAY/P  |  NXT  |  VOL-  |  MUTE  |  VOL+  |
