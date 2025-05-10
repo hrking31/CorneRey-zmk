@@ -21,6 +21,7 @@
    layers = <0>; \
 };
 
+/ {
 macros {
         // MENU CONFIG VSC
     config: ctrl_alt_b {
@@ -35,8 +36,8 @@ macros {
             , <&macro_release &kp LALT>
             , <&macro_release &kp LCTRL>;
     };
+  };
 };
-
 
 / {
 combos {
