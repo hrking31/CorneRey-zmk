@@ -68,10 +68,10 @@ combos {
   COMBO(arch, <&kp LC(B)>, 24 30)
 
   // ALT + ⬆️
-  COMBO(arch, <&kp LALT(UP)>, 41 18)
+  COMBO(up, <&kp LALT(UP)>, 41 18)
 
     // ALT + ⬇️
-  COMBO(arch, <&kp LALT(DOWN)>, 41 30)
+  COMBO(down, <&kp LALT(DOWN)>, 41 30)
 };
 };
  
