@@ -37,7 +37,7 @@
   macros {
     MACRO(config, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp B &macro_release &kp LALT &macro_release &kp LCTRL)
     MACRO(lefT, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT &macro_release &kp LCTRL)
-    MACRO(rigth, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(right, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT &macro_release &kp LCTRL)
   };
 };
 
@@ -113,7 +113,7 @@ combos {
                         bindings = <
    &kp  N1    &kp  N2     &kp  N3   &kp  N4     &kp  N5     &kp  N6                &kp  N7     &kp  N8     &kp  N9      &kp  N0        &kp  LC(J)       &trans
    &kp  LEFT  &kp  HOME   &kp  END  &kp  PG_UP  &kp  PG_DN  &kp LC(Z)              &kp  UP     &kp  LC(C)  &kp  LC(V)   &kp  LC(X)     &kp  RIGHT       &trans
-   &mcr_left  &mcr_rigth  &none     &none       &none       &kp LC(Y)              &kp  DOWN   &kp  LC(B)  &mcr_config  &kp  LALT(UP)  &kp  LALT(DOWN)  &none
+   &mcr_left  &mcr_right &none     &none       &none       &kp LC(Y)              &kp  DOWN   &kp  LC(B)  &mcr_config  &kp  LALT(UP)  &kp  LALT(DOWN)  &none
                                     &none       &trans      &trans                 &trans      &trans      &none  
                         >;
                 };
