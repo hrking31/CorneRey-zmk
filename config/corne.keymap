@@ -56,10 +56,10 @@ combos {
   COMBO(cut, <&kp LC(X)>, 24 29)
 
     // CTRL + Z
-  COMBO(atra, <&kp LC(z)>, 24 34)
+  COMBO(atra, <&kp LC(Z)>, 24 34)
 
     // CTRL + Y
-  COMBO(adel, <&kp LC(y)>, 24 5)
+  COMBO(adel, <&kp LC(Y)>, 24 5)
 
   // CTRL + J
   COMBO(clg, <&kp LC(J)>, 24 27)
@@ -113,8 +113,8 @@ combos {
 
                         bindings = <
    &kp  N1    &kp  N2    &kp  N3   &kp  N4     &kp  N5     &kp  N6                &kp  N7     &kp  N8     &kp  N9     &kp  N0     &kp  LC(J)  &trans
-   &kp  LEFT  &kp  HOME  &kp  END  &kp  PG_UP  &kp  PG_DN  &kp LC(z)              &kp  UP     &kp  LC(C)  &kp  LC(V)  &kp  LC(X)  &kp  RIGHT  &trans
-   &none      &none      &none     &none       &none       &kp LC(y)              &kp  DOWN   &kp  LC(B)  &config     &none       &none       &none
+   &kp  LEFT  &kp  HOME  &kp  END  &kp  PG_UP  &kp  PG_DN  &kp LC(Z)              &kp  UP     &kp  LC(C)  &kp  LC(V)  &kp  LC(X)  &kp  RIGHT  &trans
+   &none      &none      &none     &none       &none       &kp LC(Y)              &kp  DOWN   &kp  LC(B)  &config     &none       &none       &none
                                    &none       &trans      &trans                 &trans      &trans      &none
                         >;
                 };
