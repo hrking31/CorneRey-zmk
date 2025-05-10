@@ -42,37 +42,36 @@
 };
 
 / {
-combos {
-  compatible = "zmk,combos";
+  combos {
+    compatible = "zmk,combos";
 
-  // CTRL + C
-  COMBO(copy, <&kp LC(C)>, 24 8)
+    // CTRL + C
+    COMBO(copy, <&kp LC(C)>, 24 8)
 
-  // CTRL + V
-  COMBO(paste, <&kp LC(V)>, 24 33)
+    // CTRL + V
+    COMBO(paste, <&kp LC(V)>, 24 33)
 
-  // CTRL + X
-  COMBO(cut, <&kp LC(X)>, 24 29)
+    // CTRL + X
+    COMBO(cut, <&kp LC(X)>, 24 29)
 
     // CTRL + Z
-  COMBO(atra, <&kp LC(Z)>, 24 34)
+    COMBO(atra, <&kp LC(Z)>, 24 34)
 
     // CTRL + Y
-  COMBO(adel, <&kp LC(Y)>, 24 5)
+    COMBO(adel, <&kp LC(Y)>, 24 5)
 
-  // CTRL + J
-  COMBO(clg, <&kp LC(J)>, 24 27)
+    // CTRL + J
+    COMBO(clg, <&kp LC(J)>, 24 27)
 
-  // CTRL + B
-  COMBO(arch, <&kp LC(B)>, 24 30)
+    // CTRL + B
+    COMBO(arch, <&kp LC(B)>, 24 30)
 
-  // ALT + UP
-  COMBO(up, <&kp RALT(UP)>, 41 18)
+    // ALT + UP
+    COMBO(up, <&kp RALT(UP)>, 41 18)
 
- // ALT + DOWN
-  COMBO(down, <&kp RALT(DOWN)>, 41 30)
-
-};
+    // ALT + DOWN
+    COMBO(down, <&kp RALT(DOWN)>, 41 30)
+  };
 };
  
  / {
