@@ -37,6 +37,10 @@
 
       // MENU CONFIG VSC
 MACRO(config, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp B &macro_release &kp LALT &macro_release &kp LCTRL)
+      // MENU CONFIG VSC
+MACRO(config, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT &macro_release &kp LCTRL)
+      // MENU CONFIG VSC
+MACRO(config, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT &macro_release &kp LCTRL)
 
 };
 
@@ -44,26 +48,32 @@ MACRO(config, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp B &mac
 combos {
   compatible = "zmk,combos";
 
-  // COPY - CTRL + C
+  // CTRL + C
   COMBO(copy, <&kp LC(C)>, 24 8)
 
-  // PASTE - CTRL + V
+  // CTRL + V
   COMBO(paste, <&kp LC(V)>, 24 33)
 
-  // CUT - CTRL + X
+  // CTRL + X
   COMBO(cut, <&kp LC(X)>, 24 29)
 
-    // ATRAS VSC - CTRL + Z
+    // CTRL + Z
   COMBO(atra, <&kp LC(z)>, 24 34)
 
-    // ADELANTE VSC - CTRL + Y
+    // CTRL + Y
   COMBO(adel, <&kp LC(y)>, 24 5)
 
-  // CONSOLA VSC - CTRL + J
+  // CTRL + J
   COMBO(clg, <&kp LC(J)>, 24 27)
 
-  // ARCHIVO VSC - CTRL + B
+  // CTRL + B
   COMBO(arch, <&kp LC(B)>, 24 30)
+
+  // ALT + ⬆️
+  COMBO(arch, <&kp LA(UP)>, 41 18)
+
+    // ALT + ⬇️
+  COMBO(arch, <&kp LA(DOWN)>, 41 30)
 };
 };
  
@@ -100,8 +110,8 @@ combos {
 // --------------------------------------------------------------------------------------------------------------------------------
 // |  1     |  2     |  3     |  4     |  5     |  6     |            |  7     |  8        |  9       |  0    |  CONSLA  |  BSPC  |
 // |  LEFT  |  HOME  |  END   |  PGUP  |  PGDN  |  ATRA  |            |  UP    |  COPY     |  PASTE   |  CUT  |  RIGHT   |  DEL   |
-// |        |        |        |        |        |  ADEL  |            |  DWN   |  ARCHIVO  |  CONFIG  |       |          |        |
-//                            |        |  NUM   |  SPC   |            |  ENT   |  SIM      |          |
+// |        |        |        |        |        |  ADEL  |            |  DOWN   |  ARCHIVO  |  CONFIG  |       |          |        |
+//                            |        |  NUM   |  SPC   |            |  ENT    |  SIM      |          |
 
                         bindings = <
    &kp  N1    &kp  N2    &kp  N3   &kp  N4     &kp  N5     &kp  N6                &kp  N7     &kp  N8     &kp  N9     &kp  N0     &kp  LC(J)  &trans
