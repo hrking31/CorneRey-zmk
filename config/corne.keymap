@@ -67,7 +67,7 @@
     COMBO(arch, <&kp LC(B)>, 24 30)
 
     // ALT + UP
-    COMBO(up, <<&mt RALT UP>, 41 18)
+    COMBO(up, <&mt RALT UP>, 41 18)
 
     // ALT + DOWN
     COMBO(down, <&mt RALT DOWN>, 41 30)
