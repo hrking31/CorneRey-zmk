@@ -18,7 +18,7 @@
    timeout-ms = <200>; \
    bindings = BINDINGS; \
    key-positions = <KEYPOS>; \
-   layers = <0>; \
+   layers = <-1>; \
 };
 
 #define STRINGIFY(x) #x
@@ -66,6 +66,11 @@ combos {
   // CTRL + B
   COMBO(arch, <&kp LC(B)>, 24 30)
 
+  // ALT + UP
+  COMBO(up, <&kp LALT(UP)>, 41 18)
+
+ // ALT + DOWN
+  COMBO(down, <&kp LALT(DOWN)>, 41 30)
 
 };
 };
@@ -102,14 +107,14 @@ combos {
             label = "NUM";
 // -------------------------------------------------------------------------------------------------------------------------------------------
 // |  1       |  2       |  3     |  4     |  5     |  6     |            |  7      |  8        |  9       |  0        |  CONSLA    |  BSPC  |
-// |  LEFT    |  HOME    |  END   |  PGUP  |  PGDN  |  ATRA  |            |  UP     |  COPY     |  PASTE   |  CUT      |  RIGHT     |  DEL   |  LALT(UP)  LALT(DOWN)
+// |  LEFT    |  HOME    |  END   |  PGUP  |  PGDN  |  ATRA  |            |  UP     |  COPY     |  PASTE   |  CUT      |  RIGHT     |  DEL   |
 // |  CODELF  |  CODERG  |        |        |        |  ADEL  |            |  DOWN   |  ARCHIVO  |  CONFIG  |  CODEUP   |  CODEDOWN  |        |
 //                                |        |  NUM   |  SPC   |            |  ENT    |  SYM      |          |
 
                         bindings = <
    &kp  N1    &kp  N2     &kp  N3   &kp  N4     &kp  N5     &kp  N6                &kp  N7     &kp  N8     &kp  N9      &kp  N0        &kp  LC(J)       &trans
    &kp  LEFT  &kp  HOME   &kp  END  &kp  PG_UP  &kp  PG_DN  &kp LC(Z)              &kp  UP     &kp  LC(C)  &kp  LC(V)   &kp  LC(X)     &kp  RIGHT       &trans
-   &mcr_left  &mcr_right  &none     &none       &none       &kp LC(Y)              &kp  DOWN   &kp  LC(B)  &mcr_config  &none          &none    &none
+   &mcr_left  &mcr_right  &none     &none       &none       &kp LC(Y)              &kp  DOWN   &kp  LC(B)  &mcr_config  &kp  LALT(UP)  &kp  LALT(DOWN)  &none
                                     &none       &trans      &trans                 &trans      &trans      &none  
                         >;
                 };
