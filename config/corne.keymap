@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include "config_macros.dtsi"
+#include "config_macros.overlay"
 
 #define DEF 0
 #define NUM 1
