@@ -36,6 +36,8 @@
 / {
   macros {
     MACRO(config, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp B &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(lefT, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(rigth, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT &macro_release &kp LCTRL)
   };
 };
 
@@ -102,17 +104,17 @@ combos {
 
                  number_layer {
             label = "NUM";
-// --------------------------------------------------------------------------------------------------------------------------------
-// |  1     |  2     |  3     |  4     |  5     |  6     |            |  7     |  8        |  9       |  0    |  CONSLA  |  BSPC  |
-// |  LEFT  |  HOME  |  END   |  PGUP  |  PGDN  |  ATRA  |            |  UP    |  COPY     |  PASTE   |  CUT  |  RIGHT   |  DEL   |
-// |        |        |        |        |        |  ADEL  |            |  DOWN   |  ARCHIVO  |  CONFIG  |       |          |        |
-//                            |        |  NUM   |  SPC   |            |  ENT    |  SIM      |          |
+// -------------------------------------------------------------------------------------------------------------------------------------------
+// |  1       |  2       |  3     |  4     |  5     |  6     |            |  7      |  8        |  9       |  0        |  CONSLA    |  BSPC  |
+// |  LEFT    |  HOME    |  END   |  PGUP  |  PGDN  |  ATRA  |            |  UP     |  COPY     |  PASTE   |  CUT      |  RIGHT     |  DEL   |
+// |  CODELF  |  CODERG  |        |        |        |  ADEL  |            |  DOWN   |  ARCHIVO  |  CONFIG  |   CODEUP  |  CODEDOWN  |        |
+//                                |        |  NUM   |  SPC   |            |  ENT    |  SIM      |          |
 
                         bindings = <
-   &kp  N1    &kp  N2    &kp  N3   &kp  N4     &kp  N5     &kp  N6                &kp  N7     &kp  N8     &kp  N9      &kp  N0     &kp  LC(J)  &trans
-   &kp  LEFT  &kp  HOME  &kp  END  &kp  PG_UP  &kp  PG_DN  &kp LC(Z)              &kp  UP     &kp  LC(C)  &kp  LC(V)   &kp  LC(X)  &kp  RIGHT  &trans
-   &none      &none      &none     &none       &none       &kp LC(Y)              &kp  DOWN   &kp  LC(B)  &mcr_config  &none       &none       &none
-                                   &none       &trans      &trans                 &trans      &trans      &none
+   &kp  N1    &kp  N2     &kp  N3   &kp  N4     &kp  N5     &kp  N6                &kp  N7     &kp  N8     &kp  N9      &kp  N0        &kp  LC(J)       &trans
+   &kp  LEFT  &kp  HOME   &kp  END  &kp  PG_UP  &kp  PG_DN  &kp LC(Z)              &kp  UP     &kp  LC(C)  &kp  LC(V)   &kp  LC(X)     &kp  RIGHT       &trans
+   &mcr_left  &mcr_rigth  &none     &none       &none       &kp LC(Y)              &kp  DOWN   &kp  LC(B)  &mcr_config  &kp  LALT(UP)  &kp  LALT(DOWN)  &none
+                                    &none       &trans      &trans                 &trans      &trans      &none  
                         >;
                 };
 
