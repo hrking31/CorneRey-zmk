@@ -18,7 +18,7 @@
    timeout-ms = <200>; \
    bindings = BINDINGS; \
    key-positions = <KEYPOS>; \
-   layers = <0>; \
+   layers = <0 1>; \
 };
 
 #define STRINGIFY(x) #x
