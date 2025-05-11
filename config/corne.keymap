@@ -67,10 +67,10 @@
     COMBO(arch, <&kp LC(B)>, 24 30)
 
     // ALT + UP
-    COMBO(up, <&kp RALT(UP)>, 41 18)
+    COMBO(up, <&kp RALT(UP)>, 41 75)
 
     // ALT + DOWN
-    COMBO(down, <&kp RALT(DOWN)>, 41 30)
+    COMBO(down, <&kp RALT(DOWN)>, 41 76)
   };
 };
  
