@@ -91,7 +91,7 @@
 // --------------------------------------------------------------------------------------------------------
 // |  ESC   |  ,  |  !  |  Ñ     |  P    |  Y    |            |  F    |  G    |  C    |  H  |  L  |  BSPC |
 // |  GUI   |  A  |  O  |  E     |  U    |  I    |            |  D    |  R    |  T    |  N  |  S  |  DEL  |
-// |  CTRL  |  .  |  Q  |  J     |  K    |  X    |            |  B    |  M    |  W    |  V  |  Z  |  TAB  |
+// |  CTRL  |  .  |  Q  |  J     |  K    |  X    |            |  B    |  M    |  W    |  V  |  Z  |  TAB  |rey
 //                      |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SIM  |  ALT  |
 
                         bindings = < 
