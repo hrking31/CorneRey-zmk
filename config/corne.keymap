@@ -77,16 +77,16 @@
     COMBO(down, <&kp LA(DOWN)>, 12 25)
 
     // SHFT + RIGHT
-    COMBO(selright, <&kp LSHFT(RIGHT)>, 30 19)
+    COMBO(selright, <&kp LS(RIGHT)>, 30 19)
 
     // SHFT  + LEFT
-    COMBO(selleft, <&kp LSHFT(LEFT)>, 30 12)
+    COMBO(selleft, <&kp LS(LEFT)>, 30 12)
 
     // SHFT  + UP
-    COMBO(selup, <&kp LSHFT(UP)>, 30 15)
+    COMBO(selup, <&kp LS(UP)>, 30 15)
 
     // SHFT + DOWN
-    COMBO(seldown, <&kp LSHFT(DOWN)>, 30 25)
+    COMBO(seldown, <&kp LS(DOWN)>, 30 25)
 
     // CTRL + }
     COMBO(comentar, <&kp LC(BSLH)>, 30 22)
@@ -163,10 +163,10 @@
 //                                 |       |  NUM  |  SPC     |            |  ENT       |  SYM     |       |
 
                         bindings = <
-   &kp  F1           &kp  F2        &kp  F3        &kp  F4        &kp  F5        &kp  F6                   &kp  F7          &kp  F8    &kp  F9      &kp  F10       &kp  F11       &kp  F12
-   &bt  BT_CLR       &bt  BT_SEL 0  &bt  BT_SEL 1  &bt  BT_SEL 2  &bt  BT_SEL 3  &bt  BT_SEL 4             &kp  C_PREV      &kp  C_PP  &kp  C_NEXT  &kp  C_VOL_DN  &kp  C_MUTE    &kp  C_VOL_UP
-   &kp  LSHFT(LEFT)  &mcr_selleft   &none          &none          &none          &kp  LSHFT(UP)            &kp LSHFT(DOWN)  &none      &none        &none          &mcr_selright  &kp LSHFT(RIGHT)
-                                                   &none          &trans         &trans                    &trans           &trans     &none
+   &kp  F1           &kp  F2        &kp  F3        &kp  F4        &kp  F5        &kp  F6                   &kp  F7       &kp  F8    &kp  F9      &kp  F10       &kp  F11       &kp  F12
+   &bt  BT_CLR       &bt  BT_SEL 0  &bt  BT_SEL 1  &bt  BT_SEL 2  &bt  BT_SEL 3  &bt  BT_SEL 4             &kp  C_PREV   &kp  C_PP  &kp  C_NEXT  &kp  C_VOL_DN  &kp  C_MUTE    &kp  C_VOL_UP
+   &kp  LS(LEFT)     &mcr_selleft   &none          &none          &none          &kp  LS(UP)               &kp LS(DOWN)  &none      &none        &none          &mcr_selright  &kp LS(RIGHT)
+                                                   &none          &trans         &trans                    &trans        &trans     &none
                         >;
                 };
         };
