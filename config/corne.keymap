@@ -89,7 +89,7 @@
     COMBO(seldown, <&kp LSHFT(DOWN)>, 30 25)
 
     // CTRL + }
-    COMBO(comentar, <&kp LC(BSLH)>, 30 25)
+    COMBO(comentar, <&kp LC(BSLH)>, 30 22)
 
   };
 };
