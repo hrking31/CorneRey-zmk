@@ -71,6 +71,11 @@
 
     // ALT + DOWN
     COMBO(down, <&kp LA(DOWN)>, 36 27)
+
+    // ALT + TAB
+    COMBO(vista, <&kp LA(TAB)>, 41 35)
+
+
   };
 };
  
@@ -95,7 +100,7 @@
 //                      |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SIM  |  RALT  |
 
                         bindings = < 
-   &kp  ESC    &kp  COMMA  &kp  EXCL  &kp  NTIL    &kp  P    &kp  Y            &kp  F    &kp  G    &kp  C     &kp  H  &kp  L  &kp  BSPC
+   &kp  ESC    &kp  COMMA  &kp  EXCL  &kp  SEMI    &kp  P    &kp  Y            &kp  F    &kp  G    &kp  C     &kp  H  &kp  L  &kp  BSPC
    &kp  LGUI   &kp  A      &kp  O     &kp  E       &kp  U    &kp  I            &kp  D    &kp  R    &kp  T     &kp  N  &kp  S  &kp  DEL
    &kp  LCTRL  &kp  DOT    &kp  Q     &kp  J       &kp  K    &kp  X            &kp  B    &kp  M    &kp  W     &kp  V  &kp  Z  &kp  TAB
                                       &kp  LSHFT   &mo  NUM  &kp  SPACE        &kp  RET  &mo  SYM  &kp  RALT
@@ -104,16 +109,16 @@
 
                  number_layer {
             label = "NUM";
-// -------------------------------------------------------------------------------------------------------------------------------------------
-// |  1       |  2       |  3     |  4     |  5     |  6     |            |  7      |  8        |  9       |  0        |  CONSLA    |  BSPC  |
-// |  LEFT    |  HOME    |  END   |  PGUP  |  PGDN  |  ATRA  |            |  UP     |  COPY     |  PASTE   |  CUT      |  RIGHT     |  DEL   |
-// |  CODELF  |  CODERG  |        |        |        |  ADEL  |            |  DOWN   |  ARCHIVO  |  CONFIG  |  CODEUP   |  CODEDOWN  |        |
+// --------------------------------------------------------------------------------------------------------------------------------------------
+// |  1       |  2       |  3     |  4     |  5     |  6     |            |  7      |  8        |  9       |  0        |  CONSLA    |  BSPC   |
+// |  LEFT    |  HOME    |  END   |  PGUP  |  PGDN  |  ATRA  |            |  UP     |  COPY     |  PASTE   |  CUT      |  RIGHT     |  DEL    |
+// |  CODELF  |  CODERG  |        |        |        |  ADEL  |            |  DOWN   |  ARCHIVO  |  CONFIG  |  CODEUP   |  CODEDOWN  |  VISTA  |
 //                                |        |  NUM   |  SPC   |            |  ENT    |  SYM      |  RALT    |
 
                         bindings = <
    &kp  N1    &kp  N2     &kp  N3   &kp  N4     &kp  N5     &kp  N6                &kp  N7     &kp  N8     &kp  N9      &kp  N0      &kp  LC(J)     &trans
    &kp  LEFT  &kp  HOME   &kp  END  &kp  PG_UP  &kp  PG_DN  &kp LC(Z)              &kp  UP     &kp  LC(C)  &kp  LC(V)   &kp  LC(X)   &kp  RIGHT     &trans
-   &mcr_left  &mcr_right  &none     &none       &none       &kp LC(Y)              &kp  DOWN   &kp  LC(B)  &mcr_config  &kp  LA(UP)  &kp  LA(DOWN)  &none
+   &mcr_left  &mcr_right  &none     &none       &none       &kp LC(Y)              &kp  DOWN   &kp  LC(B)  &mcr_config  &kp  LA(UP)  &kp  LA(DOWN)  &kp LA(TAB)
                                     &none       &trans      &trans                 &trans      &trans      &trans  
                         >;
                 };
