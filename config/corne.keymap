@@ -40,6 +40,8 @@
     MACRO(right, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT &macro_release &kp LCTRL)
     MACRO(wleft, &macro_press &kp LCTRL &macro_press &kp RGUI &macro_tap &kp LEFT &macro_release &kp RGUI &macro_release &kp LCTRL)
     MACRO(wright, &macro_press &kp LCTRL &macro_press &kp RGUI &macro_tap &kp RIGHT &macro_release &kp RGUI &macro_release &kp LCTRL)
+    MACRO(selright, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp RIGHT &macro_release &kp RSHFT &macro_release &kp LCTRL)
+    MACRO(selleft, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp LEFT &macro_release &kp RSHFT &macro_release &kp LCTRL)
   };
 };
 
@@ -69,10 +71,22 @@
     COMBO(arch, <&kp LC(B)>, 24 30)
 
     // ALT + UP
-    COMBO(up, <&kp LA(UP)>, 34 18)
+    COMBO(up, <&kp LA(UP)>, 12 15)
 
     // ALT + DOWN
-    COMBO(down, <&kp LA(DOWN)>, 34 27)
+    COMBO(down, <&kp LA(DOWN)>, 12 25)
+
+    // SHFT + RIGHT
+    COMBO(selright, <&kp LSHFT(RIGHT)>, 30 19)
+
+    // SHFT  + LEFT
+    COMBO(selleft, <&kp LSHFT(LEFT)>, 30 12)
+
+    // SHFT  + UP
+    COMBO(selup, <&kp LSHFT(UP)>, 30 15)
+
+    // SHFT + DOWN
+    COMBO(seldown, <&kp LSHFT(DOWN)>, 30 25)
 
   };
 };
@@ -111,7 +125,7 @@
 // |  1        |  2       |  3     |  4     |  5          |  6     |            |  7      |  8        |  9       |  0        |  CONSLA   |  BSPC     |
 // |  LEFT     |          |        |        |  CODE-UP    |  ATRA  |            |  UP     |  COPY     |  PASTE   |  CUT      |  RIGHT    |  DEL      |
 // |  CODE-LF  |  W-LEFT  |        |        |  CODE-DOWN  |  ADEL  |            |  DOWN   |  ARCHIVO  |  CONFIG  |           |  W-RIGHT  |  COD-ERG  |
-//                                 |        |  NUM        |  SPC   |            |  ENT    |  SYM      |  GUI     |
+//                                 |  SHFT  |  NUM        |  SPC   |            |  ENT    |  SYM      |  GUI     |
 
                         bindings = <
    &kp  N1    &kp  N2     &kp  N3   &kp  N4  &kp  N5        &kp  N6                &kp  N7     &kp  N8     &kp  N9      &kp  N0     &kp  LC(J)     &trans
@@ -139,17 +153,17 @@
 
                  function_layer {
             label = "FUN";
-// --------------------------------------------------------------------------------------------------------------------------------
-// |  F1      |  F2   |  F3   |  F4   |  F5   |  F6      |            |  F7        |  F8      |  F9   |  F10   |   F11  |  F12    |
-// |  BTCLR   |  BT1  |  BT2  |  BT3  |  BT4  |  BT5     |            |  PRV       |  PLAY/P  |  NXT  |  VOL-  |  MUTE  |  VOL+   |
-// |  SEL-L   |       |       |       |       |  SEL-UP  |            |  SEL-DOWN  |          |       |        |        |  SEL-R  |
-//                            |       |  NUM  |  SPC     |            |  ENT       |  SYM     |       |
+// ------------------------------------------------------------------------------------------------------------------------------------------
+// |  F1       |  F2       |  F3   |  F4   |  F5   |  F6      |            |  F7        |  F8      |  F9   |  F10   |   F11     |  F12      |
+// |  BTCLR    |  BT1      |  BT2  |  BT3  |  BT4  |  BT5     |            |  PRV       |  PLAY/P  |  NXT  |  VOL-  |  MUTE     |  VOL+     |
+// |  SEL-L-L  |  SEL-L-P  |       |       |       |  SEL-UP  |            |  SEL-DOWN  |          |       |        |  SEL-R-P  |  SEL-R-L  |
+//                                 |       |  NUM  |  SPC     |            |  ENT       |  SYM     |       |
 
                         bindings = <
-   &kp  F1                &kp  F2        &kp  F3        &kp  F4        &kp  F5        &kp  F6                               &kp  F7               &kp  F8    &kp  F9      &kp  F10       &kp  F11     &kp  F12
-   &bt  BT_CLR            &bt  BT_SEL 0  &bt  BT_SEL 1  &bt  BT_SEL 2  &bt  BT_SEL 3  &bt  BT_SEL 4                         &kp  C_PREV           &kp  C_PP  &kp  C_NEXT  &kp  C_VOL_DN  &kp  C_MUTE  &kp  C_VOL_UP
-   &kp_combo LSHFT LEFT   &none          &none          &none          &none          &kp_combo LSHFT UP                    &kp_combo LSHFT DOWN  &none      &none        &none          &none        &kp_combo LSHFT RIGHT
-                                                        &none          &trans         &trans                                &trans                &trans     &none
+   &kp  F1           &kp  F2        &kp  F3        &kp  F4        &kp  F5        &kp  F6                   &kp  F7          &kp  F8    &kp  F9      &kp  F10       &kp  F11       &kp  F12
+   &bt  BT_CLR       &bt  BT_SEL 0  &bt  BT_SEL 1  &bt  BT_SEL 2  &bt  BT_SEL 3  &bt  BT_SEL 4             &kp  C_PREV      &kp  C_PP  &kp  C_NEXT  &kp  C_VOL_DN  &kp  C_MUTE    &kp  C_VOL_UP
+   &kp  LSHFT(LEFT)  &mcr_selleft   &none          &none          &none          &kp  LSHFT(UP)            &kp LSHFT(DOWN)  &none      &none        &none          &mcr_selright  &kp LSHFT(RIGHT)
+                                                   &none          &trans         &trans                    &trans           &trans     &none
                         >;
                 };
         };
