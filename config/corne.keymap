@@ -38,6 +38,8 @@
     MACRO(config, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp B &macro_release &kp LALT &macro_release &kp LCTRL)
     MACRO(left, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT &macro_release &kp LCTRL)
     MACRO(right, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(wleft, &macro_press &kp LCTRL &macro_press &kp GUI &macro_tap &kp LEFT &macro_release &kp GUI &macro_release &kp LCTRL)
+    MACRO(wright, &macro_press &kp LCTRL &macro_press &kp GUI &macro_tap &kp RIGHT &macro_release &kp GUI &macro_release &kp LCTRL)
   };
 };
 
@@ -72,10 +74,6 @@
     // ALT + DOWN
     COMBO(down, <&kp LA(DOWN)>, 36 27)
 
-    // ALT + TAB
-    COMBO(vista, <&kp LA(TAB)>, 41 35)
-
-
   };
 };
  
@@ -93,49 +91,49 @@
 
                    default_layer {
             label = "DEF";
-// ---------------------------------------------------------------------------------------------------------
-// |  ESC   |  ,  |  !  |  Ñ     |  P    |  Y    |            |  F    |  G    |  C     |  H  |  L  |  BSPC |
-// |  GUI   |  A  |  O  |  E     |  U    |  I    |            |  D    |  R    |  T     |  N  |  S  |  DEL  |
-// |  CTRL  |  .  |  Q  |  J     |  K    |  X    |            |  B    |  M    |  W     |  V  |  Z  |  TAB  |
-//                      |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SIM  |  RALT  |
+// --------------------------------------------------------------------------------------------------------
+// |  ESC   |  ,  |  !  |  Ñ     |  P    |  Y    |            |  F    |  G    |  C    |  H  |  L  |  BSPC |
+// |  TAB   |  A  |  O  |  E     |  U    |  I    |            |  D    |  R    |  T    |  N  |  S  |  DEL  |
+// |  CTRL  |  .  |  Q  |  J     |  K    |  X    |            |  B    |  M    |  W    |  V  |  Z  |  GUI  |
+//                      |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SIM  |  ALT  |
 
                         bindings = < 
    &kp  ESC    &kp  COMMA  &kp  EXCL  &kp  SEMI    &kp  P    &kp  Y            &kp  F    &kp  G    &kp  C     &kp  H  &kp  L  &kp  BSPC
-   &kp  LGUI   &kp  A      &kp  O     &kp  E       &kp  U    &kp  I            &kp  D    &kp  R    &kp  T     &kp  N  &kp  S  &kp  DEL
-   &kp  LCTRL  &kp  DOT    &kp  Q     &kp  J       &kp  K    &kp  X            &kp  B    &kp  M    &kp  W     &kp  V  &kp  Z  &kp  TAB
-                                      &kp  LSHFT   &mo  NUM  &kp  SPACE        &kp  RET  &mo  SYM  &kp  RALT
+   &kp  TAB    &kp  A      &kp  O     &kp  E       &kp  U    &kp  I            &kp  D    &kp  R    &kp  T     &kp  N  &kp  S  &kp  DEL
+   &kp  LCTRL  &kp  DOT    &kp  Q     &kp  J       &kp  K    &kp  X            &kp  B    &kp  M    &kp  W     &kp  V  &kp  Z  &kp  GUI
+                                      &kp  LSHFT   &mo  NUM  &kp  SPACE        &kp  RET  &mo  SYM  &kp  ALT
                         >;
                 };
 
                  number_layer {
             label = "NUM";
-// --------------------------------------------------------------------------------------------------------------------------------------------
-// |  1       |  2       |  3     |  4     |  5     |  6     |            |  7      |  8        |  9       |  0        |  CONSLA    |  BSPC   |
-// |  LEFT    |  HOME    |  END   |  PGUP  |  PGDN  |  ATRA  |            |  UP     |  COPY     |  PASTE   |  CUT      |  RIGHT     |  DEL    |
-// |  CODELF  |  CODERG  |        |        |        |  ADEL  |            |  DOWN   |  ARCHIVO  |  CONFIG  |  CODEUP   |  CODEDOWN  |  VISTA  |
-//                                |        |  NUM   |  SPC   |            |  ENT    |  SYM      |  RALT    |
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+// |  1       |  2      |  3     |  4     |  5         |  6     |            |  7      |  8        |  9       |  0        |  CONSLA  |  BSPC    |
+// |  LEFT    |         |        |        |  CODEUP    |  ATRA  |            |  UP     |  COPY     |  PASTE   |  CUT      |  RIGHT   |  DEL     |
+// |  CODELF  |  WLEFT  |        |        |  CODEDOWN  |  ADEL  |            |  DOWN   |  ARCHIVO  |  CONFIG  |           |  WRIGHT  |  CODERG  |
+//                               |        |  NUM       |  SPC   |            |  ENT    |  SYM      |  RALT    |
 
                         bindings = <
-   &kp  N1    &kp  N2     &kp  N3   &kp  N4     &kp  N5     &kp  N6                &kp  N7     &kp  N8     &kp  N9      &kp  N0      &kp  LC(J)     &trans
-   &kp  LEFT  &kp  HOME   &kp  END  &kp  PG_UP  &kp  PG_DN  &kp LC(Z)              &kp  UP     &kp  LC(C)  &kp  LC(V)   &kp  LC(X)   &kp  RIGHT     &trans
-   &mcr_left  &mcr_right  &none     &none       &none       &kp LC(Y)              &kp  DOWN   &kp  LC(B)  &mcr_config  &kp  LA(UP)  &kp  LA(DOWN)  &kp LA(TAB)
-                                    &none       &trans      &trans                 &trans      &trans      &trans  
+   &kp  N1    &kp  N2     &kp  N3   &kp  N4     &kp  N5        &kp  N6                &kp  N7     &kp  N8     &kp  N9      &kp  N0     &kp  LC(J)     &trans
+   &kp  LEFT  &kp         &kp        &kp        &kp  LA(UP)    &kp LC(Z)              &kp  UP     &kp  LC(C)  &kp  LC(V)   &kp  LC(X)  &kp  RIGHT     &trans
+   &mcr_left  &mcr_wleft  &none     &none       &kp  LA(DOWN)  &kp LC(Y)              &kp  DOWN   &kp  LC(B)  &mcr_config  &none       &mcr_wright    &mcr_right
+                                    &trans       &trans         &trans                 &trans      &trans      &trans  
                         >;
                 };
 
                symbol_layer {
             label = "SYM";
 // ------------------------------------------------------------------------------------------------------
-// |  ESC   |  !  |  @  |  #  |  $    |  %    |            |  ^    |  &    |  *  |  (  |  )    |  BSPC  |
-// |  GUI   |  "  |  '  |  `  |  <    |  >    |            |  -    |  =    |  [  |  ]  |  \    |  DEL   |
-// |  CTRL  |  `  |  ~  |     |       |       |            |  _    |  +    |  {  |  }  |  "|"  |        |
-//                      |     |  NUM  |  SPC  |            |  ENT  |  SYM  |     |
+// |  HOME  |  !  |  @  |  #  |  $     |  %     |            |  ^    |  &    |  *  |  (  |  )    |  BSPC  |
+// |  END   |  "  |  '  |  `  |  <     |  >     |            |  -    |  =    |  [  |  ]  |  \    |  DEL   |
+// |        |  `  |  ~  |     |  PGUP  |  PGDN  |            |  _    |  +    |  {  |  }  |  "|"  |        |
+//                      |     |  NUM   |  SPC   |            |  ENT  |  SYM  |     |
 
                         bindings = <
-   &trans  &kp  EXCL   &kp  AT          &kp  HASH   &kp  DLLR  &kp  PRCNT            &kp  CARET  &kp  AMPS   &kp  ASTRK  &kp  LPAR  &kp  RPAR  &trans
-   &trans  &kp  DQT    &kp  APOSTROPHE  &kp  GRAVE  &kp LT     &kp  DOT              &kp  MINUS  &kp  EQUAL  &kp  LBKT   &kp  RBKT  &kp  BSLH  &trans
-   &trans  &kp  TILDE  &kp  GRAVE       &none       &none      &none                 &kp  UNDER  &kp  PLUS   &kp  LBRC   &kp  RBRC  &kp  PIPE  &none
-                                        &none       &trans     &trans                &trans      &trans      &trans
+   &kp  HOME  &kp  EXCL   &kp  AT          &kp  HASH   &kp  DLLR   &kp  PRCNT            &kp  CARET  &kp  AMPS   &kp  ASTRK  &kp  LPAR  &kp  RPAR  &trans
+   &kp END    &kp  DQT    &kp  APOSTROPHE  &kp  GRAVE  &kp LT      &kp  DOT              &kp  MINUS  &kp  EQUAL  &kp  LBKT   &kp  RBKT  &kp  BSLH  &trans
+   &none      &kp  TILDE  &kp  GRAVE       &none       &kp  PG_UP  &kp  PG_DN            &kp  UNDER  &kp  PLUS   &kp  LBRC   &kp  RBRC  &kp  PIPE  &none
+                                           &none       &trans      &trans                &trans      &trans      &trans
                         >;
                 };
 
