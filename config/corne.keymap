@@ -90,7 +90,7 @@
     // SHFT + DOWN
     COMBO(seldown, <&kp LS(DOWN)>, 36 18)
 
-    // CTRL + }
+    // CTRL + llaves
     COMBO(comentar, <&kp LC(BSLH)>, 24 22)
 
     // RALT + Q
@@ -148,7 +148,7 @@
 // -----------------------------------------------------------------------------------------------------------
 // |  ESC   |  !  |  @  |  #     |  $    |  %    |            |  ^    |  &    |  *    |  (  |  )    |  BSPC  |
 // |  ALT   |  "  |  '  |  `     |  <    |  >    |            |  -    |  =    |  [    |  ]  |  \    |  DEL   |
-// |  CTRL  |  `  |  ~  |        |       |       |            |  _    |  +    |  {    |  }  |  "|"  |  TAB  |
+// |  CTRL  |  `  |  ~  |        |       |       |            |  _    |  +    |  {    |  }  |  "|"  |  TAB   |
 //                      |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SYM  |  GUI  |
 
                         bindings = <
@@ -168,10 +168,10 @@
 //                                  |  SHFT  |  NUM  |  SPC       |            |  ENT   |  SYM  |  GUI  |
 
                         bindings = <
-   &trans  &mcr_selleft  &mcr_wleft  &none   &none   &kp  LS(UP)                &kp  UP    &none   &none  &mcr_wright  &mcr_selright  &trans
-   &trans  &kp  LEFT     &mcr_left   &none   &none   &none                      &none      &none   &none  &mcr_right   &kp  RIGHT     &trans
-   &trans  LS(LEFT)      &kp  PG_UP  &none   &none   &kp LS(DOWN)               &kp  DOWN  &none   &none  &kp  PG_DN   &kp LS(RIGHT)  &trans
-                                     &trans  &trans  &trans                     &trans     &trans  &trans
+   &trans  &mcr_selleft   &mcr_wleft  &none   &none   &kp  LS(UP)                &kp  UP    &none   &none  &mcr_wright  &mcr_selright  &trans
+   &trans  &kp  LEFT      &mcr_left   &none   &none   &none                      &none      &none   &none  &mcr_right   &kp  RIGHT     &trans
+   &trans  &kp  LS(LEFT)  &kp  PG_UP  &none   &none   &kp LS(DOWN)               &kp  DOWN  &none   &none  &kp  PG_DN   &kp LS(RIGHT)  &trans
+                                      &trans  &trans  &trans                     &trans     &trans  &trans
                         >;
                 };
 
