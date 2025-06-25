@@ -151,16 +151,16 @@
                symbol_layer {
             label = "SYM";
 // -----------------------------------------------------------------------------------------------------------
-// |  ESC   |  !  |  @  |  #     |  $    |  %    |            |  ^    |  &    |  *    |  (  |  )    |  BSPC  |
-// |  ALT   |  "  |  '  |  `     |  <    |  >    |            |  -    |  =    |  [    |  ]  |  \    |  DEL   |
-// |  CTRL  |  `  |  ~  |        |       |       |            |  _    |  +    |  {    |  }  |  "|"  |  TAB   |
+// |  ESC   |  ¡  |  "  |  #     |  $    |  %    |            |       |       |  '    |  ´  |  !   |  BSPC  |
+// |  ALT   |  [  |  {  |  (     |  |    |  ¿    |            |  ?    |  &    |   )   |  }  |  ]   |  DEL   |   
+// |  CTRL  |  +  |     |  *     |  /    |  =    |            |       |       |       |     |  °   |  TAB   |
 //                      |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SYM  |       |
 
                         bindings = <
-   &trans  &kp  EXCL   &kp  AT          &kp  HASH   &kp  DLLR  &kp  PRCNT            &kp  CARET  &kp  AMPS   &kp  ASTRK  &kp  LPAR  &kp  RPAR  &trans
-   &trans  &kp  DQT    &kp  APOSTROPHE  &kp  GRAVE  &kp  LT    &kp  DOT              &kp  MINUS  &kp  EQUAL  &kp  LBKT   &kp  RBKT  &kp  BSLH  &trans
-   &trans  &kp  TILDE  &kp  GRAVE       &none       &none      &none                 &kp  UNDER  &kp  PLUS   &kp  LBRC   &kp  RBRC  &kp  PIPE  &trans
-                                        &trans      &trans     &trans                &trans      &trans      &none
+   &trans  &kp  PLUS   &kp  AT          &kp  HASH   &kp  DLLR   &kp  PRCNT             &none       &none       &kp  MINUS  &kp  LBKT  &kp  EXCL   &trans
+   &trans  &kp  DQT    &kp  APOSTROPHE  &kp  ASTRK  &kp  GRAVE  &kp  EQUAL             &kp  UNDER  &kp  CARET  &kp  LPAR   &kp  BSLH  &kp  PIPE   &trans
+   &trans  &kp  RBKT   &none            &kp  RBRC   &kp  AMPS   &kp  RPAR              &none       &none       &none       &none      &kp  TILDE  &trans
+                                        &trans      &trans      &trans                 &trans      &trans      &trans
                         >;
                 };
 
