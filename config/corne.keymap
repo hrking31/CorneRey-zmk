@@ -97,10 +97,10 @@
     COMBO(arroba, <&kp RA(Q)>, 12 26)
 
     // CTRL + A
-    COMBO(copy, <&kp LC(A)>, 24 13)
+    COMBO(narchivo, <&kp LC(A)>, 24 13)
 
     // CTRL + E
-    COMBO(copy, <&kp LC(E)>, 24 15)
+    COMBO(ncarpeta, <&kp LC(E)>, 24 15)
   };
 };
  
