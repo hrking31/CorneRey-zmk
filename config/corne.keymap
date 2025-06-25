@@ -73,25 +73,25 @@
     COMBO(arch, <&kp LC(B)>, 24 30)
 
     // ALT + UP
-    COMBO(up, <&kp LA(UP)>, 12 15)
+    COMBO(up, <&kp LA(UP)>, 12 4)
 
     // ALT + DOWN
-    COMBO(down, <&kp LA(DOWN)>, 12 25)
+    COMBO(down, <&kp LA(DOWN)>, 12 18)
 
     // SHFT + RIGHT
-    COMBO(selright, <&kp LS(RIGHT)>, 30 19)
+    COMBO(selright, <&kp LS(RIGHT)>, 36 12)
 
     // SHFT  + LEFT
-    COMBO(selleft, <&kp LS(LEFT)>, 30 12)
+    COMBO(selleft, <&kp LS(LEFT)>, 36 9)
 
     // SHFT  + UP
-    COMBO(selup, <&kp LS(UP)>, 30 15)
+    COMBO(selup, <&kp LS(UP)>, 36 4)
 
     // SHFT + DOWN
-    COMBO(seldown, <&kp LS(DOWN)>, 30 25)
+    COMBO(seldown, <&kp LS(DOWN)>, 36 18)
 
     // CTRL + }
-    COMBO(comentar, <&kp LC(BSLH)>, 30 22)
+    COMBO(comentar, <&kp LC(BSLH)>, 24 22)
 
     // RALT + Q
     COMBO(arroba, <&kp RA(Q)>, 12 26)
