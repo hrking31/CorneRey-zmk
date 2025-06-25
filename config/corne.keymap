@@ -132,7 +132,7 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC   |  0  |  1  |  2     |  3          |  4     |            |  5       |  6      |  7        |  8        |  9    |  BSPC  |
 // |  ALT   |     |     |  HOME  |  CODE-UP    |  ATRA  |            |  COPY    |  PASTE  |  CUT      |  COMENTA  |       |  DEL   |
-// |  CTRL  |     |     |  END   |  CODE-DOWN  |  ADEL  |            |  CONFIG  |  CONSL  |  ARCHIVO  |  FOCO-A   |  W-R  |  TAB   |
+// |  CTRL  |     |     |  END   |  CODE-DOWN  |  ADEL  |            |  CONFIG  |  CONSL  |  ARCHIVO  |  FOCO-A   |       |  TAB   |
 //                      |  SHFT  |  NUM        |  SPC   |            |  ENT     |  SYM    |  GUI      |
 
                         bindings = <
@@ -146,16 +146,16 @@
                symbol_layer {
             label = "SYM";
 // --------------------------------------------------------------------------------------------------------
-// |  HOME  |  !  |  @  |  #  |  $    |  %    |            |  ^    |  &    |  *    |  (  |  )    |  BSPC  |
-// |  END   |  "  |  '  |  `  |  <    |  >    |            |  -    |  =    |  [    |  ]  |  \    |  DEL   |
-// |  PGUP  |  `  |  ~  |     |       |       |            |  _    |  +    |  {    |  }  |  "|"  |  PGDN  |
-//                      |     |  NUM  |  SPC  |            |  ENT  |  SYM  |  ALT  |
+// |  ESC   |  !  |  @  |  #     |  $    |  %    |            |  ^    |  &    |  *    |  (  |  )    |  BSPC  |
+// |  ALT   |  "  |  '  |  `     |  <    |  >    |            |  -    |  =    |  [    |  ]  |  \    |  DEL   |
+// |  CTRL  |  `  |  ~  |        |       |       |            |  _    |  +    |  {    |  }  |  "|"  |  TAB  |
+//                      |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SYM  |  GUI  |
 
                         bindings = <
-   &none  &kp  EXCL   &kp  AT          &kp  HASH   &kp  DLLR  &kp  PRCNT            &kp  CARET  &kp  AMPS   &kp  ASTRK  &kp  LPAR  &kp  RPAR  &trans
-   &none  &kp  DQT    &kp  APOSTROPHE  &kp  GRAVE  &kp  LT    &kp  DOT              &kp  MINUS  &kp  EQUAL  &kp  LBKT   &kp  RBKT  &kp  BSLH  &trans
-   &none  &kp  TILDE  &kp  GRAVE       &none       &none      &none                 &kp  UNDER  &kp  PLUS   &kp  LBRC   &kp  RBRC  &kp  PIPE  &kp  PG_DN
-                                       &trans      &trans     &trans                &trans      &trans      &trans
+   &trans  &kp  EXCL   &kp  AT          &kp  HASH   &kp  DLLR  &kp  PRCNT            &kp  CARET  &kp  AMPS   &kp  ASTRK  &kp  LPAR  &kp  RPAR  &trans
+   &trans  &kp  DQT    &kp  APOSTROPHE  &kp  GRAVE  &kp  LT    &kp  DOT              &kp  MINUS  &kp  EQUAL  &kp  LBKT   &kp  RBKT  &kp  BSLH  &trans
+   &trans  &kp  TILDE  &kp  GRAVE       &none       &none      &none                 &kp  UNDER  &kp  PLUS   &kp  LBRC   &kp  RBRC  &kp  PIPE  &trans
+                                        &trans      &trans     &trans                &trans      &trans      &trans
                         >;
                 };
 
