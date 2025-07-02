@@ -160,7 +160,7 @@
    &trans  &kp  PLUS   &kp  AT          &kp  HASH   &kp  DLLR   &kp  PRCNT             &none       &none       &kp  MINUS  &kp  LBKT  &kp  EXCL   &trans
    &trans  &kp  DQT    &kp  APOSTROPHE  &kp  ASTRK  &kp  GRAVE  &kp  EQUAL             &kp  UNDER  &kp  CARET  &kp  LPAR   &kp  BSLH  &kp  PIPE   &trans
    &trans  &kp  RBKT   &none            &kp  RBRC   &kp  AMPS   &kp  RPAR              &none       &none       &none       &none      &kp  TILDE  &trans
-                                        &trans      &trans      &trans                 &trans      &trans      &trans
+                                        &trans      &trans      &trans                 &trans      &trans      &none
                         >;
                 };
 
