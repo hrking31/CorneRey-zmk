@@ -37,10 +37,8 @@
     bindings = <BINDINGS>; \
   };
 
-/ {
 &led_strip {
     chain-length = <27>;
-};
 };
 
 / {
