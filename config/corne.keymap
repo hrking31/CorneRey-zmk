@@ -37,12 +37,10 @@
     bindings = <BINDINGS>; \
   };
 
-/ {
-    rgb_underglow: rgb_underglow {
-        compatible = "zmk,rgb-underglow";
-        chain-length = <27>; 
-        color-mapping = <LED_COLOR_MAPPING_GRB>;
-    };
+rgb_underglow: rgb_underglow {
+compatible = "zmk,rgb-underglow";
+chain-length = <27>; 
+color-mapping = <LED_COLOR_MAPPING_GRB>;
 };
 
 / {
