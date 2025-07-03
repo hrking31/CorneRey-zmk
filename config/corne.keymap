@@ -106,6 +106,13 @@
     COMBO(ncarpeta, <&kp LC(E)>, 24 15)
   };
 };
+
+/ {
+    // Aquí puedes definir nodos adicionales como este
+    &led_strip {
+        chain-length = <21>;
+    };
+};
  
  / {
     conditional_layers {
@@ -188,7 +195,7 @@
 // ------------------------------------------------------------------------------------------------------------------------
 // |  F1    |  F2     |  F3   |  F4     |  F5   |  F6   |            |  F7   |  F8      |  F9   |  F10   |   F11  |  F12   |
 // |  ALT   |  BT1    |  BT2  |  BT3    |  BT4  |  BT5  |            |  PRV  |  PLAY/P  |  NXT  |  VOL-  |  MUTE  |  VOL+  |
-// |  CTRL  |  BTCLR  |  RGB  |  POWER  |  C-B  |       |            |       |  + B     |  - B  |  + E   |  - E   |  TAB   |
+// |  CTRL  |  BTCLR  |  RGB  |  POWER  |  C-B  |       |            |  + B  |  - B     |  + E  |  - E   |        |  TAB   |
 //                            |  SHFT   |  NUM  |  SPC  |            |  ENT  |  SYM     |       |
 
                         bindings = <
