@@ -107,12 +107,6 @@
   };
 };
 
-/ {
-&led_strip {
-    chain-length = <27>;
-};
-}
- 
  / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
