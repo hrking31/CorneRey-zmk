@@ -37,8 +37,12 @@
     bindings = <BINDINGS>; \
   };
 
-&led_strip {
-    chain-length = <27>;
+/ {
+    rgb_underglow: rgb_underglow {
+        compatible = "zmk,rgb-underglow";
+        chain-length = <27>; 
+        color-mapping = <LED_COLOR_MAPPING_GRB>;
+    };
 };
 
 / {
