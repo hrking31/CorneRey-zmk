@@ -38,6 +38,12 @@
   };
 
 / {
+&led_strip {
+    chain-length = <27>;
+};
+};
+
+/ {
   macros {
     MACRO(config, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp B &macro_release &kp LALT &macro_release &kp LCTRL)
     MACRO(left, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT &macro_release &kp LCTRL)
