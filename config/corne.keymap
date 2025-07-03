@@ -108,11 +108,10 @@
 };
 
 / {
-    // Aquí puedes definir nodos adicionales como este
-    &led_strip {
-        chain-length = <21>;
-    };
+&led_strip {
+    chain-length = <21>;
 };
+}
  
  / {
     conditional_layers {
