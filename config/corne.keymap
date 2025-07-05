@@ -168,19 +168,19 @@
             label = "NAV";
 // ---------------------------------------------------------------------------------------------------------------------------------------
 // |  ESC   |  SEL-L-P  |  W-LEFT   |        |       |  SEL-UP    |            |  UP    |       |       |  W-RIGHT  |  SEL-R-P  |  BSPC  |
-// |  ALT   |  LEFT     |  CODE-LF  |        |       |            |            |        |       |       |  CODE-RG  |  RIGHT    |  DEL   |
-// |  CTRL  |  SEL-L-L  |  PGUP     |        |       |  SEL-DOWN  |            |  DOWN  |       |       |  PGDN     |  SEL-R-L  |  TAB   |
+// |  ALT   |  LEFT     |  CODE-LF  |        |       |  SEL-DOWN  |            |  DOWN  |       |       |  CODE-RG  |  RIGHT    |  DEL   |
+// |  CTRL  |  SEL-L-L  |  PGUP     |        |       |            |            |        |       |       |  PGDN     |  SEL-R-L  |  TAB   |
 //                                  |  SHFT  |  NUM  |  SPC       |            |  ENT   |  SYM  |  GUI  |
 
                         bindings = <
-   &trans  &mcr_selleft   &mcr_wleft  &none   &none   &kp  LS(UP)                &kp  UP    &none   &none  &mcr_wright  &mcr_selright  &trans
-   &trans  &kp  LEFT      &mcr_left   &none   &none   &none                      &none      &none   &none  &mcr_right   &kp  RIGHT     &trans
-   &trans  &kp  LS(LEFT)  &kp  PG_UP  &none   &none   &kp LS(DOWN)               &kp  DOWN  &none   &none  &kp  PG_DN   &kp LS(RIGHT)  &trans
-                                      &trans  &mo FUN  &trans                     &trans     &trans  &trans
+   &trans  &mcr_selleft   &mcr_wleft  &none   &none    &kp  LS(UP)                &kp  UP    &none      &none     &mcr_wright  &mcr_selright  &trans
+   &trans  &kp  LEFT      &mcr_left   &none   &none    &kp LS(DOWN)               &kp  DOWN  &none      &none     &mcr_right   &kp  RIGHT     &trans
+   &trans  &kp  LS(LEFT)  &kp  PG_UP  &none   &none    &none                      &none      &none      &none     &kp  PG_DN   &kp LS(RIGHT)  &trans
+                                      &trans  &mo FUN  &trans                     &trans     &trans     &trans
                         >;
                 };
 
-                 function_layer {
+                 led_layer {
             label = "LED";
 // ------------------------------------------------------------------------------------------------------------------------------
 // |       |          |        |        |        |        |            |        |        |        |        |          |         |
