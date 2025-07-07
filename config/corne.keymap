@@ -116,8 +116,8 @@
     // SHFT  + \
     COMBO(mayor, <&kp LS(NUBS)>, 36 4)
 
-    // RALT  + \
-    COMBO(mayor, <&kp RA(UNDER)>)
+    // RALT  + ?
+    COMBO(barra, <&kp RA(QMARK)>)
   };
 };
 
@@ -168,7 +168,7 @@
                         bindings = <
    &trans  &kp  PLUS   &kp  AT          &kp  HASH   &kp  DLLR   &kp  PRCNT             &kp  PSCRN  &none         &kp  MINUS  &kp  LBKT      &kp  EXCL   &trans
    &trans  &kp  DQT    &kp  APOSTROPHE  &kp  ASTRK  &kp  GRAVE  &kp  EQUAL             &kp  UNDER  &kp  CARET    &kp  LPAR   &kp  BSLH      &kp  PIPE   &trans
-   &trans  &kp  RBKT   &kp  SLASH       &kp  RBRC   &kp  AMPS   &kp  RPAR              &kp  NUBS   &kp LS(NUBS)  &kp  GT     &kp LS(SLASH)  &kp  TILDE  &trans
+   &trans  &kp  RBKT   &kp  SLASH       &kp  RBRC   &kp  AMPS   &kp  RPAR              &kp  NUBS   &kp LS(NUBS)  RA(QMARK)     &kp LS(SLASH)  &kp  TILDE  &trans
                                         &trans      &mo LED     &trans                 &trans      &trans        &trans
                         >;
                 };
