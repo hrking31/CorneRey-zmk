@@ -52,6 +52,7 @@
     MACRO(selright, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp RIGHT &macro_release &kp RSHFT &macro_release &kp LCTRL)
     MACRO(selleft, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp LEFT &macro_release &kp RSHFT &macro_release &kp LCTRL)
     MACRO(focoa, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp E &macro_release &kp RSHFT &macro_release &kp LCTRL)
+    MACRO(barra, &macro_press &kp LALT &macro_tap &kp N9 &macro_tap &kp N2 &macro_release &kp LALT)
   };
 };
 
@@ -166,7 +167,7 @@
                         bindings = <
    &trans  &kp  PLUS   &kp  AT          &kp  HASH   &kp  DLLR   &kp  PRCNT             &kp  PSCRN  &none         &kp  MINUS  &kp  LBKT      &kp  EXCL   &trans
    &trans  &kp  DQT    &kp  APOSTROPHE  &kp  ASTRK  &kp  GRAVE  &kp  EQUAL             &kp  UNDER  &kp  CARET    &kp  LPAR   &kp  BSLH      &kp  PIPE   &trans
-   &trans  &kp  RBKT   &kp  SLASH       &kp  RBRC   &kp  AMPS   &kp  RPAR              &kp  NUBS   &kp LS(NUBS)  &uc U+005C  &kp LS(SLASH)  &kp  TILDE  &trans
+   &trans  &kp  RBKT   &kp  SLASH       &kp  RBRC   &kp  AMPS   &kp  RPAR              &kp  NUBS   &kp LS(NUBS)  &mcr_barra  &kp LS(SLASH)  &kp  TILDE  &trans
                                         &trans      &mo LED     &trans                 &trans      &trans        &none
                         >;
                 };
