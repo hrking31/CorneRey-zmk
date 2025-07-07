@@ -115,6 +115,9 @@
 
     // SHFT  + \
     COMBO(mayor, <&kp LS(NUBS)>, 36 4)
+
+    // RALT  + \
+    COMBO(mayor, <&kp RA(UNDER)>)
   };
 };
 
