@@ -134,65 +134,65 @@
 
                  number_layer {
             label = "NUM";
-// -------------------------------------------------------------------------------------------------------------------------------------------------
-// |  ESC   |  0          |  1          |  2     |  3          |  4     |            |  5       |  6      |  7        |  8        |  9    |  BSPC  |
-// |  ALT   |  N-CARPETA  |  N-ARCHIVO  |  HOME  |  CODE-UP    |  ATRA  |            |  COPY    |  PASTE  |  CUT      |  COMENTA  |       |  DEL   |
-// |  CTRL  |             |             |  END   |  CODE-DOWN  |  ADEL  |            |  CONFIG  |  CONSL  |  ARCHIVO  |  FOCO-A   |       |  TAB   |
-//                                      |  SHFT  |  NUM        |  SPC   |            |  ENT     |  SYM    |  GUI      |
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+// |  ESC   |  0          |  1          |  2     |  3          |  4     |            |  5     |  6       |  7      |  8        |  9        |  BSPC  |
+// |  ALT   |  N-CARPETA  |  N-ARCHIVO  |  HOME  |  CODE-UP    |  ATRA  |            |  UP    |  COPY    |  PASTE  |  CUT      |  COMENTA  |  DEL   |
+// |  CTRL  |  LEFT       |  RIGHT      |  END   |  CODE-DOWN  |  ADEL  |            |  DOWN  |  CONFIG  |  CONSL  |  ARCHIVO  |  FOCO-A   |  TAB   |
+//                                      |  SHFT  |  NUM        |  SPC   |            |  ENT   |  SYM     |  GUI    |
 
                         bindings = <
-   &trans  &kp  N0    &kp  N1    &kp  N2    &kp  N3        &kp  N4                &kp  N5      &kp  N6     &kp  N7      &kp  N8        &kp  N9  &trans
-   &trans  &kp LC(A)  &kp LC(E)  &kp  HOME  &kp  LA(UP)    &kp LC(Z)              &kp  LC(C)   &kp  LC(V)  &kp  LC(X)   &kp  LC(BSLH)  &none    &trans
-   &trans  &none      &none      &kp  END   &kp  LA(DOWN)  &kp LC(Y)              &mcr_config  &kp  LC(J)  &kp  LC(B)   &mcr_focoa     &none    &trans
-                                 &trans     &trans         &trans                 &trans       &mo NAV     &trans        
+   &trans  &kp  N0    &kp  N1     &kp  N2    &kp  N3        &kp  N4                &kp  N5     &kp  N6      &kp  N7     &kp  N8      &kp  N9        &trans
+   &trans  &kp LC(A)  &kp LC(E)   &kp  HOME  &kp  LA(UP)    &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)  &kp  LC(X)   &kp  LC(BSLH)  &trans
+   &trans  &kp  LEFT  &kp  RIGHT  &kp  END   &kp  LA(DOWN)  &kp LC(Y)              &kp  DOWN   &mcr_config  &kp  LC(J)  &kp  LC(B)   &mcr_focoa     &trans
+                                  &trans     &trans         &trans                 &trans      &mo NAV      &mo FUN
                         >;
                 };
 
                symbol_layer {
             label = "SYM";
-// -----------------------------------------------------------------------------------------------------------
-// |  ESC   |  ¡  |  "  |  #     |  $    |  %    |            |       |       |  '    |  ´  |  !   |  BSPC  |
-// |  ALT   |  [  |  {  |  (     |  |    |  ¿    |            |  ?    |  &    |   )   |  }  |  ]   |  DEL   |   
-// |  CTRL  |  +  |     |  *     |  /    |  =    |            |       |       |       |     |  °   |  TAB   |
-//                      |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SYM  |  GUI  |
+// ---------------------------------------------------------------------------------------------------------------
+// |  ESC   |  ¡  |  "  |  #     |  $    |  %    |            |  P-SCREEN  |       |  '    |  ´  |  !   |  BSPC  |
+// |  ALT   |  [  |  {  |  (     |  |    |  ¿    |            |  ?         |  &    |   )   |  }  |  ]   |  DEL   |
+// |  CTRL  |  +  |  -  |  *     |  /    |  =    |            |            |       |       |  _  |  °   |  TAB   |
+//                      |  SHFT  |  NUM  |  SPC  |            |  ENT       |  SYM  |  GUI  |
 
                         bindings = <
-   &trans  &kp  PLUS   &kp  AT          &kp  HASH   &kp  DLLR   &kp  PRCNT             &none       &none       &kp  MINUS  &kp  LBKT  &kp  EXCL   &trans
-   &trans  &kp  DQT    &kp  APOSTROPHE  &kp  ASTRK  &kp  GRAVE  &kp  EQUAL             &kp  UNDER  &kp  CARET  &kp  LPAR   &kp  BSLH  &kp  PIPE   &trans
-   &trans  &kp  RBKT   &none            &kp  RBRC   &kp  AMPS   &kp  RPAR              &none       &none       &none       &none      &kp  TILDE  &trans
+   &trans  &kp  PLUS   &kp  AT          &kp  HASH   &kp  DLLR   &kp  PRCNT             &kp PSCRN   &none       &kp  MINUS  &kp  LBKT   &kp  EXCL   &trans
+   &trans  &kp  DQT    &kp  APOSTROPHE  &kp  ASTRK  &kp  GRAVE  &kp  EQUAL             &kp  UNDER  &kp  CARET  &kp  LPAR   &kp  BSLH   &kp  PIPE   &trans
+   &trans  &kp  RBKT   &kp KC_SLASH     &kp  RBRC   &kp  AMPS   &kp  RPAR              &none       &none       &none       &kp  UNDER  &kp  TILDE  &trans
                                         &trans      &mo LED     &trans                 &trans      &trans      &trans
                         >;
                 };
 
                  navigate_layer {
             label = "NAV";
-// ---------------------------------------------------------------------------------------------------------------------------------------
-// |  ESC   |  SEL-L-P  |  W-LEFT   |        |       |  SEL-UP    |            |  UP    |       |       |  W-RIGHT  |  SEL-R-P  |  BSPC  |
-// |  ALT   |  LEFT     |  CODE-LF  |        |       |  SEL-DOWN  |            |  DOWN  |       |       |  CODE-RG  |  RIGHT    |  DEL   |
-// |  CTRL  |  SEL-L-L  |  PGUP     |        |       |            |            |        |       |       |  PGDN     |  SEL-R-L  |  TAB   |
-//                                  |  SHFT  |  NUM  |  SPC       |            |  ENT   |  SYM  |  GUI  |
+// ---------------------------------------------------------------------------------------------------------------------------
+// |  ESC   |     |  PGUP    |  SEL-L-P  |       |       |            |       |       |  SEL-R-P  |  SEL-UP    |    |  BSPC  |
+// |  ALT   |     |  PGDN    |  SEL-L-L  |       |       |            |       |       |  SEL-R-L  |  SEL-DOWN  |    |  DEL   |
+// |  CTRL  |     |  W-LEFT  |  CODE-LF  |       |       |            |       |       |  CODE-RG  |  W-RIGHT   |    |  TAB   |
+//                           |  SHFT     |  NUM  |  SPC  |            |  ENT  |  SYM  |  GUI      |
 
                         bindings = <
-   &trans  &mcr_selleft   &mcr_wleft  &none   &none    &kp  LS(UP)                &kp  UP    &none      &none     &mcr_wright  &mcr_selright  &trans
-   &trans  &kp  LEFT      &mcr_left   &none   &none    &kp LS(DOWN)               &kp  DOWN  &none      &none     &mcr_right   &kp  RIGHT     &trans
-   &trans  &kp  LS(LEFT)  &kp  PG_UP  &none   &none    &none                      &none      &none      &none     &kp  PG_DN   &kp LS(RIGHT)  &trans
-                                      &trans  &mo FUN  &trans                     &trans     &trans     &trans
+   &trans  &none  &kp  PG_UP  &mcr_selleft   &none   &none               &none    &none   &mcr_selright  &kp  LS(UP)   &none  &trans
+   &trans  &none  &kp  PG_DN  &kp  LS(LEFT)  &none   &none               &none    &none   &kp LS(RIGHT)  &kp LS(DOWN)  &none  &trans
+   &trans  &none  &mcr_wleft  &mcr_left      &none   &none               &none    &none   &mcr_right     &mcr_wright   &none  &trans
+                              &trans         &trans  &trans              &trans   &trans  &trans
                         >;
                 };
 
                  led_layer {
             label = "LED";
-// ------------------------------------------------------------------------------------------------------------------------------
-// |       |          |        |        |        |        |            |        |        |        |        |          |         |
-// |  RGB  |  TONO-D  |  SA-D  |  BR-D  |  SP-D  |  EF-D  |            |  EF-I  |  SP-I  |  BR-I  |  SA-I  |  TONO-I  |  POWER  |
-// |       |          |        |        |        |        |            |        |        |        |        |          |         |
-//                             |  SHFT  |  NUM   |  SPC   |            |  ENT   |  SYM   |  GUI   |
+// ---------------------------------------------------------------------------------------------------------------
+// |     |     |  SP-D  |  EF-D    |       |       |            |       |       |  EF-I    |  SP-I   |     |     |
+// |     |     |  SA-D  |  BR-D    |       |       |            |       |       |  BR-I    |  SA-I   |     |     |
+// |     |     |  RGB   |  TONO-D  |       |       |            |       |       |  TONO-I  |  POWER  |     |     |
+//                      |  SHFT    |  NUM  |  SPC  |            |  ENT  |  SYM  |  GUI     |
 
                         bindings = <
-   &none            &none            &none            &none            &none            &none                    &none            &none            &none            &none            &none            &none
-   &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR          &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &ext_power EP_TOG
-   &none            &none            &none            &none            &none            &none                    &none            &none            &none            &none            &none            &none
-                                                      &trans           &trans           &trans                   &trans           &trans           &trans
+   &none  &none  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &none   &none          &none   &none   &rgb_ug RGB_EFF  &rgb_ug RGB_SPI    &none  &none
+   &none  &none  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &none   &none          &none   &none   &rgb_ug RGB_BRI  &rgb_ug RGB_SAI    &none  &none
+   &none  &none  &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &none   &none          &none   &none   &rgb_ug RGB_HUI  &ext_power EP_TOG  &none  &none
+                                  &trans           &trans  &trans         &trans  &trans  &trans
                         >;
                 };
 
