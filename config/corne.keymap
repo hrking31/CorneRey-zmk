@@ -163,9 +163,9 @@
 //                      |  SHFT  |  NUM  |  SPC  |            |  ENT       |  SYM  |  GUI  |
 
                         bindings = <
-   &trans  &kp  PLUS   &kp  AT          &kp  HASH   &kp  DLLR   &kp  PRCNT             &kp PSCRN   &none         &kp  MINUS  &kp  LBKT      &kp  EXCL   &trans
-   &trans  &kp  DQT    &kp  APOSTROPHE  &kp  ASTRK  &kp  GRAVE  &kp  EQUAL             &kp  UNDER  &kp  CARET    &kp  LPAR   &kp  BSLH      &kp  PIPE   &trans
-   &trans  &kp  RBKT   &kp  SLASH       &kp  RBRC   &kp  AMPS   &kp  RPAR              &kp  NUBS   &kp LS(NUBS)  &kp KC_NUBS       &kp LS(SLASH)  &kp  TILDE  &trans
+   &trans  &kp  PLUS   &kp  AT          &kp  HASH   &kp  DLLR   &kp  PRCNT             &kp PSCRN   &none         &kp  MINUS          &kp  LBKT      &kp  EXCL   &trans
+   &trans  &kp  DQT    &kp  APOSTROPHE  &kp  ASTRK  &kp  GRAVE  &kp  EQUAL             &kp  UNDER  &kp  CARET    &kp  LPAR           &kp  BSLH      &kp  PIPE   &trans
+   &trans  &kp  RBKT   &kp  SLASH       &kp  RBRC   &kp  AMPS   &kp  RPAR              &kp  NUBS   &kp LS(NUBS)  &kp INTL_BACKSLASH  &kp LS(SLASH)  &kp  TILDE  &trans
                                         &trans      &mo LED     &trans                 &trans      &trans        &trans
                         >;
                 };
