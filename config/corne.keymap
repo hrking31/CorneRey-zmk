@@ -117,7 +117,7 @@
     COMBO(mayor, <&kp LS(NUBS)>, 36 4)
 
     // RALT  + ?
-    COMBO(barra, <&kp RA(QMARK)>)
+    COMBO(barra, <&kp RA(QMARK)>, 12 26)
   };
 };
 
@@ -143,17 +143,17 @@
 
                  number_layer {
             label = "NUM";
-// --------------------------------------------------------------------------------------------------------------------------------------------------
-// |  ESC   |  0          |  1          |  2     |  3          |  4     |            |  5     |  6       |  7      |  8        |  9        |  BSPC  |
-// |  ALT   |  N-CARPETA  |  N-ARCHIVO  |  HOME  |  CODE-UP    |  ATRA  |            |  UP    |  COPY    |  PASTE  |  CUT      |  COMENTA  |  DEL   |
-// |  CTRL  |  LEFT       |  RIGHT      |  END   |  CODE-DOWN  |  ADEL  |            |  DOWN  |  CONFIG  |  CONSL  |  ARCHIVO  |  FOCO-A   |  TAB   |
-//                                      |  SHFT  |  NUM        |  SPC   |            |  ENT   |  SYM     |  GUI    |
+// -----------------------------------------------------------------------------------------------------------------------------------------------
+// |  ESC   |  0       |  1          |  2     |  3          |  4     |            |  5     |  6       |  7      |  8        |  9        |  BSPC  |
+// |  ALT   |  FOCO-A  |  N-CARPETA  |  HOME  |  CODE-UP    |  ATRA  |            |  UP    |  COPY    |  PASTE  |  CUT      |  COMENTA  |  DEL   |
+// |  CTRL  |  LEFT    |  N-ARCHIVO  |  END   |  CODE-DOWN  |  ADEL  |            |  DOWN  |  CONFIG  |  CONSL  |  ARCHIVO  |  RIGHT    |  TAB   |
+//                                   |  SHFT  |  NUM        |  SPC   |            |  ENT   |  SYM     |  GUI    |
 
                         bindings = <
-   &trans  &kp  N0    &kp  N1     &kp  N2    &kp  N3        &kp  N4                &kp  N5     &kp  N6      &kp  N7     &kp  N8      &kp  N9        &trans
-   &trans  &kp LC(A)  &kp LC(E)   &kp  HOME  &kp  LA(UP)    &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)  &kp  LC(X)   &kp  LC(BSLH)  &trans
-   &trans  &kp  LEFT  &kp  RIGHT  &kp  END   &kp  LA(DOWN)  &kp LC(Y)              &kp  DOWN   &mcr_config  &kp  LC(J)  &kp  LC(B)   &mcr_focoa     &trans
-                                  &trans     &trans         &trans                 &trans      &mo NAV      &mo FUN
+   &trans  &kp  N0    &kp  N1    &kp  N2    &kp  N3        &kp  N4                &kp  N5     &kp  N6      &kp  N7     &kp  N8      &kp  N9        &trans
+   &trans  &mcr_focoa &kp LC(A)  &kp  HOME  &kp  LA(UP)    &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)  &kp  LC(X)   &kp  LC(BSLH)  &trans
+   &trans  &kp  LEFT  &kp LC(E)  &kp  END   &kp  LA(DOWN)  &kp LC(Y)              &kp  DOWN   &mcr_config  &kp  LC(J)  &kp  LC(B)   &kp  RIGHT     &trans
+                                 &trans     &trans         &trans                 &trans      &mo NAV      &mo FUN
                         >;
                 };
 
