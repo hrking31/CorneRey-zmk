@@ -53,7 +53,7 @@
     MACRO(selleft, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp LEFT &macro_release &kp RSHFT &macro_release &kp LCTRL)
     MACRO(focoa, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp E &macro_release &kp RSHFT &macro_release &kp LCTRL)
     MACRO(barra, &macro_press &kp LALT &macro_tap &kp KP_N9 &macro_tap &kp KP_N2 &macro_release &kp LALT)
-    MACRO(color2, &macro_press &mo SYM &macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100) &macro_release &mo SYM &macro_tap &rgb_ug RGB_COLOR_HSB(300,100,50))
+    MACRO(color2, &macro_press &mo SIM &macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100) &macro_release &mo SIM &macro_tap &rgb_ug RGB_EFR)
   };
 };
 
