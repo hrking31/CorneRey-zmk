@@ -117,7 +117,7 @@
     COMBO(mayor, <&kp LS(NUBS)>, 36 4)
 
     // RALT  + ?
-    COMBO(barra, <&kp RA(NUBS)>, 12 26)
+    COMBO(barra, <&kp RA(NUBS)>, 12 31)
   };
 };
 
