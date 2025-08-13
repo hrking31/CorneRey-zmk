@@ -47,8 +47,6 @@
     MACRO(config, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp B &macro_release &kp LALT &macro_release &kp LCTRL)
     MACRO(left, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT &macro_release &kp LCTRL)
     MACRO(right, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT &macro_release &kp LCTRL)
-    MACRO(wleft, &macro_press &kp LCTRL &macro_press &kp RGUI &macro_tap &kp LEFT &macro_release &kp RGUI &macro_release &kp LCTRL)
-    MACRO(wright, &macro_press &kp LCTRL &macro_press &kp RGUI &macro_tap &kp RIGHT &macro_release &kp RGUI &macro_release &kp LCTRL)
     MACRO(selright, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp RIGHT &macro_release &kp RSHFT &macro_release &kp LCTRL)
     MACRO(selleft, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp LEFT &macro_release &kp RSHFT &macro_release &kp LCTRL)
     MACRO(focoa, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp E &macro_release &kp RSHFT &macro_release &kp LCTRL)
@@ -68,6 +66,7 @@
 
     // CTRL + X
     COMBO(cut, <&kp LC(X)>, 24 29)
+
 
     // CTRL + Z
     COMBO(atra, <&kp LC(Z)>, 24 34)
@@ -174,16 +173,16 @@
 
                  navigate_layer {
             label = "NAV";
-// ---------------------------------------------------------------------------------------------------------------------------
-// |  ESC   |     |  PGUP    |  SEL-L-P  |       |       |            |       |       |  SEL-R-P  |  SEL-UP    |    |  BSPC  |
-// |  ALT   |     |  PGDN    |  SEL-L-L  |       |       |            |       |       |  SEL-R-L  |  SEL-DOWN  |    |  DEL   |
-// |  CTRL  |     |  W-LEFT  |  CODE-LF  |       |       |            |       |       |  CODE-RG  |  W-RIGHT   |    |  TAB   |
-//                           |  SHFT     |  NUM  |  SPC  |            |  ENT  |  SYM  |           |
+// -------------------------------------------------------------------------------------------------------------------------
+// |  ESC   |     |  PGUP  |  SEL-L-P  |       |       |            |       |       |  SEL-R-P  |  SEL-UP    |    |  BSPC  |
+// |  ALT   |     |  PGDN  |  SEL-L-L  |       |       |            |       |       |  SEL-R-L  |  SEL-DOWN  |    |  DEL   |
+// |  CTRL  |     |        |  CODE-LF  |       |       |            |       |       |  CODE-RG  |            |    |  TAB   |
+//                         |  SHFT     |  NUM  |  SPC  |            |  ENT  |  SYM  |           |
 
                         bindings = <
    &trans  &none  &kp  PG_UP  &mcr_selleft   &none   &none               &none    &none   &mcr_selright  &kp  LS(UP)   &none  &trans
    &trans  &none  &kp  PG_DN  &kp  LS(LEFT)  &none   &none               &none    &none   &kp LS(RIGHT)  &kp LS(DOWN)  &none  &trans
-   &trans  &none  &mcr_wleft  &mcr_left      &none   &none               &none    &none   &mcr_right     &mcr_wright   &none  &trans
+   &trans  &none  &none       &mcr_left      &none   &none               &none    &none   &mcr_right     &none         &none  &trans
                               &trans         &trans  &trans              &trans   &trans  &none
                         >;
                 };
@@ -207,15 +206,15 @@
                  function_layer {
             label = "FUN";
 // ------------------------------------------------------------------------------------------------------------------------
-// |  F1    |  F2     |  F3   |  F4    |  F5   |  F6   |            |  F7   |  F8      |  F9   |  F10   |   F11  |  F12   |
-// |  ALT   |  BT1    |  BT2  |  BT3   |  BT4  |  BT5  |            |  PRV  |  PLAY/P  |  NXT  |  VOL-  |  MUTE  |  VOL+  |
-// |  CTRL  |  BTCLR  |       |        |       |       |            |       |          |       |        |        |  TAB   |
-//                            |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SYM     |       |
+// |  F1    |  F2     |  F3   |  F4    |  F5   |  F6   |            |  F7   |  F8      |  F9    |  F10   |  F11  |  F12   |
+// |  ALT   |  BT1    |  BT2  |  BT3   |  BT4  |  BT5  |            |  PRV  |  PLAY/P  |  VOL+  |  VOL-  |  NXT  |  MUTE  |
+// |  CTRL  |  BTCLR  |       |        |       |       |            |       |          |        |        |       |  TAB   |
+//                            |  SHFT  |  NUM  |  SPC  |            |  ENT  |  SYM     |        |
 
                         bindings = <
-   &kp  F1  &kp  F2        &kp  F3        &kp  F4        &kp  F5        &kp  F6                  &kp  F7      &kp  F8    &kp  F9      &kp  F10       &kp  F11     &kp  F12
-   &trans   &bt  BT_SEL 0  &bt  BT_SEL 1  &bt  BT_SEL 2  &bt  BT_SEL 3  &bt  BT_SEL 4            &kp  C_PREV  &kp  C_PP  &kp  C_NEXT  &kp  C_VOL_DN  &kp  C_MUTE  &kp  C_VOL_UP
-   &trans   &bt  BT_CLR    &none          &none          &none          &none                    &none        &none      &none        &none          &none        &trans
+   &kp  F1  &kp  F2        &kp  F3        &kp  F4        &kp  F5        &kp  F6                  &kp  F7      &kp  F8    &kp  F9        &kp  F10       &kp  F11     &kp  F12
+   &trans   &bt  BT_SEL 0  &bt  BT_SEL 1  &bt  BT_SEL 2  &bt  BT_SEL 3  &bt  BT_SEL 4            &kp  C_PREV  &kp  C_PP  &kp  C_VOL_UP  &kp  C_VOL_DN  &kp  C_NEXT  &kp  C_MUTE  
+   &trans   &bt  BT_CLR    &none          &none          &none          &none                    &none        &none      &none          &none          &none        &trans
                                           &trans         &trans         &trans                   &trans       &trans     &none
                         >;
                 };
