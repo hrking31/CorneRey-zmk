@@ -60,23 +60,23 @@ Conecta cada mitad y flashea el archivo `.uf2` generado en la carpeta `build/`.
 
 <div align="center">
 
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0029.jpg" width="30%" />
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0064.jpg" width="30%" />
+  <img src="./assets/images/IMG-20250828-WA0029.jpg" width="30%" />
+  <img src="./assets/images/IMG-20250828-WA0064.jpg" width="30%" />
 
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0027.jpg" width="40%" />
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0052.jpg" width="40%" />
+  <img src="./assets/images/IMG-20250828-WA0027.jpg" width="40%" />
+  <img src="./assets/images/IMG-20250828-WA0052.jpg" width="40%" />
 
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0071.jpg" width="40%" />
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0072.jpg" width="40%" />
+  <img src="./assets/images/IMG-20250828-WA0071.jpg" width="40%" />
+  <img src="./assets/images/IMG-20250828-WA0072.jpg" width="40%" />
 
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0082.jpg" width="40%" />
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0075.jpg" width="40%" />
+  <img src="./assets/images/IMG-20250828-WA0082.jpg" width="40%" />
+  <img src="./assets/images/IMG-20250828-WA0075.jpg" width="40%" />
 
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0083.jpg" width="40%" />
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0090.jpg" width="40%" />
+  <img src="./assets/images/IMG-20250828-WA0083.jpg" width="40%" />
+  <img src="./assets/images/IMG-20250828-WA0090.jpg" width="40%" />
 
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0098.jpg" width="40%" />
-  <img src="../CorneRey-zmk/assets/images/IMG-20250828-WA0100.jpg" width="40%" />
+  <img src="./assets/images/IMG-20250828-WA0098.jpg" width="40%" />
+  <img src="./assets/images/IMG-20250828-WA0100.jpg" width="40%" />
 
 </div>
 
