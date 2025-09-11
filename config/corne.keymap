@@ -161,7 +161,7 @@
     COMBO(whapp, <&kp RG(N7)>, 41 7)
 
     // CTRL + PGUP----combo para cambiar entre pestañas en vsc
-    COMBO(pestañas, <&kp LC(PG_UP)>, 24 2)
+    COMBO(ventanas, <&kp LC(PG_UP)>, 24 2)
 
   };
 };
@@ -220,11 +220,11 @@
 
                  navigate_layer {
             label = "NAV";
-// -------------------------------------------------------------------------------------------------------------------------------------
-// |  ESC   |     |  PGUP  |  SEL-L-P  |       |  HA      |            |  M-SELEC  |  CLOSE-C   |  SEL-R-P  |  SEL-UP    |    |  BSPC  |
-// |  ALT   |     |  PGDN  |  SEL-L-L  |       |  GOOGLE  |            |  UP       |  PESTAÑAS  |  SEL-R-L  |  SEL-DOWN  |    |  DEL   |
-// |  CTRL  |     |  LEFT  |  CODE-LF  |       |  WAPP    |            |  DOWN     |            |  CODE-RG  |  RIGHT     |    |  TAB   |
-//                         |  SHFT     |  NUM  |  SPC     |            |  ENT      |  SYM       |  FUN      |
+// ------------------------------------------------------------------------------------------------------------------------------------
+// |  ESC   |     |  PGUP  |  SEL-L-P  |       |  HA      |            |  M-SELEC  |  CLOSE-C  |  SEL-R-P  |  SEL-UP    |    |  BSPC  |
+// |  ALT   |     |  PGDN  |  SEL-L-L  |       |  GOOGLE  |            |  UP       |  VISTAS   |  SEL-R-L  |  SEL-DOWN  |    |  DEL   |
+// |  CTRL  |     |  LEFT  |  CODE-LF  |       |  WAPP    |            |  DOWN     |           |  CODE-RG  |  RIGHT     |    |  TAB   |
+//                         |  SHFT     |  NUM  |  SPC     |            |  ENT      |  SYM      |  FUN      |
 
                         bindings = <
    &trans  &none  &kp  PG_UP  &mcr_selleft   &none   &kp  RG(N1)                &kp  LC(D)  &mcr_close     &mcr_selright   &kp  LS(UP)   &none  &trans
