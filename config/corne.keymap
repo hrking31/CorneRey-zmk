@@ -148,16 +148,16 @@
     COMBO(ia, <&kp LC(I)>, 24 17)
 
     // WIND + 1----combo para abrir home assistants 
-    COMBO(ha, <&kp RGUI(N1)>, 41 1)
+    COMBO(ha, <&kp GUI(N1)>, 41 1)
 
     // WIND + 3----combo para abrir vsc 
-    COMBO(vsc, <&kp RGUI(N3)>, 41 3)
+    COMBO(vsc, <&kp GUI(N3)>, 41 3)
 
     // WIND + 5----combo para abrir google 
-    COMBO(google, <&kp RGUI(N5)>, 41 5)
+    COMBO(google, <&kp GUI(N5)>, 41 5)
 
     // WIND + 7----combo para abrir whatsapp 
-    COMBO(whapp, <&kp RGUI(N7)>, 41 7)
+    COMBO(whapp, <&kp GUI(N7)>, 41 7)
 
   };
 };
@@ -193,7 +193,7 @@
                         bindings = <
    &trans  &kp  N1     &kp  N2    &kp  N3    &kp  N4        &kp  N5                &kp  N6       &kp  N7      &kp  N8     &kp  N9      &kp  N0        &trans
    &trans  &mcr_focoa  &kp LC(E)  &kp  HOME  &kp  LA(UP)    &kp LC(Z)              &mcr_open     &kp  LC(C)   &kp  LC(V)  &kp  LC(X)   &kp  LC(BSLH)  &trans
-   &trans  &kp LC(I)   &kp LC(A)  &kp  END   &kp  LA(DOWN)  &kp LC(Y)              &kp  RGUI(N3)  &mcr_config  &kp  LC(J)  &kp  LC(B)   &mcr_git       &trans
+   &trans  &kp LC(I)   &kp LC(A)  &kp  END   &kp  LA(DOWN)  &kp LC(Y)              &kp  GUI(N3)  &mcr_config  &kp  LC(J)  &kp  LC(B)   &mcr_git       &trans
                                   &trans     &trans         &trans                 &trans        &mo NAV      &mo FUN
                         >;
                 };
@@ -216,16 +216,16 @@
 
                  navigate_layer {
             label = "NAV";
-// ---------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------
 // |  ESC   |     |  PGUP  |  SEL-L-P  |       |  HA      |            |  M-SELEC  |  CLOSE-C  |  SEL-R-P  |  SEL-UP    |    |  BSPC  |
 // |  ALT   |     |  PGDN  |  SEL-L-L  |       |  GOOGLE  |            |  UP       |           |  SEL-R-L  |  SEL-DOWN  |    |  DEL   |
 // |  CTRL  |     |  LEFT  |  CODE-LF  |       |  WAPP    |            |  DOWN     |           |  CODE-RG  |  RIGHT     |    |  TAB   |
 //                         |  SHFT     |  NUM  |  SPC     |            |  ENT      |  SYM      |           |
 
                         bindings = <
-   &trans  &none  &kp  PG_UP  &mcr_selleft   &none   &kp  RGUI(N1)                &kp  LC(D)  &mcr_close  &mcr_selright   &kp  LS(UP)   &none  &trans
-   &trans  &none  &kp  PG_DN  &kp  LS(LEFT)  &none   &kp  RGUI(N5)                &kp  UP     &none       &kp  LS(RIGHT)  &kp LS(DOWN)  &none  &trans
-   &trans  &none  &kp  LEFT   &mcr_left      &none   &kp  RGUI(N7)                &kp  DOWN   &none       &mcr_right      &kp  RIGHT    &none  &trans
+   &trans  &none  &kp  PG_UP  &mcr_selleft   &none   &kp  GUI(N1)                &kp  LC(D)  &mcr_close  &mcr_selright   &kp  LS(UP)   &none  &trans
+   &trans  &none  &kp  PG_DN  &kp  LS(LEFT)  &none   &kp  GUI(N5)                &kp  UP     &none       &kp  LS(RIGHT)  &kp LS(DOWN)  &none  &trans
+   &trans  &none  &kp  LEFT   &mcr_left      &none   &kp  GUI(N7)                &kp  DOWN   &none       &mcr_right      &kp  RIGHT    &none  &trans
                               &trans         &trans  &trans                      &trans      &trans      &none
                         >;
                 };
