@@ -160,6 +160,9 @@
     // WIND + 7----combo para abrir whatsapp 
     COMBO(whapp, <&kp RG(N7)>, 41 7)
 
+    // CTRL + PGUP----combo para cambiar entre pestañas en vsc
+    COMBO(pestañas, <&kp LC(PG_UP)>, 24 2)
+
   };
 };
 
@@ -217,17 +220,17 @@
 
                  navigate_layer {
             label = "NAV";
-// ------------------------------------------------------------------------------------------------------------------------------------
-// |  ESC   |     |  PGUP  |  SEL-L-P  |       |  HA      |            |  M-SELEC  |  CLOSE-C  |  SEL-R-P  |  SEL-UP    |    |  BSPC  |
-// |  ALT   |     |  PGDN  |  SEL-L-L  |       |  GOOGLE  |            |  UP       |           |  SEL-R-L  |  SEL-DOWN  |    |  DEL   |
-// |  CTRL  |     |  LEFT  |  CODE-LF  |       |  WAPP    |            |  DOWN     |           |  CODE-RG  |  RIGHT     |    |  TAB   |
-//                         |  SHFT     |  NUM  |  SPC     |            |  ENT      |  SYM      |  FUN      |
+// -------------------------------------------------------------------------------------------------------------------------------------
+// |  ESC   |     |  PGUP  |  SEL-L-P  |       |  HA      |            |  M-SELEC  |  CLOSE-C   |  SEL-R-P  |  SEL-UP    |    |  BSPC  |
+// |  ALT   |     |  PGDN  |  SEL-L-L  |       |  GOOGLE  |            |  UP       |  PESTAÑAS  |  SEL-R-L  |  SEL-DOWN  |    |  DEL   |
+// |  CTRL  |     |  LEFT  |  CODE-LF  |       |  WAPP    |            |  DOWN     |            |  CODE-RG  |  RIGHT     |    |  TAB   |
+//                         |  SHFT     |  NUM  |  SPC     |            |  ENT      |  SYM       |  FUN      |
 
                         bindings = <
-   &trans  &none  &kp  PG_UP  &mcr_selleft   &none   &kp  RG(N1)                &kp  LC(D)  &mcr_close  &mcr_selright   &kp  LS(UP)   &none  &trans
-   &trans  &none  &kp  PG_DN  &kp  LS(LEFT)  &none   &kp  RG(N5)                &kp  UP     &none       &kp  LS(RIGHT)  &kp LS(DOWN)  &none  &trans
-   &trans  &none  &kp  LEFT   &mcr_left      &none   &kp  RG(N7)                &kp  DOWN   &none       &mcr_right      &kp  RIGHT    &none  &trans
-                              &trans         &trans  &trans                     &trans      &trans      &trans
+   &trans  &none  &kp  PG_UP  &mcr_selleft   &none   &kp  RG(N1)                &kp  LC(D)  &mcr_close     &mcr_selright   &kp  LS(UP)   &none  &trans
+   &trans  &none  &kp  PG_DN  &kp  LS(LEFT)  &none   &kp  RG(N5)                &kp  UP     &kp LC(PG_UP)  &kp  LS(RIGHT)  &kp LS(DOWN)  &none  &trans
+   &trans  &none  &kp  LEFT   &mcr_left      &none   &kp  RG(N7)                &kp  DOWN   &none          &mcr_right      &kp  RIGHT    &none  &trans
+                              &trans         &trans  &trans                     &trans      &trans         &trans
                         >;
                 };
 
