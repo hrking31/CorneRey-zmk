@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
+//para activar funcioes en el teclado
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -11,6 +12,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 
+//se definen nombres a las capas
 #define DEF 0
 #define NUM 1
 #define SYM 2
@@ -18,6 +20,7 @@
 #define LED 4
 #define FUN 5
 
+//plantilla para crear combos
 #define COMBO(NAME, BINDINGS, KEYPOS) \
    combo_##NAME { \
    timeout-ms = <200>; \
@@ -26,6 +29,7 @@
    layers = <0>; \
 };
 
+//plantilla para crear macros
 #define STRINGIFY(x) #x
 #define EXPAND_AND_STRINGIFY(x) STRINGIFY(x)
 #define MACRO(NAME, BINDINGS) \
@@ -38,19 +42,42 @@
     bindings = <BINDINGS>; \
   };
 
+//numero de luces del teclado
 &led_strip {
     chain-length = <27>;
 };
 
 / {
   macros {
+    //macro para abrir el menu de configuracion en vsc
     MACRO(config, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp B &macro_release &kp LALT &macro_release &kp LCTRL)
+
+    //macro para mover la ventana del codigo a la izquierda en vsc
     MACRO(left, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT &macro_release &kp LCTRL)
+
+    //macro para  mover la ventana del codigo a la derecha en vsc
     MACRO(right, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT &macro_release &kp LCTRL)
+
+    //macro para seleccionar por palabras hacia la derecha en vsc
     MACRO(selright, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp RIGHT &macro_release &kp RSHFT &macro_release &kp LCTRL)
+
+    //macro para seleccionar por palabras hacia la izquierda en vsc
     MACRO(selleft, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp LEFT &macro_release &kp RSHFT &macro_release &kp LCTRL)
+
+    //macro para colocar el foco en el menu del explorador de archivos en vsc
     MACRO(focoa, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp E &macro_release &kp RSHFT &macro_release &kp LCTRL)
+
+    //macro para crear la barra "\"
     MACRO(barra, &macro_press &kp LALT &macro_tap &kp KP_N9 &macro_tap &kp KP_N2 &macro_release &kp LALT)
+
+    //macro para abril el menu de git en vsc
+    MACRO(git, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp G &macro_release &kp RSHFT &macro_release &kp LCTRL)
+
+    //macro para abril nueva carpeta de proyecto en vsc
+    MACRO(open, &macro_press &kp LCTRL &macro_tap &kp k &macro_tap &kp O &macro_release &kp LCTRL )
+
+    //macro para cerrar carpeta actual de proyecto en vsc
+    MACRO(close, &macro_press &kp LCTRL &macro_tap &kp k &macro_tap &kp F &macro_release &kp LCTRL )
   };
 };
 
@@ -58,62 +85,68 @@
   combos {
     compatible = "zmk,combos";
 
-    // CTRL + C
+    // CTRL + C----combo para copiar
     COMBO(copy, <&kp LC(C)>, 24 8)
 
-    // CTRL + V
+    // CTRL + V----combo para pegar
     COMBO(paste, <&kp LC(V)>, 24 33)
 
-    // CTRL + X
+    // CTRL + X----combo para cortar
     COMBO(cut, <&kp LC(X)>, 24 29)
 
-    // CTRL + Z
+    // CTRL + Z----combo para deshace la última acción en vsc
     COMBO(atra, <&kp LC(Z)>, 24 34)
 
-    // CTRL + Y
+    // CTRL + Y----combo para rehacer la última acción en vsc
     COMBO(adel, <&kp LC(Y)>, 24 5)
 
-    // CTRL + J
+    // CTRL + J----combo para abril terminal en vsc
     COMBO(clg, <&kp LC(J)>, 24 27)
 
-    // CTRL + B
+    // CTRL + B----combo para abril el menu del explorador de archivos en vsc
     COMBO(arch, <&kp LC(B)>, 24 30)
 
-    // ALT + UP
+    // ALT + UP----combo para mover una linea de codigo hacia arriba en vsc
     COMBO(up, <&kp LA(UP)>, 12 4)
 
-    // ALT + DOWN
+    // ALT + DOWN----combo para mover una linea de codigo hacia abajo en vsc
     COMBO(down, <&kp LA(DOWN)>, 12 18)
 
-    // SHFT + RIGHT
+    // SHFT + RIGHT----combo para seleccionar por letras hacia la derecha en vsc
     COMBO(selright, <&kp LS(RIGHT)>, 36 12)
 
-    // SHFT  + LEFT
+    // SHFT  + LEFT----combo para seleccionar por letras hacia la izquierda en vsc
     COMBO(selleft, <&kp LS(LEFT)>, 36 9)
 
-    // SHFT  + UP
+    // SHFT  + UP----combo para seleccionar por lineas hacia arriba en vsc
     COMBO(selup, <&kp LS(UP)>, 36 4)
 
-    // SHFT + DOWN
+    // SHFT + DOWN----combo para seleccionar por lineas hacia abajo en vsc
     COMBO(seldown, <&kp LS(DOWN)>, 36 18)
 
-    // CTRL + llaves
+    // CTRL + llaves----combo para comentar en vsc
     COMBO(comentar, <&kp LC(BSLH)>, 24 22)
 
-    // RALT + Q
+    // RALT + Q----combo para agregar la "@" al teclado
     COMBO(arroba, <&kp RA(Q)>, 12 26)
 
-    // CTRL + A
+    // CTRL + A----combo para crear nuevo archivo en explorador de vsc
     COMBO(narchivo, <&kp LC(A)>, 24 13)
 
-    // CTRL + E
+    // CTRL + E----combo para crear nueva carpeta en explorador de vsc
     COMBO(ncarpeta, <&kp LC(E)>, 24 15)
 
-    // SHFT  + /
+    // SHFT  + /----combo para crear "_" en teclado
     COMBO(menos, <&kp LS(SLASH)>, 36 4)
 
-    // SHFT  + \
+    // SHFT  + \----combo para crear ">" en el teclado
     COMBO(mayor, <&kp LS(NUBS)>, 36 4)
+
+    // CTRL + D----combo para hacer multiples selecciones en vsc
+    COMBO(mselec, <&kp LC(D)>, 24 18)
+
+    // CTRL + I----combo para abrir chat con ia en linea en vsc
+    COMBO(ia, <&kp LC(I)>, 24 17)
 
   };
 };
@@ -140,17 +173,17 @@
 
                  number_layer {
             label = "NUM";
-// -----------------------------------------------------------------------------------------------------------------------------------------------
-// |  ESC   |  1       |  2          |  3     |  4          |  5     |            |  6     |  7       |  8      |  9        |  0        |  BSPC  |
-// |  ALT   |  FOCO-A  |  N-CARPETA  |  HOME  |  CODE-UP    |  ATRA  |            |  UP    |  COPY    |  PASTE  |  CUT      |  COMENTA  |  DEL   |
-// |  CTRL  |  LEFT    |  N-ARCHIVO  |  END   |  CODE-DOWN  |  ADEL  |            |  DOWN  |  CONFIG  |  CONSL  |  ARCHIVO  |  RIGHT    |  TAB   |
-//                                   |  SHFT  |  NUM        |  SPC   |            |  ENT   |  NAV     |  FUN    |
+// -------------------------------------------------------------------------------------------------------------------------------------------------
+// |  ESC   |  1       |  2          |  3     |  4          |  5     |            |  6       |  7       |  8      |  9        |  0        |  BSPC  |
+// |  ALT   |  FOCO-A  |  N-CARPETA  |  HOME  |  CODE-UP    |  ATRA  |            |  OPEN-C  |  COPY    |  PASTE  |  CUT      |  COMENTA  |  DEL   |
+// |  CTRL  |  IA      |  N-ARCHIVO  |  END   |  CODE-DOWN  |  ADEL  |            |  CLOSE-C |  CONFIG  |  CONSL  |  ARCHIVO  |  GIT      |  TAB   |
+//                                   |  SHFT  |  NUM        |  SPC   |            |  ENT     |  NAV     |  FUN    |
 
                         bindings = <
-   &trans  &kp  N1    &kp  N2    &kp  N3    &kp  N4        &kp  N5                &kp  N6     &kp  N7      &kp  N8     &kp  N9      &kp  N0        &trans
-   &trans  &mcr_focoa &kp LC(E)  &kp  HOME  &kp  LA(UP)    &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)  &kp  LC(X)   &kp  LC(BSLH)  &trans
-   &trans  &kp  LEFT  &kp LC(A)  &kp  END   &kp  LA(DOWN)  &kp LC(Y)              &kp  DOWN   &mcr_config  &kp  LC(J)  &kp  LC(B)   &kp  RIGHT     &trans
-                                 &trans     &trans         &trans                 &trans      &mo NAV      &mo FUN
+   &trans  &kp  N1     &kp  N2    &kp  N3    &kp  N4        &kp  N5                &kp  N6     &kp  N7      &kp  N8     &kp  N9      &kp  N0        &trans
+   &trans  &mcr_focoa  &kp LC(E)  &kp  HOME  &kp  LA(UP)    &kp LC(Z)              &mcr_open   &kp  LC(C)   &kp  LC(V)  &kp  LC(X)   &kp  LC(BSLH)  &trans
+   &trans  &kp LC(I)   &kp LC(A)  &kp  END   &kp  LA(DOWN)  &kp LC(Y)              &mcr_close  &mcr_config  &kp  LC(J)  &kp  LC(B)   &mcr_git       &trans
+                                  &trans     &trans         &trans                 &trans      &mo NAV      &mo FUN
                         >;
                 };
 
@@ -172,17 +205,17 @@
 
                  navigate_layer {
             label = "NAV";
-// -------------------------------------------------------------------------------------------------------------------------
-// |  ESC   |     |  PGUP  |  SEL-L-P  |       |       |            |       |       |  SEL-R-P  |  SEL-UP    |    |  BSPC  |
-// |  ALT   |     |  PGDN  |  SEL-L-L  |       |       |            |       |       |  SEL-R-L  |  SEL-DOWN  |    |  DEL   |
-// |  CTRL  |     |        |  CODE-LF  |       |       |            |       |       |  CODE-RG  |            |    |  TAB   |
-//                         |  SHFT     |  NUM  |  SPC  |            |  ENT  |  SYM  |           |
+// -----------------------------------------------------------------------------------------------------------------------------
+// |  ESC   |     |  PGUP  |  SEL-L-P  |       |       |            |  M-SELEC  |       |  SEL-R-P  |  SEL-UP    |    |  BSPC  |
+// |  ALT   |     |  PGDN  |  SEL-L-L  |       |       |            |  UP       |       |  SEL-R-L  |  SEL-DOWN  |    |  DEL   |
+// |  CTRL  |     |  LEFT  |  CODE-LF  |       |       |            |  DOWN     |       |  CODE-RG  |  RIGHT     |    |  TAB   |
+//                         |  SHFT     |  NUM  |  SPC  |            |  ENT      |  SYM  |           |
 
                         bindings = <
-   &trans  &none  &kp  PG_UP  &mcr_selleft   &none   &none               &none    &none   &mcr_selright  &kp  LS(UP)   &none  &trans
-   &trans  &none  &kp  PG_DN  &kp  LS(LEFT)  &none   &none               &none    &none   &kp LS(RIGHT)  &kp LS(DOWN)  &none  &trans
-   &trans  &none  &none       &mcr_left      &none   &none               &none    &none   &mcr_right     &none         &none  &trans
-                              &trans         &trans  &trans              &trans   &trans  &none
+   &trans  &none  &kp  PG_UP  &mcr_selleft   &none   &none               &kp  LC(D)  &none   &mcr_selright  &kp  LS(UP)   &none  &trans
+   &trans  &none  &kp  PG_DN  &kp  LS(LEFT)  &none   &none               &kp  UP     &none   &kp LS(RIGHT)  &kp LS(DOWN)  &none  &trans
+   &trans  &none  &kp  LEFT   &mcr_left      &none   &none               &kp  DOWN   &none   &mcr_right     &kp  RIGHT    &none  &trans
+                              &trans         &trans  &trans              &trans      &trans  &none
                         >;
                 };
 
