@@ -70,9 +70,6 @@
     //macro para crear la barra "\"
     MACRO(barra, &macro_press &kp LALT &macro_tap &kp KP_N9 &macro_tap &kp KP_N2 &macro_release &kp LALT)
 
-    //macro para abril el menu de explorador en vsc
-    MACRO(exp, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp E &macro_release &kp RSHFT &macro_release &kp LCTRL)
-
     //macro para abril el menu de git en vsc
     MACRO(git, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp G &macro_release &kp RSHFT &macro_release &kp LCTRL)
 
@@ -105,6 +102,9 @@
 
     // CTRL + J----combo para abril terminal en vsc
     COMBO(clg, <&kp LC(J)>, 24 27)
+
+    // CTRL + B----combo para abril el menu del explorador de archivos en vsc
+    COMBO(arch, <&kp LC(B)>, 24 30)
 
     // ALT + UP----combo para mover una linea de codigo hacia arriba en vsc
     COMBO(up, <&kp LA(UP)>, 12 4)
