@@ -77,7 +77,7 @@
     MACRO(open, &macro_press &kp LCTRL &macro_tap &kp K &macro_tap &kp O &macro_release &kp LCTRL )
 
     //macro para cerrar carpeta actual de proyecto en vsc
-    MACRO(close, &macro_press &kp LCTRL &macro_tap &kp K &macro_tap &kp F &macro_release &kp LCTRL )
+    MACRO(close, &macro_press &kp LCTRL &macro_tap &kp K &macro_release &kp LCTRL &macro_tap &kp F)
   };
 };
 
