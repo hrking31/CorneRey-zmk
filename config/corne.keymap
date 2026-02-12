@@ -81,6 +81,12 @@
 
     //macro para cerrar carpeta actual de proyecto en vsc
     MACRO(close, &macro_press &kp LCTRL &macro_tap &kp K &macro_release &kp LCTRL &macro_tap &kp F)
+
+   //macro para mover una linea de código hacia arriba en vsc
+    MACRO(up, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp UP &macro_release &kp LALT &macro_release &kp RSHFT)
+
+    //macro para mover una linea de código hacia abajo en vsc
+    MACRO(down, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp DOWN &macro_release &kp LALT &macro_release &kp RSHFT)
   };
 };
 / {
@@ -101,18 +107,12 @@
 
     // CTRL + Y----combo para rehacer la última acción en vsc
     COMBO(adel, <&kp LC(Y)>, 24 5)
-
+ 
     // CTRL + J----combo para abril terminal en vsc
     COMBO(clg, <&kp LC(J)>, 24 27)
 
     // CTRL + B----combo para abril el menu del explorador de archivos en vsc 
     COMBO(arch, <&kp LC(B)>, 24 30)
-
-    // ALT + UP----combo para mover una linea de código hacia arriba en vsc
-    COMBO(up, <&kp LA(UP)>, 12 4)
-
-    // ALT + DOWN----combo para mover una linea de código hacia abajo en vsc
-    COMBO(down, <&kp LA(DOWN)>, 12 18)
 
     // SHFT + RIGHT----combo para seleccionar por letras hacia la derecha en vsc
     COMBO(selright, <&kp LS(RIGHT)>, 36 12)
@@ -160,10 +160,10 @@
             label = "DEF";
 
                         bindings = < 
-   &kp  ESC    &kp  DOT   &kp  COMMA  &kp  SEMI   &kp  P    &kp  Y              &kp  F    &kp  G    &kp  C     &kp  H  &kp  L  &kp  BSPC
-   &kp  LALT   &kp  A     &kp  O      &kp  E      &kp  U    &kp  I              &kp  D    &kp  R    &kp  T     &kp  N  &kp  S  &kp  DEL
-   &kp  LCTRL  &kp  LBKT  &kp  Q      &kp  J      &kp  K    &kp  X              &kp  B    &kp  M    &kp  W     &kp  V  &kp  Z  &kp  TAB
-                                      &kp  LSHFT  &mo  NUM  &kp  SPACE          &kp  RET  &mo  SYM  &kp  RGUI 
+   &kp  ESC     &kp  DOT    &kp  COMMA   &kp  SEMI    &kp  P     &kp  Y              &kp  F     &kp  G     &kp  C   &kp  H   &kp  L   &kp  BSPC
+   &kp  LALT    &kp  A      &kp  O       &kp  E       &kp  U     &kp  I              &kp  D     &kp  R     &kp  T   &kp  N   &kp  S   &kp  DEL
+   &kp  LCTRL   &kp  LBKT   &kp  Q       &kp  J       &kp  K     &kp  X              &kp  B     &kp  M     &kp  W   &kp  V   &kp  Z   &kp  TAB
+                                         &kp  LSHFT   &mo  NUM   &kp  SPACE          &kp  RET   &mo  SYM   &kp  RGUI 
                         >;
                 };
 
@@ -171,10 +171,10 @@
             label = "NUM";
 
                         bindings = <
-   &trans  &kp  N1     &kp  N2    &kp  N3    &kp  N4        &kp  N5                &kp  N6      &kp  N7      &kp  N8     &kp  N9      &kp  N0        &trans
-   &trans  &kp  LC(B)  &kp LC(E)  &kp  HOME  &kp  LA(UP)    &kp LC(Z)              &kp  UP      &kp  LC(C)   &kp  LC(V)  &kp  LC(X)   &kp  LC(BSLH)  &trans
-   &trans  &mcr_focoa  &kp LC(A)  &kp  END   &kp  LA(DOWN)  &kp LC(Y)              &kp  DOWN    &kp  LC(J)   &mcr_file   &mcr_git     &mcr_ext       &trans
-                                  &trans     &trans         &trans                 &trans       &mo NAV      &mo FUN 
+   &trans   &kp  N1       &kp  N2     &kp  N3     &kp  N4     &kp  N5                &kp  N6     &kp  N7      &kp  N8      &kp  N9      &kp  N0         &trans
+   &trans   &kp  LC (B)   &kp LC(E)   &kp  HOME   &mcr_up     &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)   &kp  LC(X)   &kp  LC(BSLH)   &trans
+   &trans   &mcr_focoa    &kp LC(A)   &kp  END    &mcr_down   &kp LC(Y)              &kp  DOWN   &kp  LC(J)   &mcr_file    &mcr_git     &mcr_ext        &trans
+                                      &trans      &trans      &trans                 &trans      &mo NAV      &mo FUN 
                         >;
                 };
 
@@ -182,10 +182,10 @@
             label = "SYM";
 
                         bindings = <
-   &trans  &kp  PLUS   &kp  AT          &kp  HASH   &kp  DLLR   &kp  PRCNT             &kp  PSCRN  &kp  RA(Q)     &kp  MINUS  &kp  LBKT      &kp  EXCL   &trans
-   &trans  &kp  DQT    &kp  APOSTROPHE  &kp  ASTRK  &kp  GRAVE  &kp  EQUAL             &kp  UNDER  &kp  CARET     &kp  LPAR   &kp  BSLH      &kp  PIPE   &trans
-   &trans  &kp  RBKT   &kp  SLASH       &kp  RBRC   &kp  AMPS   &kp  RPAR              &kp  NUBS   &kp  LS(NUBS)  &mcr_barra  &kp LS(SLASH)  &kp  TILDE  &trans
-                                        &trans      &mo LED     &trans                 &trans      &trans         &trans
+   &trans   &kp  PLUS   &kp  AT           &kp  HASH    &kp  DLLR    &kp  PRCNT             &kp  PSCRN   &kp  RA(Q)      &kp  MINUS   &kp  LBKT       &kp  EXCL    &trans
+   &trans   &kp  DQT    &kp  APOSTROPHE   &kp  ASTRK   &kp  GRAVE   &kp  EQUAL             &kp  UNDER   &kp  CARET      &kp  LPAR    &kp  BSLH       &kp  PIPE    &trans
+   &trans   &kp  RBKT   &kp  SLASH        &kp  RBRC    &kp  AMPS    &kp  RPAR              &kp  NUBS    &kp  LS(NUBS)   &mcr_barra   &kp LS(SLASH)   &kp  TILDE   &trans
+                                          &trans       &mo LED      &trans                 &trans       &trans          &trans
                         >;
                 };
 
@@ -193,10 +193,10 @@
             label = "NAV";
 
                         bindings = <
-   &trans  &none  &kp  PG_UP  &mcr_selleft   &none   &none                      &kp  LC(D)  &kp LC(PG_UP)  &mcr_selright   &kp  LS(UP)    &none  &trans
-   &trans  &none  &kp  PG_DN  &kp  LS(LEFT)  &none   &none                      &mcr_open   &none          &kp  LS(RIGHT)  &kp  LS(DOWN)  &none  &trans
-   &trans  &none  &kp  LEFT   &mcr_left      &none   &none                      &mcr_close  &none          &mcr_right      &kp  RIGHT     &none  &trans
-                              &trans         &trans  &trans                     &trans      &trans         &trans
+   &trans   &none  &kp   PG_UP   &mcr_selleft    &none    &none                      &kp  LC(D)   &kp LC(PG_UP)   &mcr_selright    &kp  LS(UP)     &none   &trans
+   &trans   &none  &kp   PG_DN   &kp  LS(LEFT)   &none    &none                      &mcr_open    &none           &kp  LS(RIGHT)   &kp  LS(DOWN)   &none   &trans
+   &trans   &none  &kp   LEFT    &mcr_left       &none    &none                      &mcr_close   &none           &mcr_right       &kp  RIGHT      &none   &trans
+                                 &trans          &trans   &trans                     &trans       &trans          &trans
                         >;
                 };
 
@@ -204,10 +204,10 @@
             label = "LED";
 
                         bindings = <
-   &none  &none  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &none   &none          &none   &none   &rgb_ug RGB_EFF  &rgb_ug RGB_SPI    &none  &none
-   &none  &none  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &none   &none          &none   &none   &rgb_ug RGB_BRI  &rgb_ug RGB_SAI    &none  &none
-   &none  &none  &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &none   &none          &none   &none   &rgb_ug RGB_HUI  &ext_power EP_TOG  &none  &none
-                                  &trans           &trans  &trans         &trans  &trans  &trans
+   &none   &none   &rgb_ug RGB_SPD   &rgb_ug RGB_EFR   &none    &none          &none    &none    &rgb_ug RGB_EFF   &rgb_ug RGB_SPI     &none   &none
+   &none   &none   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD   &none    &none          &none    &none    &rgb_ug RGB_BRI   &rgb_ug RGB_SAI     &none   &none
+   &none   &none   &rgb_ug RGB_TOG   &rgb_ug RGB_HUD   &none    &none          &none    &none    &rgb_ug RGB_HUI   &ext_power EP_TOG   &none   &none
+                                     &trans            &trans   &trans         &trans   &trans   &trans
                         >;
                 };
 
@@ -215,10 +215,10 @@
             label = "FUN";
 
                         bindings = <
-   &kp  F1  &kp  F2        &kp  F3        &kp  F4        &kp  F5        &kp  F6                  &kp  F7      &kp  F8    &kp  F9        &kp  F10       &kp  F11     &kp  F12
-   &trans   &bt  BT_SEL 0  &bt  BT_SEL 1  &bt  BT_SEL 2  &bt  BT_SEL 3  &bt  BT_SEL 4            &kp  C_PREV  &kp  C_PP  &kp  C_VOL_UP  &kp  C_VOL_DN  &kp  C_NEXT  &kp  C_MUTE  
-   &trans   &bt  BT_CLR    &none          &none          &none          &none                    &none        &none      &none          &none          &none        &trans
-                                          &trans         &trans         &trans                   &trans       &trans     &trans
+   &kp  F1   &kp  F2         &kp  F3         &kp  F4         &kp  F5         &kp  F6                  &kp  F7       &kp  F8     &kp  F9         &kp  F10        &kp  F11      &kp  F12
+   &trans    &bt  BT_SEL 0   &bt  BT_SEL 1   &bt  BT_SEL 2   &bt  BT_SEL 3   &bt  BT_SEL 4            &kp  C_PREV   &kp  C_PP   &kp  C_VOL_UP   &kp  C_VOL_DN   &kp  C_NEXT   &kp  C_MUTE  
+   &trans    &bt  BT_CLR     &none           &none           &none           &none                    &none         &none       &none           &none           &none         &trans
+                                             &trans          &trans          &trans                   &trans        &trans      &trans
                         >;
                 };
         };
