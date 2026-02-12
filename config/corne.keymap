@@ -145,7 +145,7 @@
     // CTRL + D----combo para hacer multiples selecciones en vsc
     COMBO(mselec, <&kp LC(D)>, 24 18)
 
-    // CTRL + I----combo para abrir chat con ia en linea en vsc
+    // CTRL + I----combo para abrir chat con ia en linea en vsc hola bebe
     COMBO(ia, <&kp LC(I)>, 24 17)
 
   };
