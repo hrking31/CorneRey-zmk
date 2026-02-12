@@ -148,8 +148,8 @@
     // CTRL + D----combo para hacer multiples selecciones en vsc
     COMBO(mselec, <&kp LC(D)>, 24 18)
 
-    // CTRL + PGUP----combo para cambiar entre pestañas en vsc  prueba de cambios guardados
-    
+    // CTRL + PGUP----combo para cambiar entre pestañas en vsc
+
     COMBO(ventanas, <&kp LC(PG_UP)>, 24 2)
 
   };
