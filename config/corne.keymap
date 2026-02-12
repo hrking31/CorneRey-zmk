@@ -77,7 +77,7 @@
     MACRO(ext, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp x &macro_release &kp RSHFT &macro_release &kp LCTRL)
 
     //macro para abril nueva carpeta de proyecto en vsc
-    MACRO(open, &macro_press &kp LCTRL &macro_tap &kp K &macro_tap &kp O &macro_release &kp LCTRL )
+    MACRO(open, &macro_press &kp LCTRL &macro_tap &kp K &macro_tap &kp O &macro_release &kp LCTRL)
 
     //macro para cerrar carpeta actual de proyecto en vsc
     MACRO(close, &macro_press &kp LCTRL &macro_tap &kp K &macro_release &kp LCTRL &macro_tap &kp F)
@@ -148,10 +148,9 @@
     // CTRL + D----combo para hacer multiples selecciones en vsc
     COMBO(mselec, <&kp LC(D)>, 24 18)
 
-    // CTRL + PGUP----combo para cambiar entre pestañas en vscggggggggg
+    // CTRL + PGUP----combo para cambiar entre pestañas en vsc
 
     COMBO(ventanas, <&kp LC(PG_UP)>, 24 2)
-
   };
 };
 
@@ -175,7 +174,7 @@
 
                         bindings = <
    &trans  &kp  N1     &kp  N2    &kp  N3    &kp  N4        &kp  N5                &kp  N6      &kp  N7      &kp  N8     &kp  N9      &kp  N0        &trans
-   &trans  LC(B)       &kp LC(E)  &kp  HOME  &kp  LA(UP)    &kp LC(Z)              &kp  UP      &kp  LC(C)   &kp  LC(V)  &kp  LC(X)   &kp  LC(BSLH)  &trans
+   &trans  &kp  LC(B)  &kp LC(E)  &kp  HOME  &kp  LA(UP)    &kp LC(Z)              &kp  UP      &kp  LC(C)   &kp  LC(V)  &kp  LC(X)   &kp  LC(BSLH)  &trans
    &trans  &mcr_focoa  &kp LC(A)  &kp  END   &kp  LA(DOWN)  &kp LC(Y)              &kp  DOWN    &kp  LC(J)   &mcr_file   &mcr_git     &mcr_ext       &trans
                                   &trans     &trans         &trans                 &trans       &mo NAV      &mo FUN 
                         >;
