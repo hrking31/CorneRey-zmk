@@ -227,10 +227,10 @@
             label = "NAV";
 
                         bindings = <
-   &trans   &none          &kp   PG_UP   &mcr_selleft    &kp  RA(Q)      &kp  RA(E)                      &kp  LC(D)   &kp LC(PG_UP)   &mcr_selright    &kp  LS(UP)     &none   &trans
-   &trans   &none          &kp   PG_DN   &kp  LS(LEFT)   &kp  RA(LEFT)   &kp  RA(D)                      &mcr_open    RA(RBKT)        &kp  LS(RIGHT)   &kp  LS(DOWN)   &none   &trans
-   &trans   &kp  LC(DOT)   &kp   LEFT    &mcr_left       &kp  RA(N)      &kp  RA(M)                      &mcr_close   &none           &mcr_right       &kp  RIGHT      &none   &trans
-                                         &trans          &trans          &trans                          &trans       &trans          &trans
+   &trans   &none          &kp   PG_UP   &mcr_selleft    &kp  RA(Q)      &kp  RA(E)                      &kp  LC(D)   &kp  LC(PG_UP)   &mcr_selright    &kp  LS(UP)     &none   &trans
+   &trans   &none          &kp   PG_DN   &kp  LS(LEFT)   &kp  RA(LEFT)   &kp  RA(D)                      &mcr_open    &kp  RA(RBKT)    &kp  LS(RIGHT)   &kp  LS(DOWN)   &none   &trans
+   &trans   &kp  LC(DOT)   &kp   LEFT    &mcr_left       &kp  RA(N)      &kp  RA(M)                      &mcr_close   &none            &mcr_right       &kp  RIGHT      &none   &trans
+                                         &trans          &trans          &trans                          &trans       &trans           &trans
                         >;
                 };
 
