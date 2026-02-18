@@ -151,7 +151,7 @@
     COMBO(ventanas, <&kp LC(PG_UP)>, 24 2)
 
     // CTRL + .----combo para corregir ortografía en vsc
-    COMBO(ortografía, <&kp LC(DOT)>, 24 1)
+    COMBO(ortografia, <&kp LC(DOT)>, 24 1)
 
 ///////////////////////////////// KOMOREBI //////////////////////////////////////////
     // RALT + W----cambia el foco a otro monitor izquierda
@@ -167,7 +167,7 @@
     COMBO(ventanasde, <&kp RA(D)>, 12 18)
 
     // RALT + Q----cierra ventanas abierta
-    COMBO(cerrar, <&kp RA(Q)>, 12 22)
+    COMBO(cerrar, <&kp RA(Q)>, 12 26)
 
     // RALT + M----maximiza ventana enfocada
     COMBO(maximiza, <&kp RA(M)>, 12 18)
