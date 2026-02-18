@@ -151,12 +151,9 @@
     COMBO(ventanas, <&kp LC(PG_UP)>, 24 2)
 
     // CTRL + .----combo para corregir ortografía en vsc
-    COMBO(ortografía, <&kp LC(DOT)>, 24 18)
+    COMBO(ortografia, <&kp LC(DOT)>, 24 18)
 
-/*
 ///////////////////////////////// KOMOREBI //////////////////////////////////////////
- */
-
     // RALT + W----cambia el foco a otro monitor izquierda
     COMBO(monitor, <&kp RA(W)>, 12 32)
 
