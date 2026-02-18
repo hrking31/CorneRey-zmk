@@ -149,6 +149,40 @@
 
     // CTRL + PGUP----combo para cambiar entre pestañas en vsc
     COMBO(ventanas, <&kp LC(PG_UP)>, 24 2)
+
+    // CTRL + .----combo para corregir ortografía en vsc
+    COMBO(ortografía, <&kp LC(DOT)>, 24 18)
+
+    ///////////////////////////////// KOMOREBI ////////////////////////////////////////////
+    // RALT + W----cambia el foco a otro monitor izquierda
+    COMBO(monitor, <&kp RA(W)>, 12 32)
+
+    // RALT + E----cambia el foco a otro monitor derecha
+    COMBO(monitor, <&kp RA(E)>, 12 15)
+
+    // RALT + S----cambia ventanas en pila izquierda
+    COMBO(ventanas, <&kp RA(S)>, 12 22)
+
+    // RALT + D----cambia ventanas en pila  derecha
+    COMBO(ventanas, <&kp RA(D)>, 12 18)
+
+    // RALT + Q----cierra ventanas abierta
+    COMBO(cerrar, <&kp RA(Q)>, 12 22)
+
+    // RALT + M----maximiza ventana enfocada
+    COMBO(maximiza, <&kp RA(M)>, 12 18)
+
+    // RALT + +----aumenta tamaño de la ventanas enfocada
+    COMBO(maxventanas, <&kp RA(RBKT)>, 12 25)
+
+    // RALT + <-- ----apila varias ventanas izquierda
+    COMBO(apilaiz, <&kp RA(LEFT)>, 12 26)
+
+    // RALT + --> --apila varias ventanas derecha
+    COMBO(apiladr, <&kp RA(RIGHT)>, 12 33)
+
+    // RALT + N ----des apila ventanas 
+    COMBO(desapila, <&kp RA(N)>, 12 21)
   };
 };
 
@@ -193,10 +227,10 @@
             label = "NAV";
 
                         bindings = <
-   &trans   &none  &kp   PG_UP   &mcr_selleft    &none    &none                      &kp  LC(D)   &kp LC(PG_UP)   &mcr_selright    &kp  LS(UP)     &none   &trans
-   &trans   &none  &kp   PG_DN   &kp  LS(LEFT)   &none    &none                      &mcr_open    &none           &kp  LS(RIGHT)   &kp  LS(DOWN)   &none   &trans
-   &trans   &none  &kp   LEFT    &mcr_left       &none    &none                      &mcr_close   &none           &mcr_right       &kp  RIGHT      &none   &trans
-                                 &trans          &trans   &trans                     &trans       &trans          &trans
+   &trans   &none          &kp   PG_UP   &mcr_selleft    &kp  RA(Q)      &kp  RA(E)                      &kp  LC(D)   &kp LC(PG_UP)   &mcr_selright    &kp  LS(UP)     &none   &trans
+   &trans   &none          &kp   PG_DN   &kp  LS(LEFT)   &kp  RA(LEFT)   &kp  RA(D)                      &mcr_open    RA(RBKT)        &kp  LS(RIGHT)   &kp  LS(DOWN)   &none   &trans
+   &trans   &kp  LC(DOT)   &kp   LEFT    &mcr_left       &kp  RA(N)      &kp  RA(M)                      &mcr_close   &none           &mcr_right       &kp  RIGHT      &none   &trans
+                                         &trans          &trans          &trans                          &trans       &trans          &trans
                         >;
                 };
 
