@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-//para activar funcioes en el teclado
+//para activar funciones en el teclado
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -49,6 +49,17 @@
 
 / {
   macros {
+
+/////////////////////////////////////////////////////////////// MACROS PARA TECLADO WINDOWS ///////////////////////////////////////////////////////////////
+
+    //macro para crear la barra "\"
+    MACRO(barra, &macro_press &kp LALT &macro_tap &kp KP_N9 &macro_tap &kp KP_N2 &macro_release &kp LALT)
+
+    //macro para crear la "@"
+    MACRO(arroba, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp Q &macro_release &kp LALT &macro_release &kp LCTRL)
+
+/////////////////////////////////////////////////////////////// MACROS PARA VSC ///////////////////////////////////////////////////////////////
+
     //macro para mover la ventana del codigo a la izquierda en vsc
     MACRO(left, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT &macro_release &kp LCTRL)
 
@@ -63,9 +74,6 @@
 
     //macro para colocar el foco en el menu del explorador de archivos en vsc
     MACRO(focoa, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp E &macro_release &kp RSHFT &macro_release &kp LCTRL)
-
-    //macro para crear la barra "\"
-    MACRO(barra, &macro_press &kp LALT &macro_tap &kp KP_N9 &macro_tap &kp KP_N2 &macro_release &kp LALT)
 
     //macro para abril el menu de archivos en vsc
     MACRO(file, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp E &macro_release &kp RSHFT &macro_release &kp LCTRL)
@@ -89,9 +97,13 @@
     MACRO(down, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp DOWN &macro_release &kp LALT &macro_release &kp RSHFT)
   };
 };
+
+
 / {
   combos {
     compatible = "zmk,combos";
+
+///////////////////////////////// COMBOS PARA TECLADO WINDOWS //////////////////////////////////////////
 
     // CTRL + C----combo para copiar
     COMBO(copy, <&kp LC(C)>, 24 8)
@@ -101,6 +113,14 @@
 
     // CTRL + X----combo para cortar
     COMBO(cut, <&kp LC(X)>, 24 29)
+
+    // SHFT  + /----combo para crear "_" en teclado
+    COMBO(menos, <&kp LS(SLASH)>, 36 4)
+
+    // SHFT  + \----combo para crear ">" en el teclado
+    COMBO(mayor, <&kp LS(NUBS)>, 36 4)
+
+///////////////////////////////// COMBOS PARA VSC //////////////////////////////////////////
 
     // CTRL + Z----combo para deshace la última acción en vsc
     COMBO(atra, <&kp LC(Z)>, 24 34)
@@ -129,20 +149,11 @@
     // CTRL + llaves----combo para comentar en vsc
     COMBO(comentar, <&kp LC(BSLH)>, 24 22)
 
-    // RALT + Q----combo para agregar la "@" al teclado
-    COMBO(arroba, <&kp RA(Q)>, 12 26)
-
     // CTRL + A----combo para crear nuevo archivo en explorador de vsc
     COMBO(narchivo, <&kp LC(A)>, 24 13)
 
     // CTRL + E----combo para crear nueva carpeta en explorador de vsc
     COMBO(ncarpeta, <&kp LC(E)>, 24 15)
-
-    // SHFT  + /----combo para crear "_" en teclado
-    COMBO(menos, <&kp LS(SLASH)>, 36 4)
-
-    // SHFT  + \----combo para crear ">" en el teclado
-    COMBO(mayor, <&kp LS(NUBS)>, 36 4)
 
     // CTRL + D----combo para hacer multiples selecciones en vsc
     COMBO(mselec, <&kp LC(D)>, 24 18)
@@ -153,7 +164,8 @@
     // CTRL + .----combo para corregir ortografía en vsc
     COMBO(ortografia, <&kp LC(DOT)>, 24 1)
 
-///////////////////////////////// KOMOREBI //////////////////////////////////////////
+///////////////////////////////// COMBOS PARA KOMOREBI //////////////////////////////////////////
+
     // LALT + W----cambia el foco a otro monitor izquierda
     COMBO(monitoriz, <&kp LA(W)>, 12 32)
 
@@ -216,7 +228,7 @@
             label = "SYM";
 
                         bindings = <
-   &trans   &kp  PLUS   &kp  AT           &kp  HASH    &kp  DLLR    &kp  PRCNT             &kp  PSCRN   &kp  RA(Q)      &kp  MINUS   &kp  LBKT       &kp  EXCL    &trans
+   &trans   &kp  PLUS   &kp  AT           &kp  HASH    &kp  DLLR    &kp  PRCNT             &kp  PSCRN   &mcr_arroba     &kp  MINUS   &kp  LBKT       &kp  EXCL    &trans
    &trans   &kp  DQT    &kp  APOSTROPHE   &kp  ASTRK   &kp  GRAVE   &kp  EQUAL             &kp  UNDER   &kp  CARET      &kp  LPAR    &kp  BSLH       &kp  PIPE    &trans
    &trans   &kp  RBKT   &kp  SLASH        &kp  RBRC    &kp  AMPS    &kp  RPAR              &kp  NUBS    &kp  LS(NUBS)   &mcr_barra   &kp LS(SLASH)   &kp  TILDE   &trans
                                           &trans       &mo LED      &trans                 &trans       &trans          &trans
