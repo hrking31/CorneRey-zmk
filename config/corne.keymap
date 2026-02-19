@@ -154,35 +154,35 @@
     COMBO(ortografia, <&kp LC(DOT)>, 24 1)
 
 ///////////////////////////////// KOMOREBI //////////////////////////////////////////
-    // RALT + W----cambia el foco a otro monitor izquierda
-    COMBO(monitoriz, <&kp RA(W)>, 12 32)
+    // LALT + W----cambia el foco a otro monitor izquierda
+    COMBO(monitoriz, <&kp LA(W)>, 12 32)
 
-    // RALT + E----cambia el foco a otro monitor derecha
-    COMBO(monitorde, <&kp RA(E)>, 12 15)
+    // LALT + E----cambia el foco a otro monitor derecha
+    COMBO(monitorde, <&kp LA(E)>, 12 15)
 
-    // RALT + S----cambia ventanas en pila izquierda
-    COMBO(ventanasiz, <&kp RA(S)>, 12 22)
+    // LALT + S----cambia ventanas en pila izquierda
+    COMBO(ventanasiz, <&kp LA(S)>, 12 22)
 
-    // RALT + D----cambia ventanas en pila  derecha
-    COMBO(ventanasde, <&kp RA(D)>, 12 18)
+    // LALT + D----cambia ventanas en pila  derecha
+    COMBO(ventanasde, <&kp LA(D)>, 12 18)
 
-    // RALT + Q----cierra ventanas abierta
-    COMBO(cerrar, <&kp RA(Q)>, 12 26)
+    // LALT + Q----cierLA ventanas abierta
+    COMBO(cerLAr, <&kp LA(Q)>, 12 26)
 
-    // RALT + M----maximiza ventana enfocada
-    COMBO(maximiza, <&kp RA(M)>, 12 18)
+    // LALT + M----maximiza ventana enfocada
+    COMBO(maximiza, <&kp LA(M)>, 12 18)
 
-    // RALT + +----aumenta tamaño de la ventanas enfocada
-    COMBO(maxventanas, <&kp RA(RBKT)>, 12 25)
+    // LALT + +----aumenta tamaño de la ventanas enfocada
+    COMBO(maxventanas, <&kp LA(RBKT)>, 12 25)
 
-    // RALT + <-- ----apila varias ventanas izquierda
-    COMBO(apilaiz, <&kp RA(LEFT)>, 12 26)
+    // LALT + <-- ----apila varias ventanas izquierda
+    COMBO(apilaiz, <&kp LA(LEFT)>, 12 26)
 
-    // RALT + --> --apila varias ventanas derecha
-    COMBO(apiladr, <&kp RA(RIGHT)>, 12 33)
+    // LALT + --> --apila varias ventanas derecha
+    COMBO(apiladr, <&kp LA(RIGHT)>, 12 33)
 
-    // RALT + N ----des apila ventanas 
-    COMBO(desapila, <&kp RA(N)>, 12 21)
+    // LALT + N ----des apila ventanas 
+    COMBO(desapila, <&kp LA(N)>, 12 21)
   };
 };
 
