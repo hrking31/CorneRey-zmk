@@ -175,10 +175,7 @@
     // LALT + S----cambia ventanas en pila izquierda
     COMBO(ventanasiz, <&kp LA(S)>, 12 22)
 
-    // LALT + D----cambia ventanas en pila  derecha
-    COMBO(ventanasde, <&kp LA(D)>, 12 18)
-
-    // LALT + Q----cierLA ventanas abierta
+    // LALT + Q----cierra ventanas abierta
     COMBO(cerLAr, <&kp LA(Q)>, 12 26)
 
     // LALT + M----maximiza ventana enfocada
@@ -191,11 +188,32 @@
     COMBO(apilaiz, <&kp LA(LEFT)>, 12 26)
 
     // LALT + --> --apila varias ventanas derecha
-    COMBO(apiladr, <&kp LA(RIGHT)>, 12 33)
+    COMBO(apilador, <&kp LA(RIGHT)>, 12 33)
 
     // LALT + N ----des apila ventanas 
     COMBO(desapila, <&kp LA(N)>, 12 21)
+
+    // LALT + H ---- cambia el foco entre ventanas izquierda
+    COMBO(winl, <&kp LA(H)>, 12 21)
+
+    // LALT + L ----cambia el foco entre ventanas derecha 
+    COMBO(winr, <&kp LA(L)>, 12 21)
+
+    // CTRL + N----abre nueva ventana del navegador 
+    COMBO(web, <&kp LC(N)>, 24 21)
   };
+};
+
+/ {
+    behaviors {
+        altb_ctrln: altb_ctrln {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            bindings = <&kp LA B>, <&kp LC N>;
+        };
+    };
 };
 
  / {
@@ -239,10 +257,10 @@
             label = "NAV";
 
                         bindings = <
-   &trans   &none          &kp   PG_UP   &mcr_selleft    &kp  LA(Q)      &kp  LA(E)                      &kp  LC(D)   &kp  LC(PG_UP)   &mcr_selright    &kp  LS(UP)     &none   &trans
-   &trans   &none          &kp   PG_DN   &kp  LS(LEFT)   &kp  LA(LEFT)   &kp  LA(D)                      &mcr_open    &kp  LA(RBKT)    &kp  LS(RIGHT)   &kp  LS(DOWN)   &none   &trans
-   &trans   &kp  LC(DOT)   &kp   LEFT    &mcr_left       &kp  LA(N)      &kp  LA(M)                      &mcr_close   &none            &mcr_right       &kp  RIGHT      &none   &trans
-                                         &trans          &trans          &trans                          &trans       &trans           &trans
+   &trans   &kp  LC(PG_UP)   &kp   PG_UP   &mcr_selleft    &kp  LA(Q)      &kp  LA(W)                      &kp  LA(E)   &kp  LA(RBKT)    &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
+   &trans   &altb_ctrln      &kp   PG_DN   &kp  LS(LEFT)   &kp  LA(N)      &kp  LA(S)                      &kp  LA(M)   &none            &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
+   &trans   &kp  LC(DOT)     &kp   LEFT    &mcr_left       &kp  LA(LEFT)   &kp  LA(H)                      &kp  LA(L)   &kp  LA(RIGHT)   &mcr_right       &kp  RIGHT      &mcr_close   &trans
+                                           &trans          &trans          &trans                          &trans       &trans           &trans
                         >;
                 };
 
