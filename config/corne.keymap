@@ -206,7 +206,7 @@
 
 / {
     behaviors {
-        al_ct: al_ct {
+        hold-tap: hold-tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -257,10 +257,10 @@
             label = "NAV";
 
                         bindings = <
-   &trans   &kp  LC(PG_UP)       &kp   PG_UP   &mcr_selleft    &kp  LA(Q)      &kp  LA(W)                      &kp  LA(E)   &kp  LA(RBKT)    &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
-   &trans   &al_ct LA(B) LC(N)   &kp   PG_DN   &kp  LS(LEFT)   &kp  LA(N)      &kp  LA(S)                      &kp  LA(M)   &none            &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
-   &trans   &kp  LC(DOT)         &kp   LEFT    &mcr_left       &kp  LA(LEFT)   &kp  LA(H)                      &kp  LA(L)   &kp  LA(RIGHT)   &mcr_right       &kp  RIGHT      &mcr_close   &trans
-                                               &trans          &trans          &trans                          &trans       &trans           &trans
+   &trans   &kp  LC(PG_UP)          &kp   PG_UP   &mcr_selleft    &kp  LA(Q)      &hold-tap LA(W) LC(E)                      &none        &kp  LA(RBKT)    &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
+   &trans   &hold-tap LA(B) LC(N)   &kp   PG_DN   &kp  LS(LEFT)   &kp  LA(N)      &kp  LA(S)                                 &kp  LA(M)   &none            &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
+   &trans   &kp  LC(DOT)            &kp   LEFT    &mcr_left       &kp  LA(LEFT)   &kp  LA(H)                                 &kp  LA(L)   &kp  LA(RIGHT)   &mcr_right       &kp  RIGHT      &mcr_close   &trans
+                                                  &trans          &trans          &trans                                     &trans       &trans           &trans
                         >;
                 };
 
