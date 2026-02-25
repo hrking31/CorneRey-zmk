@@ -211,7 +211,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            bindings = <&kp LALT B>, <&kp LCTRL N>;
+            bindings = <&kp LALT B &kp LCTRL N>;
         };
     };
 };
