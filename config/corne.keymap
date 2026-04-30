@@ -120,6 +120,9 @@
     // SHFT  + \----combo para crear ">" en el teclado
     COMBO(mayor, <&kp LS(NUBS)>, 36 4)
 
+    // CTRL + N----abre nueva ventana del navegador 
+    COMBO(web, <&kp LC(N)>, 24 21
+
 ///////////////////////////////// COMBOS PARA VSC //////////////////////////////////////////
 
     // CTRL + Z----combo para deshace la última acción en vsc
@@ -175,6 +178,9 @@
     // LALT + S----cambia ventanas en pila izquierda
     COMBO(ventanasiz, <&kp LA(S)>, 12 22)
 
+    // LALT + D----cambia ventanas en pila derecha
+    COMBO(ventanasde, <&kp LA(D)>, 12 22)
+
     // LALT + Q----cierra ventanas abierta
     COMBO(cerLAr, <&kp LA(Q)>, 12 26)
 
@@ -199,8 +205,16 @@
     // LALT + L ----cambia el foco entre ventanas derecha 
     COMBO(winr, <&kp LA(L)>, 12 21)
 
-    // CTRL + N----abre nueva ventana del navegador 
+    // LALT + J ---- cambia el foco entre ventanas down
+    COMBO(windown, <&kp LA(J)>, 12 21)
+
+    // LALT + K ----cambia el foco entre ventanas up 
+    COMBO(winup, <&kp LA(K)>, 12 21)
+
+    // LALT + B----abrela primera ventana del navegador 
     COMBO(web, <&kp LC(N)>, 24 21)
+
+)
   };
 };
 
@@ -235,10 +249,10 @@
             label = "NUM";
 
                         bindings = <
-   &trans   &kp  N1       &kp  N2     &kp  N3     &kp  N4     &kp  N5                &kp  N6     &kp  N7      &kp  N8      &kp  N9      &kp  N0         &trans
-   &trans   &kp  LC (B)   &kp LC(E)   &kp  HOME   &mcr_up     &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)   &kp  LC(X)   &kp  LC(BSLH)   &trans
-   &trans   &mcr_focoa    &kp LC(A)   &kp  END    &mcr_down   &kp LC(Y)              &kp  DOWN   &kp  LC(J)   &mcr_file    &mcr_git     &mcr_ext        &trans
-                                      &trans      &trans      &trans                 &trans      &mo NAV      &mo FUN 
+   &trans   &kp  N1      &kp  N2     &kp  N3     &kp  N4     &kp  N5                &kp  N6     &kp  N7      &kp  N8      &kp  N9      &kp  N0         &trans
+   &trans   &kp  LC(B)   &kp LC(E)   &kp  HOME   &mcr_up     &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)   &kp  LC(X)   &kp  LC(BSLH)   &trans
+   &trans   &mcr_focoa   &kp LC(A)   &kp  END    &mcr_down   &kp LC(Y)              &kp  DOWN   &kp  LC(J)   &mcr_file    &mcr_git     &mcr_ext        &trans
+                                      &trans      &trans      &trans                &trans      &mo NAV      &mo FUN 
                         >;
                 };
 
@@ -257,10 +271,10 @@
             label = "NAV";
 
                         bindings = <
-   &trans   &kp  LC(PG_UP)          &kp   PG_UP   &mcr_selleft    &kp  LA(Q)      &hold_tap LA(W) LC(E)                      &none        &kp  LA(RBKT)    &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
-   &trans   &hold_tap LA(B) LC(N)   &kp   PG_DN   &kp  LS(LEFT)   &kp  LA(N)      &kp  LA(S)                                 &kp  LA(M)   &none            &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
-   &trans   &kp  LC(DOT)            &kp   LEFT    &mcr_left       &kp  LA(LEFT)   &kp  LA(H)                                 &kp  LA(L)   &kp  LA(RIGHT)   &mcr_right       &kp  RIGHT      &mcr_close   &trans
-                                                  &trans          &trans          &trans                                     &trans       &trans           &trans
+   &trans   &kp  LC(PG_UP)          &kp   PG_UP   &mcr_selleft    &kp  LA(Q)                     &hold_tap LA(W) LC(E)                      &hold_tap LA(K) LC(J)   &kp  LA(RBKT)    &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
+   &trans   &hold_tap LA(B) LC(N)   &kp   PG_DN   &kp  LS(LEFT)   &hold_tap LA(N) LC(M)          &hold_tap LA(S) LC(D)                      &none                   &none            &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
+   &trans   &kp  LC(DOT)            &kp   LEFT    &mcr_left       &hold_tap LA(LEFT) LC(RIGHT)   &hold_tap LA(H) LC(L)                      &kp  LA(L)              &none            &mcr_right       &kp  RIGHT      &mcr_close   &trans
+                                                  &trans          &trans                         &trans                                     &trans                  &trans           &trans
                         >;
                 };
 
