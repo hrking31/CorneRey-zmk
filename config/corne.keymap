@@ -212,7 +212,7 @@
     COMBO(winup, <&kp LA(K)>, 12 21)
 
     // LALT + B----abrela primera ventana del navegador 
-    COMBO(web, <&kp LC(N)>, 24 21)
+    COMBO(webcrom, <&kp LA(N)>, 12 21)
 
 )
   };
