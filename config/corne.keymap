@@ -121,7 +121,7 @@
     COMBO(mayor, <&kp LS(NUBS)>, 36 4)
 
     // CTRL + N----abre nueva ventana del navegador 
-    COMBO(web, <&kp LC(N)>, 24 21
+    COMBO(web, <&kp LC(N)>, 24 21)
 
 ///////////////////////////////// COMBOS PARA VSC //////////////////////////////////////////
 
