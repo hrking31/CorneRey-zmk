@@ -213,8 +213,6 @@
 
     // LALT + B----abrela primera ventana del navegador 
     COMBO(webcrom, <&kp LA(B)>, 12 30)
-
-)
   };
 };
 
