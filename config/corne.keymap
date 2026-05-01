@@ -265,7 +265,7 @@
 
                         bindings = <
    &trans   &kp  N1      &kp  N2     &kp  N3     &kp  N4                     &kp  N5                &kp  N6     &kp  N7      &kp  N8      &kp  N9      &kp  N0         &trans
-   &trans   &kp  LC(B)   &kp LC(E)   &kp  HOME   &ht_mcr mcr_up mcr_down   &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)   &kp  LC(X)   &kp  LC(BSLH)   &trans
+   &trans   &kp  LC(B)   &kp LC(E)   &kp  HOME   &ht_mcr &mcr_up &mcr_down   &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)   &kp  LC(X)   &kp  LC(BSLH)   &trans
    &trans   &mcr_focoa   &kp LC(A)   &kp  END    &none                       &kp LC(Y)              &kp  DOWN   &kp  LC(J)   &mcr_file    &mcr_git     &mcr_ext        &trans
                                      &trans      &trans                      &trans                 &trans      &mo NAV      &mo FUN 
                         >;
