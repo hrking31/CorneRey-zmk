@@ -240,7 +240,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            bindings = <&macro>, <&macro>;
+            bindings = <&mcr>, <&mcr>;
         };
     };
 };
