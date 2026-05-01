@@ -286,7 +286,7 @@
             label = "NAV";
 
                         bindings = <
-   &trans   &kp  LC(PG_UP)         &kp   PG_UP   &mcr_selleft    &ht_comb LA(Q)         &ht_comb LA(W) LA(E)                      &ht_comb LA(H) LA(L)   &ht_comb LA(RBKT) LA(SLASH)   &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
+   &trans   &kp  LC(PG_UP)         &kp   PG_UP   &mcr_selleft    &kp LA(Q)         &ht_comb LA(W) LA(E)                      &ht_comb LA(H) LA(L)   &ht_comb LA(RBKT) LA(SLASH)   &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
    &trans   &ht_comb LA(B) LC(N)   &kp   PG_DN   &kp  LS(LEFT)   &ht_comb LA(N) LA(M)   &ht_comb LA(S) LA(D)                      &ht_comb LA(K) LA(J)   &none                         &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
    &trans   &kp  LC(DOT)           &kp   LEFT    &mcr_left       &ht_comb LA(X) LA(Y)   &ht_comb LA(LEFT) LA(RIGHT)               &none                  &none                         &mcr_right       &kp  RIGHT      &mcr_close   &trans
                                                  &trans          &trans                 &trans                                    &trans                 &trans                        &trans
