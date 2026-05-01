@@ -184,17 +184,26 @@
     // LALT + Q----cierra ventanas abierta
     COMBO(cerLAr, <&kp LA(Q)>, 12 26)
 
+    // LALT + X----invierte el orden de las ventanas en horizontal
+    COMBO(horizx, <&kp LA(X)>, 12 29)
+
+    // LALT + Y----invierte el orden de las ventanas en vertical
+    COMBO(horizy, <&kp LA(Y)>, 12 5)
+
     // LALT + M----maximiza ventana enfocada
     COMBO(maximiza, <&kp LA(M)>, 12 18)
 
     // LALT + +----aumenta tamaño de la ventanas enfocada
     COMBO(maxventanas, <&kp LA(RBKT)>, 12 25)
 
+    // LALT + "-"----disminuye tamaño de la ventanas enfocada
+    COMBO(minventanas, <&kp LA(SLASH)>, 12 26)
+
     // LALT + <-- ----apila varias ventanas izquierda
     COMBO(apilaiz, <&kp LA(LEFT)>, 12 26)
 
     // LALT + --> --apila varias ventanas derecha
-    COMBO(apilador, <&kp LA(RIGHT)>, 12 33)
+    COMBO(apilader, <&kp LA(RIGHT)>, 12 33)
 
     // LALT + N ----des apila ventanas 
     COMBO(desapila, <&kp LA(N)>, 12 21)
@@ -218,12 +227,20 @@
 
 / {
     behaviors {
-        hold_tap: hold_tap {
+        ht_comb: hold_tap_combos {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
+        };
+
+        ht_mcr: hold_tap_macros {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&macro>, <&macro>;
         };
     };
 };
@@ -247,10 +264,10 @@
             label = "NUM";
 
                         bindings = <
-   &trans   &kp  N1      &kp  N2     &kp  N3     &kp  N4     &kp  N5                &kp  N6     &kp  N7      &kp  N8      &kp  N9      &kp  N0         &trans
-   &trans   &kp  LC(B)   &kp LC(E)   &kp  HOME   &hold_tap &mcr_up &mcr_down     &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)   &kp  LC(X)   &kp  LC(BSLH)   &trans
-   &trans   &mcr_focoa   &kp LC(A)   &kp  END    &none   &kp LC(Y)              &kp  DOWN   &kp  LC(J)   &mcr_file    &mcr_git     &mcr_ext        &trans
-                                     &trans      &trans      &trans                &trans      &mo NAV      &mo FUN 
+   &trans   &kp  N1      &kp  N2     &kp  N3     &kp  N4                     &kp  N5                &kp  N6     &kp  N7      &kp  N8      &kp  N9      &kp  N0         &trans
+   &trans   &kp  LC(B)   &kp LC(E)   &kp  HOME   &ht_mcr &mcr_up &mcr_down   &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)   &kp  LC(X)   &kp  LC(BSLH)   &trans
+   &trans   &mcr_focoa   &kp LC(A)   &kp  END    &none                       &kp LC(Y)              &kp  DOWN   &kp  LC(J)   &mcr_file    &mcr_git     &mcr_ext        &trans
+                                     &trans      &trans                      &trans                 &trans      &mo NAV      &mo FUN 
                         >;
                 };
 
@@ -269,10 +286,10 @@
             label = "NAV";
 
                         bindings = <
-   &trans   &kp  LC(PG_UP)          &kp   PG_UP   &mcr_selleft    &kp  LA(Q)                     &hold_tap LA(W) LC(E)                      &hold_tap LA(K) LC(J)   &kp  LA(RBKT)    &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
-   &trans   &hold_tap LA(B) LC(N)   &kp   PG_DN   &kp  LS(LEFT)   &hold_tap LA(N) LC(M)          &hold_tap LA(S) LC(D)                      &none                   &none            &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
-   &trans   &kp  LC(DOT)            &kp   LEFT    &mcr_left       &hold_tap LA(LEFT) LC(RIGHT)   &hold_tap LA(H) LC(L)                      &kp  LA(L)              &none            &mcr_right       &kp  RIGHT      &mcr_close   &trans
-                                                  &trans          &trans                         &trans                                     &trans                  &trans           &trans
+   &trans   &kp  LC(PG_UP)         &kp   PG_UP   &mcr_selleft    &ht_comb LA(Q)         &ht_comb LA(W) LA(E)                      &ht_comb LA(H) LA(L)   &ht_comb LA(RBKT) LA(SLASH)   &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
+   &trans   &ht_comb LA(B) LC(N)   &kp   PG_DN   &kp  LS(LEFT)   &ht_comb LA(N) LA(M)   &ht_comb LA(S) LA(D)                      &ht_comb LA(K) LA(J)   &none                         &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
+   &trans   &kp  LC(DOT)           &kp   LEFT    &mcr_left       &ht_comb LA(X) LA(Y)   &ht_comb LA(LEFT) LA(RIGHT)               &none                  &none                         &mcr_right       &kp  RIGHT      &mcr_close   &trans
+                                                 &trans          &trans                 &trans                                    &trans                 &trans                        &trans
                         >;
                 };
 
