@@ -103,10 +103,10 @@
     MACRO(decre, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp SLASH &macro_release &kp LALT &macro_release &kp RSHFT)
 
     //macro para maximizar las ventanas en pila
-    MACRO(maxi, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp f &macro_release &kp LALT &macro_release &kp RSHFT)
+    MACRO(maxi, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp F &macro_release &kp LALT &macro_release &kp RSHFT)
 
     //macro para reset al orden visual de las ventanas
-    MACRO(reset, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp r &macro_release &kp LALT &macro_release &kp RSHFT)
+    MACRO(reset, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp R &macro_release &kp LALT &macro_release &kp RSHFT)
   };
 };
 
