@@ -95,9 +95,20 @@
 
     //macro para mover una linea de código hacia abajo en vsc
     MACRO(down, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp DOWN &macro_release &kp LALT &macro_release &kp RSHFT)
+
+    //macro para incrementar el tamaño de ventana enfocada en el eje y
+    MACRO(incre, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp RBKT &macro_release &kp LALT &macro_release &kp RSHFT)
+
+    //macro para decrementar el tamaño de ventana enfocada en el eje y
+    MACRO(decre, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp SLASH &macro_release &kp LALT &macro_release &kp RSHFT)
+
+    //macro para maximizar las ventanas en pila
+    MACRO(maxi, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp f &macro_release &kp LALT &macro_release &kp RSHFT)
+
+    //macro para reset al orden visual de las ventanas
+    MACRO(reset, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp r &macro_release &kp LALT &macro_release &kp RSHFT)
   };
 };
-
 
 / {
   combos {
@@ -193,10 +204,10 @@
     // LALT + M----maximiza ventana enfocada
     COMBO(maximiza, <&kp LA(M)>, 12 18)
 
-    // LALT + +----aumenta tamaño de la ventanas enfocada
+    // LALT + +----aumenta tamaño de la ventanas enfocada en el eje x
     COMBO(maxventanas, <&kp LA(RBKT)>, 12 25)
 
-    // LALT + "-"----disminuye tamaño de la ventanas enfocada
+    // LALT + "-"----disminuye tamaño de la ventanas enfocada en el eje x
     COMBO(minventanas, <&kp LA(SLASH)>, 12 26)
 
     // LALT + <-- ----apila varias ventanas izquierda
@@ -286,7 +297,7 @@
             label = "NAV";
 
                         bindings = <
-   &trans   &kp  LC(PG_UP)         &kp   PG_UP   &mcr_selleft    &kp LA(Q)         &ht_comb LA(W) LA(E)                      &ht_comb LA(H) LA(L)   &ht_comb LA(RBKT) LA(SLASH)   &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
+   &trans   &kp  LC(PG_UP)         &kp   PG_UP   &mcr_selleft    &kp LA(Q)              &ht_comb LA(W) LA(E)                      &ht_comb LA(H) LA(L)   &ht_comb LA(RBKT) LA(SLASH)   &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
    &trans   &ht_comb LA(B) LC(N)   &kp   PG_DN   &kp  LS(LEFT)   &ht_comb LA(N) LA(M)   &ht_comb LA(S) LA(D)                      &ht_comb LA(K) LA(J)   &none                         &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
    &trans   &kp  LC(DOT)           &kp   LEFT    &mcr_left       &ht_comb LA(X) LA(Y)   &ht_comb LA(LEFT) LA(RIGHT)               &none                  &none                         &mcr_right       &kp  RIGHT      &mcr_close   &trans
                                                  &trans          &trans                 &trans                                    &trans                 &trans                        &trans
