@@ -245,8 +245,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
-
-
     };
 };
 
@@ -269,10 +267,10 @@
             label = "NUM";
 
                         bindings = <
-   &trans   &kp  N1      &kp  N2     &kp  N3     &kp  N4                     &kp  N5                &kp  N6     &kp  N7      &kp  N8      &kp  N9                     &kp  N0         &trans
-   &trans   &kp  LC(B)   &kp LC(E)   &kp  HOME   &ht_comb &mcr_up &mcr_down   &kp LC(Z)              &kp  UP     &kp  LC(C)   &kp  LC(V)   &kp  LC(X)                  &kp  LC(BSLH)   &trans
-   &trans   &mcr_focoa   &kp LC(A)   &kp  END    &none                       &kp LC(Y)              &kp  DOWN   &kp  LC(J)   &mcr_file    &ht_comb &mcr_git &mcr_ext   &none     &trans
-                                     &trans      &trans                      &trans                 &trans      &mo NAV      &mo FUN 
+   &trans   &kp  N1      &kp  N2     &kp  N3     &kp  N4     &kp  N5                &kp  N6     &kp  N7      &kp  N8      &kp  N9      &kp  N0         &trans
+   &trans   &kp  LC(B)   &kp LC(E)   &kp  HOME   &mcr_up     &kp LC(Z)              &kp  UP     &ht_comb  LC(C) RIGHT   &kp  LC(V)   &kp  LC(X)   &kp  LC(BSLH)   &trans
+   &trans   &mcr_focoa   &kp LC(A)   &kp  END    &mcr_down   &kp LC(Y)              &kp  DOWN   &ht_comb  LC(J) LEFT   &mcr_file    &mcr_git     &mcr_ext        &trans
+                                     &trans      &trans      &trans                 &trans      &mo NAV      &mo FUN 
                         >;
                 };
 
@@ -322,3 +320,9 @@
         };
 };
 
+
+
+
+
+
+m1111111111zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz1111111zzzzzzzz11111111111111111111zzzzzzzzzzzzz1111111
