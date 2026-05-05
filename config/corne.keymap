@@ -231,8 +231,11 @@
     // LALT + K ----cambia el foco entre ventanas up 
     COMBO(winup, <&kp LA(K)>, 12 21)
 
-    // LALT + B----abrela primera ventana del navegador 
+    // LALT + B----abre la primera ventana del navegador 
     COMBO(webcrom, <&kp LA(B)>, 12 30)
+
+    // LALT + V----abre VSC
+    COMBO(vsc, <&kp LA(B)>, 12 33)
   };
 };
 
@@ -250,7 +253,7 @@
 
  / {
         keymap {
-                compatible = "zmk,keymap";
+                compatible = "zmk,keymap"; 
 
                    default_layer {
             label = "DEF";
@@ -267,10 +270,10 @@
             label = "NUM";
 
                         bindings = <
-   &trans   &kp  N1      &kp N2      &kp N3     &kp N4      &kp N5                &kp N6     &kp N7      &kp N8      &kp N9      &kp N0         &trans
-   &none    &kp LC(B)    &kp LC(E)   &kp HOME   &mcr_up     &kp LC(Z)             &kp UP     &kp LC(C)   &kp LC(V)   &kp LC(X)   &kp LC(BSLH)   &trans
-   &none    &mcr_focoa   &kp LC(A)   &kp END    &mcr_down   &kp LC(Y)             &kp DOWN   &kp LC(J)   &mcr_file   &mcr_git    &mcr_ext       &none
-                                     &none      &trans      &trans                &trans     &mo NAV     &mo FUN 
+   &trans     &kp  N1      &kp N2      &kp N3                 &kp N4      &kp N5                &kp N6     &kp N7      &kp N8      &kp N9      &kp N0         &trans
+   &kp LEFT   &kp LC(B)    &kp LC(E)   &kp HOME               &mcr_up     &kp LC(Z)             &kp UP     &kp LC(C)   &kp LC(V)   &kp LC(X)   &kp LC(BSLH)   &trans
+   &kp RIGHT  &mcr_focoa   &kp LC(A)   &kp END                &mcr_down   &kp LC(Y)             &kp DOWN   &kp LC(J)   &mcr_file   &mcr_git    &mcr_ext       &ht_comb LA(V) LC(Q)
+                                       &ht_comb LA(B) LC(N)   &trans      &trans                &trans     &mo NAV     &mo FUN 
                         >;
                 };
 
@@ -288,11 +291,11 @@
                  navigate_layer {
             label = "NAV";
 
-                        bindings = <
-   &trans   &kp LC(PG_UP)          &kp PG_UP   &mcr_selleft   &kp LA(Q)              &ht_comb LA(W) LA(E)                      &ht_comb LA(H) LA(L)   &ht_comb LA(SLASH) LA(RBKT )   &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
-   &none    &ht_comb LA(B) LC(N)   &kp PG_DN   &kp LS(LEFT)   &ht_comb LA(N) LA(M)   &ht_comb LA(S) LA(D)                      &ht_comb LA(K) LA(J)   &none                          &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
-   &none    &kp LC(DOT)            &kp LEFT    &mcr_left      &ht_comb LA(Y) LA(X)   &ht_comb LA(LEFT) LA(RIGHT)               &none                  &none                          &mcr_right       &kp  RIGHT      &mcr_close   &none
-                                               &none          &trans                 &trans                                    &trans                 &trans                         &none
+                        bindings = < 
+   &trans   &kp LC(PG_UP)   &kp PG_UP   &mcr_selleft   &none                  &ht_comb LA(W) LA(E)                      &ht_comb LA(H) LA(L)   &ht_comb LA(SLASH) LA(RBKT )   &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
+   &none    &none           &kp PG_DN   &kp LS(LEFT)   &ht_comb LA(N) LA(M)   &ht_comb LA(S) LA(D)                      &ht_comb LA(K) LA(J)   &none                          &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
+   &none    &kp LC(DOT)     &kp LEFT    &mcr_left      &ht_comb LA(Y) LA(X)   &ht_comb LA(LEFT) LA(RIGHT)               &none                  &none                          &mcr_right       &kp  RIGHT      &mcr_close   &none
+                                        &none          &trans                 &trans                                    &trans                 &trans                         &none
                         >;
                 };
 
