@@ -267,10 +267,10 @@
             label = "NUM";
 
                         bindings = <
-   &trans   &kp  N1      &kp  N2     &kp  N3     &kp  N4     &kp  N5                &kp  N6     &kp  N7                &kp  N8      &kp  N9      &kp  N0         &trans
-   &trans   &kp  LC(B)   &kp LC(E)   &kp  HOME   &mcr_up     &kp LC(Z)              &kp  UP     &ht_comb RIGHT LC(C)   &kp  LC(V)   &kp  LC(X)   &kp  LC(BSLH)   &trans
-   &trans   &mcr_focoa   &kp LC(A)   &kp  END    &mcr_down   &kp LC(Y)              &kp  DOWN   &ht_comb LEFT  LC(J)   &mcr_file    &mcr_git     &mcr_ext        &trans
-                                     &trans      &trans      &trans                 &trans      &mo NAV                &mo FUN 
+   &trans   &kp  N1      &kp N2      &kp N3     &kp N4      &kp N5                &kp N6     &kp N7      &kp N8      &kp N9      &kp N0         &trans
+   &none    &kp LC(B)    &kp LC(E)   &kp HOME   &mcr_up     &kp LC(Z)             &kp UP     &kp LC(C)   &kp LC(V)   &kp LC(X)   &kp LC(BSLH)   &trans
+   &none    &mcr_focoa   &kp LC(A)   &kp END    &mcr_down   &kp LC(Y)             &kp DOWN   &kp LC(J)   &mcr_file   &mcr_git    &mcr_ext       &none
+                                     &none      &trans      &trans                &trans     &mo NAV     &mo FUN 
                         >;
                 };
 
@@ -278,10 +278,10 @@
             label = "SYM";
 
                         bindings = <
-   &trans   &kp  PLUS   &kp  AT           &kp  HASH    &kp  DLLR    &kp  PRCNT             &kp  PSCRN   &mcr_arroba     &kp  MINUS   &kp  LBKT       &kp  EXCL    &trans
-   &trans   &kp  DQT    &kp  APOSTROPHE   &kp  ASTRK   &kp  GRAVE   &kp  EQUAL             &kp  UNDER   &kp  CARET      &kp  LPAR    &kp  BSLH       &kp  PIPE    &trans
-   &trans   &kp  RBKT   &kp  SLASH        &kp  RBRC    &kp  AMPS    &kp  RPAR              &kp  NUBS    &kp  LS(NUBS)   &mcr_barra   &kp LS(SLASH)   &kp  TILDE   &trans
-                                          &trans       &mo LED      &trans                 &trans       &trans          &trans
+   &trans   &kp PLUS   &kp AT           &kp HASH    &kp DLLR    &kp PRCNT             &kp PSCRN   &mcr_arroba    &kp MINUS    &kp LBKT        &kp EXCL    &trans
+   &none    &kp DQT    &kp APOSTROPHE   &kp ASTRK   &kp GRAVE   &kp EQUAL             &kp UNDER   &kp CARET      &kp LPAR     &kp BSLH        &kp PIPE    &trans
+   &none    &kp RBKT   &kp SLASH        &kp RBRC    &kp AMPS    &kp RPAR              &kp NUBS    &kp LS(NUBS)   &mcr_barra   &kp LS(SLASH)   &kp TILDE   &none
+                                        &none       &mo LED     &trans                &trans      &trans         &none
                         >;
                 };
 
@@ -289,10 +289,10 @@
             label = "NAV";
 
                         bindings = <
-   &trans   &kp  LC(PG_UP)         &kp   PG_UP   &mcr_selleft    &kp LA(Q)              &ht_comb LA(W) LA(E)                      &ht_comb LA(H) LA(L)   &ht_comb LA(SLASH) LA(RBKT )   &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
-   &trans   &ht_comb LA(B) LC(N)   &kp   PG_DN   &kp  LS(LEFT)   &ht_comb LA(N) LA(M)   &ht_comb LA(S) LA(D)                      &ht_comb LA(K) LA(J)   &none                         &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
-   &trans   &kp  LC(DOT)           &kp   LEFT    &mcr_left       &ht_comb LA(Y) LA(X)   &ht_comb LA(LEFT) LA(RIGHT)               &none                  &none                         &mcr_right       &kp  RIGHT      &mcr_close   &trans
-                                                 &trans          &trans                 &trans                                    &trans                 &trans                        &trans
+   &trans   &kp LC(PG_UP)          &kp PG_UP   &mcr_selleft   &kp LA(Q)              &ht_comb LA(W) LA(E)                      &ht_comb LA(H) LA(L)   &ht_comb LA(SLASH) LA(RBKT )   &mcr_selright    &kp  LS(UP)     &kp  LC(D)   &trans
+   &none    &ht_comb LA(B) LC(N)   &kp PG_DN   &kp LS(LEFT)   &ht_comb LA(N) LA(M)   &ht_comb LA(S) LA(D)                      &ht_comb LA(K) LA(J)   &none                          &kp  LS(RIGHT)   &kp  LS(DOWN)   &mcr_open    &trans
+   &none    &kp LC(DOT)            &kp LEFT    &mcr_left      &ht_comb LA(Y) LA(X)   &ht_comb LA(LEFT) LA(RIGHT)               &none                  &none                          &mcr_right       &kp  RIGHT      &mcr_close   &none
+                                               &none          &trans                 &trans                                    &trans                 &trans                         &none
                         >;
                 };
 
@@ -303,7 +303,7 @@
    &none   &none   &rgb_ug RGB_SPD   &rgb_ug RGB_EFR   &none    &none          &none    &none    &rgb_ug RGB_EFF   &rgb_ug RGB_SPI     &none   &none
    &none   &none   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD   &none    &none          &none    &none    &rgb_ug RGB_BRI   &rgb_ug RGB_SAI     &none   &none
    &none   &none   &rgb_ug RGB_TOG   &rgb_ug RGB_HUD   &none    &none          &none    &none    &rgb_ug RGB_HUI   &ext_power EP_TOG   &none   &none
-                                     &trans            &trans   &trans         &trans   &trans   &trans
+                                     &none             &trans   &none          &none    &trans   &none
                         >;
                 };
 
@@ -311,10 +311,10 @@
             label = "FUN";
 
                         bindings = <
-   &kp  F1   &kp  F2         &kp  F3         &kp  F4         &kp  F5         &kp  F6                  &kp  F7       &kp  F8     &kp  F9         &kp  F10        &kp  F11      &kp  F12
-   &trans    &bt  BT_SEL 0   &bt  BT_SEL 1   &bt  BT_SEL 2   &bt  BT_SEL 3   &bt  BT_SEL 4            &kp  C_PREV   &kp  C_PP   &kp  C_VOL_UP   &kp  C_VOL_DN   &kp  C_NEXT   &kp  C_MUTE  
-   &trans    &bt  BT_CLR     &none           &none           &none           &none                    &none         &none       &none           &none           &none         &trans
-                                             &trans          &trans          &trans                   &trans        &trans      &trans
+   &kp F1       &kp F2         &kp F3         &kp F4         &kp F5         &kp F6                  &kp F7       &kp F8     &kp F9         &kp F10        &kp F11      &kp F12
+   &bt BT_CLR   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4            &kp C_PREV   &kp C_PP   &kp C_VOL_UP   &kp C_VOL_DN   &kp C_NEXT   &kp C_MUTE  
+   &none        &none          &none          &none          &none          &none                   &none        &none      &none          &none          &none        &none
+                                              &none          &trans         &none                   &none        &none      &trans
                         >;
                 };
         };
