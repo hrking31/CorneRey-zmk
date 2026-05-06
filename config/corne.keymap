@@ -286,7 +286,7 @@
     COMBO(info, <&kp LA(I)>, 12 17)
 
     // LALT + T----manipulación de estado de ventana (convierte en flotante)
-    COMBO(info, <&kp LA(T)>, 12 20)
+    COMBO(flotante, <&kp LA(T)>, 12 20)
   };
 };
 
