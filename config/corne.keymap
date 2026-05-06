@@ -109,7 +109,7 @@
     MACRO(reset, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp R &macro_release &kp LALT &macro_release &kp RSHFT)
 
     //macro recargar la configuración propia de Komorebi (komorebi.json)
-    MACRO(resetkmrb, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp O &macro_release &kp LALT &macro_release &kp RSHFT)
+    MACRO(resetk, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp O &macro_release &kp LALT &macro_release &kp RSHFT)
 
     //macro para cambiar el foco a otro monitor y escritorio 1
     MACRO(escrt1, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 1 &macro_release &kp LALT &macro_release &kp LCTRL)
@@ -365,10 +365,10 @@
             label = "FUN";
 
                         bindings = <
-   &kp F1           &kp F2         &kp F3         &kp F4         &kp F5         &kp F6                  &kp F7       &kp F8     &kp F9         &kp F10        &kp F11      &kp F12
-   &bt BT_CLR       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4            &kp C_PREV   &kp C_PP   &kp C_VOL_UP   &kp C_VOL_DN   &kp C_NEXT   &kp C_MUTE  
-   &mrc_resetkmrb   &mrc_reset     &kp LA(I)      &none          &none          &none                   &none        &none      &none          &none          &none        &none
-                                                  &none          &trans         &none                   &none        &none      &trans
+   &kp F1        &kp F2         &kp F3         &kp F4         &kp F5         &kp F6                  &kp F7       &kp F8     &kp F9         &kp F10        &kp F11      &kp F12
+   &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4            &kp C_PREV   &kp C_PP   &kp C_VOL_UP   &kp C_VOL_DN   &kp C_NEXT   &kp C_MUTE  
+   &mrc_resetk   &mrc_reset     &kp LA(I)      &none          &none          &none                   &none        &none      &none          &none          &none        &none
+                                               &none          &trans         &none                   &none        &none      &trans
                         >;
                 };
         };
