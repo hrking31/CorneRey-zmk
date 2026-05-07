@@ -112,28 +112,28 @@
     MACRO(resetk, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp O &macro_release &kp LALT &macro_release &kp RSHFT)
 
     //macro para cambiar el foco a otro monitor y escritorio 1
-    MACRO(escrt1, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 1 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(escrt1, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N1 &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para cambiar el foco a otro monitor y escritorio 2
-    MACRO(escrt2, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 2 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(escrt2, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N2 &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para cambiar el foco a otro monitor y escritorio 3
-    MACRO(escrt3, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 3 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(escrt3, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N3 &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para cambiar el foco a otro monitor y escritorio 4
-    MACRO(escrt4, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 4 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(escrt4, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N4 &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para cambiar el foco a otro monitor y escritorio 5
-    MACRO(escrt5, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 5 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(escrt5, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N5 &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para cambiar el foco a otro monitor y escritorio 6
-    MACRO(escrt6, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 6 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(escrt6, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N6 &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para cambiar el foco a otro monitor y escritorio 7
-    MACRO(escrt7, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 7 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(escrt7, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N7 &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para cambiar el foco a otro monitor y escritorio 8
-    MACRO(escrt8, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 8 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(escrt8, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N8 &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para mover la ventana activa a otro monitor izquierda
     MACRO(venl, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp H &macro_release &kp LALT &macro_release &kp LCTRL)
@@ -142,16 +142,16 @@
     MACRO(venr, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp L &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para mover ventanas al escritorio 1
-    MACRO(esmo1, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 1 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(esmo1, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N1 &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para mover ventanas al escritorio 2
-    MACRO(esmo2, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 2 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(esmo2, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N2 &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para mover ventanas al escritorio 3
-    MACRO(esmo3, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 3 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(esmo3, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N3 &macro_release &kp LALT &macro_release &kp LCTRL)
 
     //macro para mover ventanas al escritorio 4
-    MACRO(esmo4, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp 4 &macro_release &kp LALT &macro_release &kp LCTRL)
+    MACRO(esmo4, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N4 &macro_release &kp LALT &macro_release &kp LCTRL)
   };
 };
 
