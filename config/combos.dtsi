@@ -1,0 +1,143 @@
+//plantilla para crear combos
+#define COMBO(NAME, BINDINGS, KEYPOS) \
+   combo_##NAME { \
+   timeout-ms = <200>; \
+   bindings = BINDINGS; \
+   key-positions = <KEYPOS>; \
+   layers = <0>; \
+};
+
+/ {
+  combos {
+    compatible = "zmk,combos";
+
+///////////////////////////////// COMBOS PARA TECLADO WINDOWS //////////////////////////////////////////
+
+    // CTRL + C----combo para copiar
+    COMBO(copy, <&kp LC(C)>, 24 8)
+
+    // CTRL + V----combo para pegar
+    COMBO(paste, <&kp LC(V)>, 24 33)
+
+    // CTRL + X----combo para cortar
+    COMBO(cut, <&kp LC(X)>, 24 29)
+
+    // SHFT  + /----combo para crear "_" en teclado
+    COMBO(menos, <&kp LS(SLASH)>, 36 4)
+
+    // SHFT  + \----combo para crear ">" en el teclado
+    COMBO(mayor, <&kp LS(NUBS)>, 36 4)
+
+    // CTRL + N----abre nueva ventana del navegador 
+    COMBO(web, <&kp LC(N)>, 24 21)
+
+///////////////////////////////////////////// COMBOS PARA VSC ////////////////////////////////////////////////
+
+    // CTRL + Z----combo para deshace la última acción en vsc
+    COMBO(atra, <&kp LC(Z)>, 24 34)
+
+    // CTRL + Y----combo para rehacer la última acción en vsc
+    COMBO(adel, <&kp LC(Y)>, 24 5)
+ 
+    // CTRL + J----combo para abril terminal en vsc
+    COMBO(clg, <&kp LC(J)>, 24 27)
+
+    // CTRL + B----combo para abril el menu del explorador de archivos en vsc 
+    COMBO(arch, <&kp LC(B)>, 24 30)
+
+    // SHFT + RIGHT----combo para seleccionar por letras hacia la derecha en vsc
+    COMBO(selright, <&kp LS(RIGHT)>, 36 12)
+
+    // SHFT  + LEFT----combo para seleccionar por letras hacia la izquierda en vsc
+    COMBO(selleft, <&kp LS(LEFT)>, 36 9)
+
+    // SHFT  + UP----combo para seleccionar por lineas hacia arriba en vsc
+    COMBO(selup, <&kp LS(UP)>, 36 4)
+
+    // SHFT + DOWN----combo para seleccionar por lineas hacia abajo en vsc
+    COMBO(seldown, <&kp LS(DOWN)>, 36 18)
+
+    // CTRL + llaves----combo para comentar en vsc
+    COMBO(comentar, <&kp LC(BSLH)>, 24 22)
+
+    // CTRL + A----combo para crear nuevo archivo en explorador de vsc
+    COMBO(narchivo, <&kp LC(A)>, 24 13)
+
+    // CTRL + E----combo para crear nueva carpeta en explorador de vsc
+    COMBO(ncarpeta, <&kp LC(E)>, 24 15)
+
+    // CTRL + D----combo para hacer multiples selecciones en vsc
+    COMBO(mselec, <&kp LC(D)>, 24 18)
+
+    // CTRL + PGUP----combo para cambiar entre pestañas en vsc
+    COMBO(ventanas, <&kp LC(PG_DN)>, 24 2)
+
+    // CTRL + .----combo para corregir ortografía en vsc
+    COMBO(ortografia, <&kp LC(DOT)>, 24 1)
+
+///////////////////////////////// COMBOS PARA KOMOREBI //////////////////////////////////////////
+
+    // LALT + W----cambia el foco a otro monitor izquierda
+    COMBO(monitoriz, <&kp LA(W)>, 12 32)
+
+    // LALT + E----cambia el foco a otro monitor derecha
+    COMBO(monitorde, <&kp LA(E)>, 12 15)
+
+    // LALT + S----cambia ventanas en pila izquierda
+    COMBO(ventanasiz, <&kp LA(S)>, 12 22)
+
+    // LALT + D----cambia ventanas en pila derecha
+    COMBO(ventanasde, <&kp LA(D)>, 12 22)
+
+    // LALT + Q----cierra ventanas abierta
+    COMBO(cerLAr, <&kp LA(Q)>, 12 26)
+
+    // LALT + X----invierte el orden de las ventanas en horizontal
+    COMBO(horizx, <&kp LA(X)>, 12 29)
+
+    // LALT + Y----invierte el orden de las ventanas en vertical
+    COMBO(horizy, <&kp LA(Y)>, 12 5)
+
+    // LALT + M----maximiza ventana enfocada
+    COMBO(maximiza, <&kp LA(M)>, 12 18)
+
+    // LALT + +----aumenta tamaño de la ventanas enfocada en el eje x
+    COMBO(maxventanas, <&kp LA(RBKT)>, 12 25)
+
+    // LALT + "-"----disminuye tamaño de la ventanas enfocada en el eje x
+    COMBO(minventanas, <&kp LA(SLASH)>, 12 26)
+
+    // LALT + <-- ----apila varias ventanas izquierda
+    COMBO(apilaiz, <&kp LA(LEFT)>, 12 26)
+
+    // LALT + --> --apila varias ventanas derecha
+    COMBO(apilader, <&kp LA(RIGHT)>, 12 33)
+
+    // LALT + N ----des apila ventanas 
+    COMBO(desapila, <&kp LA(N)>, 12 21)
+
+    // LALT + H ---- cambia el foco entre ventanas izquierda
+    COMBO(winl, <&kp LA(H)>, 12 21)
+
+    // LALT + L ----cambia el foco entre ventanas derecha 
+    COMBO(winr, <&kp LA(L)>, 12 21)
+
+    // LALT + J ---- cambia el foco entre ventanas down
+    COMBO(windown, <&kp LA(J)>, 12 21)
+
+    // LALT + K ----cambia el foco entre ventanas up 
+    COMBO(winup, <&kp LA(K)>, 12 21)
+
+    // LALT + B----abre la primera ventana del navegador 
+    COMBO(webcrom, <&kp LA(B)>, 12 30)
+
+    // LALT + V----abre VSC
+    COMBO(vsc, <&kp LA(V)>, 12 33)
+
+    // LALT + I----abre ventana informacion de comandos komorebi
+    COMBO(info, <&kp LA(I)>, 12 17)
+
+    // LALT + T----manipulación de estado de ventana (convierte en flotante)
+    COMBO(flotante, <&kp LA(T)>, 12 20)
+  };
+};
