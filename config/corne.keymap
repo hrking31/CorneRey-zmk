@@ -13,6 +13,11 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "macros.dtsi>
 
+//numero de luces del teclado
+&led_strip {
+    chain-length = <27>;
+};
+
 //se definen nombres a las capas
 #define DEF 0
 #define NUM 1
