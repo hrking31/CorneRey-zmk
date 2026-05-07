@@ -29,131 +29,7 @@
    layers = <0>; \
 };
 
-//plantilla para crear macros
-#define STRINGIFY(x) #x
-#define EXPAND_AND_STRINGIFY(x) STRINGIFY(x)
-#define MACRO(NAME, BINDINGS) \
-  mcr_##NAME: mcr_##NAME { \
-    label = EXPAND_AND_STRINGIFY(mcr_##NAME); \
-    compatible = "zmk,behavior-macro"; \
-    #binding-cells = <0>; \
-    wait-ms = <20>; \
-    tap-ms = <10>; \
-    bindings = <BINDINGS>; \
-  };
 
-//numero de luces del teclado
-&led_strip {
-    chain-length = <27>;
-};
-
-/ {
-  macros {
-
-/////////////////////////////////////////////////////////////// MACROS PARA TECLADO WINDOWS ///////////////////////////////////////////////////////////////
-
-    //macro para crear la barra "\"
-    MACRO(barra, &macro_press &kp LALT &macro_tap &kp KP_N9 &macro_tap &kp KP_N2 &macro_release &kp LALT)
-
-    //macro para crear la "@"
-    MACRO(arroba, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp Q &macro_release &kp LALT &macro_release &kp LCTRL)
-
-/////////////////////////////////////////////////////////////// MACROS PARA VSC ///////////////////////////////////////////////////////////////
-
-    //macro para mover la ventana del codigo a la izquierda en vsc
-    MACRO(left, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp LEFT &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para  mover la ventana del codigo a la derecha en vsc
-    MACRO(right, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp RIGHT &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para seleccionar por palabras hacia la derecha en vsc
-    MACRO(selright, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp RIGHT &macro_release &kp RSHFT &macro_release &kp LCTRL)
-
-    //macro para seleccionar por palabras hacia la izquierda en vsc
-    MACRO(selleft, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp LEFT &macro_release &kp RSHFT &macro_release &kp LCTRL)
-
-    //macro para colocar el foco en el menu del explorador de archivos en vsc
-    MACRO(focoa, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp E &macro_release &kp RSHFT &macro_release &kp LCTRL)
-
-    //macro para abril el menu de archivos en vsc
-    MACRO(file, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp E &macro_release &kp RSHFT &macro_release &kp LCTRL)
-
-    //macro para abril el menu de git en vsc
-    MACRO(git, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp G &macro_release &kp RSHFT &macro_release &kp LCTRL)
-
-    //macro para abril el menu de extensiones en vsc
-    MACRO(ext, &macro_press &kp LCTRL &macro_press &kp RSHFT &macro_tap &kp X &macro_release &kp RSHFT &macro_release &kp LCTRL)
-
-    //macro para abril nueva carpeta de proyecto en vsc
-    MACRO(open, &macro_press &kp LCTRL &macro_tap &kp K &macro_tap &kp O &macro_release &kp LCTRL)
-
-    //macro para cerrar carpeta actual de proyecto en vsc
-    MACRO(close, &macro_press &kp LCTRL &macro_tap &kp K &macro_release &kp LCTRL &macro_tap &kp F)
-
-   //macro para mover una linea de código hacia arriba en vsc
-    MACRO(up, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp UP &macro_release &kp LALT &macro_release &kp RSHFT)
-
-    //macro para mover una linea de código hacia abajo en vsc
-    MACRO(down, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp DOWN &macro_release &kp LALT &macro_release &kp RSHFT)
-
-    //macro para incrementar el tamaño de ventana enfocada en el eje y
-    MACRO(incre, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp RBKT &macro_release &kp LALT &macro_release &kp RSHFT)
-
-    //macro para decrementar el tamaño de ventana enfocada en el eje y
-    MACRO(decre, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp SLASH &macro_release &kp LALT &macro_release &kp RSHFT)
-
-    //macro para maximizar las ventanas en pila
-    MACRO(maxi, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp F &macro_release &kp LALT &macro_release &kp RSHFT)
-
-    //macro para reset al orden visual de las ventanas
-    MACRO(reset, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp R &macro_release &kp LALT &macro_release &kp RSHFT)
-
-    //macro recargar la configuración propia de Komorebi
-    MACRO(resetk, &macro_press &kp RSHFT &macro_press &kp LALT &macro_tap &kp O &macro_release &kp LALT &macro_release &kp RSHFT)
-
-    //macro para cambiar el foco a otro monitor y escritorio 1
-    MACRO(escrt1, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N1 &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para cambiar el foco a otro monitor y escritorio 2
-    MACRO(escrt2, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N2 &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para cambiar el foco a otro monitor y escritorio 3
-    MACRO(escrt3, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N3 &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para cambiar el foco a otro monitor y escritorio 4
-    MACRO(escrt4, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N4 &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para cambiar el foco a otro monitor y escritorio 5
-    MACRO(escrt5, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N5 &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para cambiar el foco a otro monitor y escritorio 6
-    MACRO(escrt6, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N6 &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para cambiar el foco a otro monitor y escritorio 7
-    MACRO(escrt7, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N7 &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para cambiar el foco a otro monitor y escritorio 8
-    MACRO(escrt8, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp N8 &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para mover la ventana activa a otro monitor izquierda
-    MACRO(venl, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp H &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para mover la ventana activa a otro monitor derecha
-    MACRO(venr, &macro_press &kp LCTRL &macro_press &kp LALT &macro_tap &kp L &macro_release &kp LALT &macro_release &kp LCTRL)
-
-    //macro para mover ventanas al escritorio 1
-    MACRO(esmo1, &macro_press &kp LALT &macro_press &kp RSHFT &macro_tap &kp N1 &macro_release &kp RSHFT &macro_release &kp LALT)
-
-    //macro para mover ventanas al escritorio 2
-    MACRO(esmo2, &macro_press &kp LALT &macro_press &kp RSHFT &macro_tap &kp N2 &macro_release &kp RSHFT &macro_release &kp LALT)
-
-    //macro para mover ventanas al escritorio 3
-    MACRO(esmo3, &macro_press &kp LALT &macro_press &kp RSHFT &macro_tap &kp N3 &macro_release &kp RSHFT &macro_release &kp LALT)
-
-    //macro para mover ventanas al escritorio 4
-    MACRO(esmo4, &macro_press &kp LALT &macro_press &kp RSHFT &macro_tap &kp N4 &macro_release &kp RSHFT &macro_release &kp LALT)
-  };
-};
 
 / {
   combos {
@@ -179,7 +55,7 @@
     // CTRL + N----abre nueva ventana del navegador 
     COMBO(web, <&kp LC(N)>, 24 21)
 
-///////////////////////////////// COMBOS PARA VSC //////////////////////////////////////////
+///////////////////////////////////////////// COMBOS PARA VSC ////////////////////////////////////////////////
 
     // CTRL + Z----combo para deshace la última acción en vsc
     COMBO(atra, <&kp LC(Z)>, 24 34)
@@ -218,7 +94,7 @@
     COMBO(mselec, <&kp LC(D)>, 24 18)
 
     // CTRL + PGUP----combo para cambiar entre pestañas en vsc
-    COMBO(ventanas, <&kp LC(PG_UP)>, 24 2)
+    COMBO(ventanas, <&kp LC(PG_DN)>, 24 2)
 
     // CTRL + .----combo para corregir ortografía en vsc
     COMBO(ortografia, <&kp LC(DOT)>, 24 1)
@@ -343,10 +219,10 @@
             label = "NAV";
 
                         bindings = < 
-   &kp LA(T)   &mcr_left       &mcr_selleft            &kp LA(N)   &kp LA(W)      &kp LA(E)                &ht_comb LA(H) LA(L)           &mcr_esmo1   &mcr_esmo2   &mcr_selright   &mcr_right     &kp LC(D)
-   &kp PG_UP   &kp LC(PG_DN)   &kp LS(LEFT)            &mcr_maxi   &kp LA(S)      &kp LA(D)                &ht_comb LA(K) LA(J)           &mcr_esmo3   &mcr_esmo4   &kp LS(RIGHT)   &kp LS(UP)     &mcr_open
-   &kp PG_DN   &kp LC(DOT)     &ht_comb LA(Y) LA(X)    &kp LA(M)   &kp LA(LEFT)   &kp LA(RIGHT)            &ht_comb LA(SLASH) LA(RBKT )   &none        &none        &none           &kp LS(DOWN)   &mcr_close
-                                                       &mcr_venl   &trans         &trans                   &trans                         &trans       &mcr_venr
+   &kp LA(T)   &mcr_left       &mcr_selleft            &kp LA(N)   &kp LA(W)      &kp LA(E)                &ht_comb LA(H) LA(L)   &mcr_esmo1      &mcr_esmo2   &mcr_selright   &mcr_right     &kp LC(D)
+   &kp PG_UP   &kp LC(PG_DN)   &kp LS(LEFT)            &mcr_maxi   &kp LA(S)      &kp LA(D)                &ht_comb LA(K) LA(J)   &mcr_esmo3      &mcr_esmo4   &kp LS(RIGHT)   &kp LS(UP)     &mcr_open
+   &kp PG_DN   &kp LC(DOT)     &ht_comb LA(Y) LA(X)    &kp LA(M)   &kp LA(LEFT)   &kp LA(RIGHT)            &kp LA(SLASH)          &kp LA(RBKT)   &mcr_incre   &mcr_decre      &kp LS(DOWN)   &mcr_close
+                                                       &mcr_venl   &trans         &trans                   &trans                 &trans          &mcr_venr
                         >;
                 };
 
