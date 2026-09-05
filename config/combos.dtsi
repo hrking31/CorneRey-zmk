@@ -134,7 +134,7 @@
     // LALT + V----abre VSC
     COMBO(vsc, <&kp LA(V)>, 12 33)
 
-    // LALT + I----abre ventana informacion de comandos komorebi
+    // LALT + I----abre ventana información de comandos komorebi
     COMBO(info, <&kp LA(I)>, 12 17)
 
     // LALT + T----manipulación de estado de ventana (convierte en flotante)
